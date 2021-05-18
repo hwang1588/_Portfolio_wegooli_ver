@@ -1,0 +1,197 @@
+<!doctype html>
+
+<!--================================================================-->
+<!-- (xxl=1400px이상에서 작동, pc), (md=768px이상에서 작동, 패드):S -->
+<!--================================================================-->
+
+<html lang="ko">
+
+<head>
+    <!--===========-->
+    <!-- meta tags -->
+    <!--===========-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--===============-->
+    <!-- Bootstrap CSS -->
+    <!--===============-->
+    <link rel="stylesheet" href="bs5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bs5/css/framework.css">
+    <link rel="stylesheet" href="bs5/css/docs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <title>HAPPYCAR_TEST</title>
+</head>
+
+<body>
+    <!--=============-->
+    <!-- 상단 헤더:S -->
+    <!--=============-->
+    <header>
+        <div class="px-3 py-3" style="background-color:aliceblue; text-align: center;">헤더영역 없음</div>
+    </header>
+    <!--=============-->
+    <!-- 상단 헤더:E -->
+    <!--=============-->
+
+    <!--============-->
+    <!-- 모달버튼:S -->
+    <!--============-->
+    <div class="conitaner-fluid">
+        <div class="row">
+            <div class="capsule">
+                <center>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        예약정보
+                    </button>
+                </center>
+            </div>
+        </div>
+    </div>
+    <!--============-->
+    <!-- 모달버튼:E -->
+    <!--============-->
+
+    <!--=========================================-->
+    <!-- 모달영역:S(헤더,바디,푸터 인라인스타일) -->
+    <!--=========================================-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="exampleModalLabel">회원을 선택해주세요.
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body" style="padding: 0px;">
+
+                    <div class="yongtest">
+                        <!--==================-->
+                        <!-- 모달 본문 내용:S -->
+                        <!--==================-->
+
+                        <body>
+                            <!--===================================-->
+                            <!-- 테이블표 위쪽 드롭다운 메뉴세트2:S -->
+                            <!--===================================-->
+                            <div class="backdrop">
+                                <div class="card-body bg-white">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-xxl-12 col-md-12 col-12">
+                                                <div class="overflow-auto">
+                                                    <table class="table newtable-2 fs-13 fw-normal border">
+                                                        <thead>
+                                                            <tr class="table-light border">
+                                                                <th scope="col" class="fw-normal border border-secondary">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            회원명(구아이디)
+                                                                            <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1">
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="fw-normal border border-secondary">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            아이디(휴대폰)
+                                                                            <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1">
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="fw-normal border border-secondary">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            성별
+                                                                            <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1">
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="fw-normal border border-secondary">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            생년월일
+                                                                            <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1">
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="fw-normal border border-secondary">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            이메일
+                                                                            <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1">
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="fw-normal border border-secondary">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            주소
+                                                                            <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1">
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="fw-normal border border-secondary">
+                                                                   <div class="cotainer px-1">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            회원구분
+                                                                            <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1">
+                                                                        </div>
+                                                                    </div>
+                                                                    </div>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="border bg-white">홍길동(ABC1234)</th>
+                                                                <td class="border bg-white">010-1234-1234</td>
+                                                                <td class="border bg-white ">남</td>
+                                                                <td class="border bg-white">1990. 04. 07</td>
+                                                                <td class="border bg-white">ABC@gmail.com</td>
+                                                                <td class="border bg-white">서울특별시 동대문구 안암로183</td>
+                                                                <td class="border bg-white">정회원</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="border bg-white">홍길동(ABC1234)</th>
+                                                                <td class="border bg-white">010-1234-1234</td>
+                                                                <td class="border bg-white ">남</td>
+                                                                <td class="border bg-white">1990. 04. 07</td>
+                                                                <td class="border bg-white">ABC@gmail.com</td>
+                                                                <td class="border bg-white">서울특별시 동대문구 안암로183</td>
+                                                                <td class="border bg-white">정회원</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </body>
+                        <!--==================-->
+                        <!-- 모달 본문 내용:E -->
+                        <!--==================-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--=========================================-->
+    <!-- 모달영역:E(헤더,바디,푸터 인라인스타일) -->
+    <!--=========================================-->
+
+</body>
+
+<!--=============================-->
+<!-- bootstrap_vanila_javascript -->
+<!--=============================-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="bs5/js/bootstrap.min.js"></script>
+
+</html>

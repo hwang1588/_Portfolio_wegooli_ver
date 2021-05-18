@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="ico_16_tab_delete_d" width="16" height="16" viewBox="0 0 16 16">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#bfbfbf;stroke-linecap:round;stroke-width:1.4px}
+        </style>
+    </defs>
+    <g id="ico" transform="translate(-337 -504)">
+        <path id="선_88" d="M0 0L8 8" class="cls-2" transform="translate(341 508)"/>
+        <path id="선_89" d="M0 0L8 8" class="cls-2" transform="rotate(90 -79.5 428.5)"/>
+    </g>
+</svg>

@@ -1,0 +1,2147 @@
+<!doctype html>
+<!--================================================================-->
+<!-- (xxl=1400px이상에서 작동, pc), (md=768px이상에서 작동, 패드):S -->
+<!--================================================================-->
+
+<html lang="ko">
+
+<head>
+    <!--===========-->
+    <!-- meta tags -->
+    <!--===========-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--=======-->
+    <!-- CSS:S -->
+    <!--=======-->
+    <link rel="stylesheet" href="bs5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bs5/css/framework.css">
+    <link rel="stylesheet" href="bs5/css/docs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!--=======-->
+    <!-- CSS:E -->
+    <!--=======-->
+    <title>HAPPYCAR_TEST</title>
+</head>
+
+<body>
+    <!--=============-->
+    <!-- 상단 헤더:S -->
+    <!--=============-->
+    <header>
+
+    </header>
+    <!--=============-->
+    <!-- 상단 헤더:E -->
+    <!--=============-->
+
+    <!--=========================================-->
+    <!-- 컨트롤러 영역 상단 네비게이션 탭 버튼:S -->
+    <!--=========================================-->
+    <div class="container-fluid mt-4">
+        <ul class="nav nav-pills mb-3 border-bottom border-1" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="false">사고접수
+                </a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="pill" href="#pills-home2" role="tab" aria-controls="pills-home2" aria-selected="false">대차</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" data-bs-toggle="pill" href="#pills-home3" role="tab" aria-controls="pills-home3" aria-selected="true">반납처리</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="pill" href="#pills-home4" role="tab" aria-controls="pills-home4" aria-selected="false">차량제어</a>
+            </li>
+        </ul>
+    </div>
+    <!--=========================================-->
+    <!-- 컨트롤러 영역 상단 네비게이션 탭 버튼:E -->
+    <!--=========================================-->
+
+    <div class="tab-pane fade bg-white" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <div class="container-fluid">
+            <div class="row">
+                <!--============-->
+                <!-- 메인영역:S -->
+                <!--============-->
+                <div class="tab-content mt-2" id="pills-tabContent">
+                    <!--======================-->
+                    <!-- 본문탭첫번째가두기:S -->
+                    <!--======================-->
+                    <div class="COM_ACC_POP_01">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <div class="container-fluid px-0">
+                                <nav>
+                                    <div class="nav nav-tabs border-0" id="nav-tab" role="tablist">
+                                        <a class="nav-link active border-0" id="sub-nav-home-tab" data-bs-toggle="tab" href="#sub-nav-home" role="tab" aria-controls="sub-nav-home" aria-selected="true">차량번호
+                                        </a>
+                                        <a class="nav-link border-0 bg-white" id="sub-nav-contact-tab" data-bs-toggle="tab" href="#sub-nav-contact" role="tab" aria-controls="sub-nav-contact" aria-selected="false">예약/이용
+                                        </a>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="nav-tabContent">
+                    <!--======================-->
+                    <!-- 본문탭첫번째가두기:S -->
+                    <!--======================-->
+                    <div class="tab-pane fade show active" id="sub-nav-home" role="tabpanel" aria-labelledby="sub-nav-home-tab">
+                        <!--====================-->
+                        <!-- 예약자 관련 정보:S -->
+                        <!--====================-->
+                        <div class="container-fluid px-0">
+                            <div class="card-body bg-palegray mb-4 pb-0">
+                                <div class="row">
+                                    <div class="col-xxl-10">
+                                        <div class="row">
+                                            <!--==============-->
+                                            <!-- 버튼그룹 1:S -->
+                                            <!--==============-->
+                                            <div class="col-xxl-3 col-md-6 col-12">
+                                                <div class="row">
+                                                    <div class="col-6 my-2">
+                                                        <!--================-->
+                                                        <!-- 버튼그룹 1-1:S -->
+                                                        <!--================-->
+                                                        <label for="inputState" class="form-label">소유회사
+                                                        </label>
+                                                        <select id="inputState" class="form-select">
+                                                            <option selected>전체</option>
+                                                            <option>샘플2</option>
+                                                        </select>
+                                                        <!--================-->
+                                                        <!-- 버튼그룹 1-1:E -->
+                                                        <!--================-->
+                                                    </div>
+                                                    <div class="col-6 my-2">
+                                                        <!--================-->
+                                                        <!-- 버튼그룹 1-2:S -->
+                                                        <!--================-->
+                                                        <label for="inputState" class="form-label">BM
+                                                        </label>
+                                                        <select id="inputState" class="form-select">
+                                                            <option selected>전체</option>
+                                                            <option>샘플2</option>
+                                                        </select>
+                                                        <!--================-->
+                                                        <!-- 버튼그룹 1-2:E -->
+                                                        <!--================-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--==============-->
+                                            <!-- 버튼그룹 1:E -->
+                                            <!--==============-->
+
+                                            <!--==============-->
+                                            <!-- 버튼그룹 2:S -->
+                                            <!--==============-->
+                                            <div class="col-xxl-4 col-md-6 col-12">
+                                                <div class="row">
+                                                    <div class="col-4 my-2">
+                                                        <!--================-->
+                                                        <!-- 버튼그룹 2-1:S -->
+                                                        <!--================-->
+                                                        <label for="inputState" class="form-label">지역
+                                                        </label>
+                                                        <select id="inputState" class="form-select">
+                                                            <option selected>서울특별시</option>
+                                                            <option>샘플2</option>
+                                                        </select>
+                                                        <!--================-->
+                                                        <!-- 버튼그룹 2-1:E -->
+                                                        <!--================-->
+                                                    </div>
+                                                    <div class="col-4 my-2">
+                                                        <!--================-->
+                                                        <!-- 버튼그룹 2-2:S -->
+                                                        <!--================-->
+                                                        <label for="inputState" class="form-label">&nbsp;
+                                                        </label>
+                                                        <select id="inputState" class="form-select">
+                                                            <option selected>구 전체</option>
+                                                            <option>샘플2</option>
+                                                        </select>
+                                                        <!--================-->
+                                                        <!-- 버튼그룹 2-2:E -->
+                                                        <!--================-->
+                                                    </div>
+                                                    <div class="col-4 my-2">
+                                                        <!--================-->
+                                                        <!-- 버튼그룹 2-3:S -->
+                                                        <!--================-->
+                                                        <label for="inputState" class="form-label">&nbsp;
+                                                        </label>
+                                                        <select id="inputState" class="form-select">
+                                                            <option selected>동 전체</option>
+                                                            <option>샘플2</option>
+                                                        </select>
+                                                        <!--================-->
+                                                        <!-- 버튼그룹 2-3:E -->
+                                                        <!--================-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--==============-->
+                                            <!-- 버튼그룹 2:E -->
+                                            <!--==============-->
+
+                                            <!--==============-->
+                                            <!-- 버튼그룹 3:S -->
+                                            <!--==============-->
+                                            <div class="col-xxl-2 col-md-6 col-12">
+                                                <div class="row">
+                                                    <div class="col-12 my-2">
+                                                        <!--================-->
+                                                        <!-- 버튼그룹 3-1:S -->
+                                                        <!--================-->
+                                                        <label for="inputState" class="form-label">거점
+                                                        </label>
+                                                        <select id="inputState" class="form-select">
+                                                            <option selected>전체</option>
+                                                            <option>샘플2</option>
+                                                        </select>
+                                                        <!--================-->
+                                                        <!-- 버튼그룹 3-1:E -->
+                                                        <!--================-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--==============-->
+                                            <!-- 버튼그룹 3:E -->
+                                            <!--==============-->
+
+                                            <!--==============-->
+                                            <!-- 버튼그룹 4:S -->
+                                            <!--==============-->
+                                            <div class="col-xxl-2 col-md-6 col-12">
+                                                <div class="row">
+                                                    <div class="col-12 my-2">
+                                                        <!--================-->
+                                                        <!-- 버튼그룹 1-1:S -->
+                                                        <!--================-->
+                                                        <label for="inputState" class="form-label">차량번호
+                                                        </label>
+                                                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="차량번호를 입력하세요" />
+                                                        <!--================-->
+                                                        <!-- 버튼그룹 1-1:E -->
+                                                        <!--================-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--==============-->
+                                            <!-- 버튼그룹 4:E -->
+                                            <!--==============-->
+
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-1">
+                                    </div>
+                                    <div class="col-xxl-1">
+                                        <div class="row">
+                                            <!--==============-->
+                                            <!-- 버튼그룹 5:S -->
+                                            <!--==============-->
+                                            <div class="col-xxl-12 mt-4">
+                                                <!--================-->
+                                                <!-- 버튼그룹 5-1:S -->
+                                                <!--================-->
+                                                <div class="btn-group mt-2 center">
+                                                    <button class="btn btn-dark btn_34 px-4" type="button" id="button-addon2">Search
+                                                    </button>
+                                                </div>
+                                                <!--================-->
+                                                <!-- 버튼그룹 5-1:E -->
+                                                <!--================-->
+                                            </div>
+                                            <!--==============-->
+                                            <!-- 버튼그룹 5:E -->
+                                            <!--==============-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="container">
+                                        <div class="border-bottom border-1">
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-md-12 col-12 my-3">
+                                        <span class="fw-bold">101하 더뉴레이</span>
+                                    </div>
+                                    <div class="col-xxl-3 col-md-4 col-12 my-3 ms-auto">
+                                        <div class="d-flex">
+                                            <div class="w-100 py-2"></div>
+                                            <div class="flex-shrink-1 py-1 fs-14 fw-500">검색결과15
+                                            </div>
+                                            <div class="flex-shrink-1 ms-1">
+                                                <i class="bi bi-caret-down-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--====================-->
+                        <!-- 예약자 관련 정보:E -->
+                        <!--====================-->
+                    </div>
+
+                    <div class="tab-pane fade" id="sub-nav-contact" role="tabpanel" aria-labelledby="sub-nav-contact-tab">
+                        <div class="container-fluid">
+                            <div class="card-body bg-palegray mb-4">
+
+                                ...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--================================================================-->
+                <!-- (xxl=1400px이상에서 작동, pc), (md=768px이상에서 작동, 패드):S -->
+                <!--================================================================-->
+                <!--=====================-->
+                <!-- DataTales Example:S -->
+                <!--=====================-->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xxl-6">
+                            <div class="card-body bg-palegray">
+                                <div class="mb-2">
+                                    <div class="container-fluid px-0">
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <h5 class="m-0 font-weight-bold text-primary text-dark">
+                                                    사고내용 접수
+                                                </h5>
+
+                                            </div>
+                                            <div class="col-xxl-2">
+                                                <div class="d-grid justify-content-md-end">
+                                                    <button class="btn btn-dark btn_34 px-3 fc-white fs-13 fw-lighter" type="button" id="button-addon2">사고내용 저장하기
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!--============-->
+                                    <!-- 1번 포장:S -->
+                                    <!--============-->
+                                    <div class="col-xxl-6 col-md-6 col-xs-12 my-2">
+                                        <!--================-->
+                                        <!-- 1번 아코디언:S -->
+                                        <!--================-->
+                                        <div class="accordion" id="accordionExampleOne">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        사고내용 접수 1번
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExampleOne">
+                                                    <div class="accordion-body bg-white">
+                                                        <!--============-->
+                                                        <!-- 1번 칼럼:S -->
+                                                        <!--============-->
+                                                        <div class="none">
+                                                            <form>
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <form>
+                                                                            <div class="mb-2">
+                                                                                <label for="text" class="form-label fc-gray-1 fw-light">차량번호
+                                                                                </label>
+                                                                                <input type="text" class="form-control" id="" placeholder="41호 2111" disabled>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+
+                                                                    <div class="col-6">
+                                                                        <form>
+                                                                            <div class="mb-2">
+                                                                                <label for="text" class="form-label fc-gray-1 fw-light">차량소유자
+                                                                                </label>
+                                                                                <input type="text" class="form-control" id="" placeholder="(주)래디우스랩" disabled>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+
+                                                            <div class="row">
+                                                                <div>
+
+                                                                    <div class="row">
+                                                                        <form>
+                                                                            <div class="row">
+                                                                                <div class="col-6">
+                                                                                    <form>
+                                                                                        <div class="mb-2">
+                                                                                            <label for="text" class="form-label fc-gray-1 fw-light">대여존
+                                                                                            </label>
+                                                                                            <input type="text" class="form-control" id="" placeholder="41호 2111" disabled>
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </div>
+
+                                                                                <div class="col-6">
+                                                                                    <form>
+                                                                                        <div class="mb-2">
+                                                                                            <label for="text" class="form-label fc-gray-1 fw-light">보험사
+                                                                                            </label>
+                                                                                            <input type="text" class="form-control" id="" placeholder="(주)래디우스랩" disabled>
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                        <div class="col-12 mb-2">
+                                                                            <label for="text" class="form-label fc-gray-1 fw-light">사고일시<b class="fc-danger ms-1 fs-6">*</b>
+                                                                            </label>
+                                                                            <input type="datetime-local" class="form-control mx-0 my-0" placeholder="YYYY-MM-DD HH:mm" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <form>
+                                                                    <div class="mb-2">
+                                                                        <label for="text" class="form-label fc-gray-1 fw-light">사고위치<b class="fc-danger ms-1 fs-6">*</b>
+                                                                        </label>
+                                                                        <input type="text" class="form-control" id="" placeholder="경기 안양시 동안구 호계동">
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+
+                                                        </div>
+                                                        <!--============-->
+                                                        <!-- 1번 칼럼:E -->
+                                                        <!--============-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================-->
+                                        <!-- 1번 아코디언:E -->
+                                        <!--================-->
+                                    </div>
+                                    <!--============-->
+                                    <!-- 1번 포장:E -->
+                                    <!--============-->
+
+                                    <!--============-->
+                                    <!-- 2번 포장:S -->
+                                    <!--============-->
+                                    <div class="col-xxl-6 col-md-6 col-xs-12 my-2">
+                                        <!--================-->
+                                        <!-- 2번 아코디언:S -->
+                                        <!--================-->
+                                        <div class="accordion" id="accordionExampleTwo">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingTwo">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                        사고내용 접수 2번
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExampleTwo">
+                                                    <div class="accordion-body bg-white">
+                                                        <!--============-->
+                                                        <!-- 2번 칼럼:S -->
+                                                        <!--============-->
+                                                        <div class="none">
+                                                            <form>
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <form>
+                                                                            <div class="mb-2">
+                                                                                <label for="text" class="form-label fc-gray-1 fw-light">사고자<b class="fc-danger ms-1 fs-6">*</b>
+                                                                                </label>
+                                                                                <input type="text" class="form-control" id="" placeholder="사고자를 입력해주세요.">
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+
+                                                                    <div class="col-6">
+                                                                        <form>
+                                                                            <div class="mb-2">
+                                                                                <label for="text" class="form-label fc-gray-1 fw-light">면허번호<b class="fc-danger ms-1 fs-6"></b>
+                                                                                </label>
+                                                                                <input type="text" class="form-control" id="" placeholder="면허번호를 입력해주세요.">
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <form>
+                                                                            <div class="mb-2">
+                                                                                <label for="text" class="form-label fc-gray-1 fw-light">만기일자
+                                                                                </label>
+                                                                                <input type="text" class="form-control" id="" placeholder="만기일자를 입력해주세요.">
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+
+                                                                    <div class="col-6">
+                                                                        <form>
+                                                                            <div class="mb-2">
+                                                                                <label for="text" class="form-label fc-gray-1 fw-light">주민번호
+                                                                                </label>
+                                                                                <input type="text" class="form-control" id="" placeholder="주민번호를 입력해주세요.">
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <form>
+                                                                            <div class="mb-2">
+                                                                                <label for="text" class="form-label fc-gray-1 fw-light">연락처<b class="fc-danger ms-1 fs-6">*</b>
+                                                                                </label>
+                                                                                <input type="text" class="form-control" id="" placeholder="연락처를 입력해주세요.">
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+
+                                                                    <div class="col-6">
+                                                                        <form>
+                                                                            <div class="mb-2">
+                                                                                <label for="text" class="form-label fc-gray-1 fw-light">연락처2<b class="fc-danger ms-1 fs-6"></b>
+                                                                                </label>
+                                                                                <input type="text" class="form-control" id="" placeholder="연락처2를 입력해주세요.">
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <form>
+                                                                            <div class="mb-2">
+                                                                                <label for="text" class="form-label fc-gray-1 fw-light">보험 (대인)
+                                                                                </label>
+                                                                                <input type="text" class="form-control" id="" placeholder="보험 (대인)을 입력해주세요.">
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+
+                                                                    <div class="col-6">
+                                                                        <form>
+                                                                            <div class="mb-2">
+                                                                                <label for="text" class="form-label fc-gray-1 fw-light">보험 (대물)
+                                                                                </label>
+                                                                                <input type="text" class="form-control" id="" placeholder="보험 (대물)을 입력해주세요.">
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                        <!--============-->
+                                                        <!-- 2번 칼럼:E -->
+                                                        <!--============-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================-->
+                                        <!-- 2번 아코디언:E -->
+                                        <!--================-->
+                                    </div>
+                                    <!--============-->
+                                    <!-- 2번 포장:E -->
+                                    <!--============-->
+
+                                    <div class="col-12 mt-1">
+                                        <form>
+                                            <div class="mb-1">
+                                                <label for="text" class="form-label fc-gray-1 fw-light">사고내용<b class="fc-danger ms-1 fs-6">*</b></label>
+                                                <textarea class="form-control" id="" rows="5" placeholder="-"></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!--===========-->
+                                    <!-- 구분 선:S -->
+                                    <!--===========-->
+                                    <div class="container my-3">
+                                        <div class="border-bottom border-1 border-secondary">
+                                        </div>
+                                    </div>
+                                    <!--===========-->
+                                    <!-- 구분 선:E -->
+                                    <!--===========-->
+                                    <h5 class="font-weight-bold text-primary text-dark mb-2">
+                                        상대방 정보
+                                    </h5>
+                                    <!--============-->
+                                    <!-- 3번 포장:S -->
+                                    <!--============-->
+                                    <div class="col-xxl-6 col-md-6 col-xs-12 my-2">
+                                        <!--================-->
+                                        <!-- 3번 아코디언:S -->
+                                        <!--================-->
+                                        <div class="accordion" id="accordionExampleThree">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingThree">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                                        상대방 정보 1번
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExampleThree">
+                                                    <div class="accordion-body bg-white">
+                                                        <!--============-->
+                                                        <!-- 3번 칼럼:S -->
+                                                        <!--============-->
+                                                        <div class="none">
+                                                            <form>
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <form>
+                                                                            <div class="mb-2">
+                                                                                <label for="text" class="form-label fc-gray-1 fw-light">이름
+                                                                                </label>
+                                                                                <input type="text" class="form-control" id="" placeholder="이름을 입력해주세요.">
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+
+                                                                    <div class="col-6">
+                                                                        <form>
+                                                                            <div class="mb-2">
+                                                                                <label for="text" class="form-label fc-gray-1 fw-light">연락처
+                                                                                </label>
+                                                                                <input type="text" class="form-control" id="" placeholder="연락처를 입력해주세요.">
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+
+                                                            <div class="row">
+                                                                <div>
+                                                                    <div class="row">
+                                                                        <div class="col-6">
+                                                                            <form>
+                                                                                <div class="mb-2">
+                                                                                    <label for="text" class="form-label fc-gray-1 fw-light">차량번호
+                                                                                    </label>
+                                                                                    <input type="text" class="form-control" id="" placeholder="41호 2111">
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+
+                                                                        <div class="col-6">
+                                                                            <form>
+                                                                                <div class="mb-2">
+                                                                                    <label for="text" class="form-label fc-gray-1 fw-light">차명
+                                                                                    </label>
+                                                                                    <input type="text" class="form-control" id="" placeholder="차명을 입력해주세요.">
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <form>
+                                                                        <div class="mb-2">
+                                                                            <label for="text" class="form-label fc-gray-1 fw-light">보험담당자
+                                                                            </label>
+                                                                            <input type="text" class="form-control" id="" placeholder="보험담당자를 입력해주세요.">
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+
+                                                                <div class="col-6">
+                                                                    <form>
+                                                                        <div class="mb-2">
+                                                                            <label for="text" class="form-label fc-gray-1 fw-light">보험연락처
+                                                                            </label>
+                                                                            <input type="text" class="form-control" id="" placeholder="보험연락처를 입력해주세요.">
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <!--============-->
+                                                        <!-- 3번 칼럼:E -->
+                                                        <!--============-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================-->
+                                        <!-- 3번 아코디언:E -->
+                                        <!--================-->
+                                    </div>
+                                    <!--============-->
+                                    <!-- 3번 포장:E -->
+                                    <!--============-->
+
+                                    <!--============-->
+                                    <!-- 4번 포장:S -->
+                                    <!--============-->
+                                    <div class="col-xxl-6 col-md-6 col-xs-12 my-2">
+                                        <!--================-->
+                                        <!-- 4번 아코디언:S -->
+                                        <!--================-->
+                                        <div class="accordion" id="accordionExampleFour">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingFour">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                                        상대방 정보 2번
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#accordionExampleFour">
+                                                    <div class="accordion-body bg-white">
+                                                        <!--============-->
+                                                        <!-- 4번 칼럼:S -->
+                                                        <!--============-->
+                                                        <div class="none">
+                                                            <form>
+
+                                                            </form>
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <form>
+                                                                        <div class="mb-2">
+                                                                            <label for="text" class="form-label fc-gray-1 fw-light">보험사
+                                                                            </label>
+                                                                            <input type="text" class="form-control" id="" placeholder="보험사를 입력해주세요.">
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+
+                                                                <div class="col-6">
+                                                                    <form>
+                                                                        <div class="mb-2">
+                                                                            <label for="text" class="form-label fc-gray-1 fw-light">대인
+                                                                            </label>
+                                                                            <input type="text" class="form-control" id="" placeholder="대인을 입력해주세요.">
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <form>
+                                                                        <div class="mb-2">
+                                                                            <label for="text" class="form-label fc-gray-1 fw-light">대물
+                                                                            </label>
+                                                                            <input type="text" class="form-control" id="" placeholder="경기 안양시 동안구 호계동">
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row mb-5 pb-4">
+                                                            </div>
+                                                        </div>
+                                                        <!--============-->
+                                                        <!-- 4번 칼럼:E -->
+                                                        <!--============-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================-->
+                                        <!-- 4번 아코디언:E -->
+                                        <!--================-->
+                                    </div>
+                                    <!--============-->
+                                    <!-- 4번 포장:E -->
+                                    <!--============-->
+
+                                    <!--===========-->
+                                    <!-- 구분 선:S -->
+                                    <!--===========-->
+                                    <div class="container my-3">
+                                        <div class="border-bottom border-1 border-secondary">
+                                        </div>
+                                    </div>
+                                    <!--===========-->
+                                    <!-- 구분 선:E -->
+                                    <!--===========-->
+                                    <h5 class="font-weight-bold text-primary text-dark mb-2">
+                                        경찰신고
+                                    </h5>
+                                    <!--============-->
+                                    <!-- 5번 포장:S -->
+                                    <!--============-->
+                                    <div class="col-xxl-6 col-md-6 col-xs-12 my-2">
+                                        <!--================-->
+                                        <!-- 5번 아코디언:S -->
+                                        <!--================-->
+                                        <div class="accordion" id="accordionExampleFive">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingFive">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                                        경찰신고 정보 1번
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseFive" class="accordion-collapse collapse show" aria-labelledby="headingFive" data-bs-parent="#accordionExampleFive">
+                                                    <div class="accordion-body bg-white">
+                                                        <!--============-->
+                                                        <!-- 5번 칼럼:S -->
+                                                        <!--============-->
+                                                        <div class="none">
+                                                            <form>
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <form>
+                                                                            <div class="mb-2">
+                                                                                <label for="text" class="form-label fc-gray-1 fw-light">신고
+                                                                                </label>
+                                                                                <div class="input-group mb-1">
+                                                                                    <select class="form-select" id="">
+                                                                                        <option selected>미신고</option>
+                                                                                        <option value="1">One</option>
+                                                                                        <option value="2">Two</option>
+                                                                                        <option value="3">Three</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+
+                                                                    <div class="col-6">
+                                                                        <form>
+                                                                            <div class="mb-2">
+                                                                                <label for="text" class="form-label fc-gray-1 fw-light">경찰서
+                                                                                </label>
+                                                                                <input type="text" class="form-control" id="" placeholder="경찰서를 입력해주세요.">
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <form>
+                                                                        <div class="mb-2">
+                                                                            <label for="text" class="form-label fc-gray-1 fw-light">경찰관
+                                                                            </label>
+                                                                            <input type="text" class="form-control" id="" placeholder="경찰관을 입력해주세요.">
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+
+                                                                <div class="col-6">
+                                                                    <form>
+                                                                        <div class="mb-2">
+                                                                            <label for="text" class="form-label fc-gray-1 fw-light">연락처
+                                                                            </label>
+                                                                            <input type="text" class="form-control" id="" placeholder="연락처를 입력해주세요.">
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+                                                        <!--============-->
+                                                        <!-- 5번 칼럼:E -->
+                                                        <!--============-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================-->
+                                        <!-- 5번 아코디언:E -->
+                                        <!--================-->
+                                    </div>
+                                    <!--============-->
+                                    <!-- 5번 포장:E -->
+                                    <!--============-->
+
+                                    <!--============-->
+                                    <!-- 6번 포장:S -->
+                                    <!--============-->
+                                    <div class="col-xxl-6 col-md-6 col-xs-12 my-2">
+                                        <!--================-->
+                                        <!-- 6번 아코디언:S -->
+                                        <!--================-->
+                                        <div class="accordion" id="accordionExampleSix">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingSix">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                                        경찰신고 정보 2번
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseSix" class="accordion-collapse collapse show" aria-labelledby="headingSix" data-bs-parent="#accordionExampleSix">
+                                                    <div class="accordion-body bg-white">
+                                                        <!--============-->
+                                                        <!-- 6번 칼럼:S -->
+                                                        <!--============-->
+                                                        <div class="none">
+                                                            <form>
+                                                                <div class="row">
+                                                                    <div>
+                                                                        <div class="row">
+                                                                            <div class="col-6">
+                                                                                <form>
+                                                                                    <div class="mb-2">
+                                                                                        <label for="text" class="form-label fc-gray-1 fw-light">목격자1
+                                                                                        </label>
+                                                                                        <input type="text" class="form-control" id="" placeholder="목격자1을 입력해주세요.">
+                                                                                    </div>
+                                                                                </form>
+                                                                            </div>
+
+                                                                            <div class="col-6">
+                                                                                <form>
+                                                                                    <div class="mb-2">
+                                                                                        <label for="text" class="form-label fc-gray-1 fw-light">연락처1
+                                                                                        </label>
+                                                                                        <input type="text" class="form-control" id="" placeholder="연락처1을 입력해주세요.">
+                                                                                    </div>
+                                                                                </form>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </form>
+
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <form>
+                                                                        <div class="mb-2">
+                                                                            <label for="text" class="form-label fc-gray-1 fw-light">목격자2
+                                                                            </label>
+                                                                            <input type="text" class="form-control" id="" placeholder="목격자2를 입력해주세요.">
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+
+                                                                <div class="col-6">
+                                                                    <form>
+                                                                        <div class="mb-2">
+                                                                            <label for="text" class="form-label fc-gray-1 fw-light">연락처2
+                                                                            </label>
+                                                                            <input type="text" class="form-control" id="" placeholder="연락처2를 입력해주세요.">
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--============-->
+                                                        <!-- 6번 칼럼:E -->
+                                                        <!--============-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================-->
+                                        <!-- 6번 아코디언:E -->
+                                        <!--================-->
+                                    </div>
+                                    <!--============-->
+                                    <!-- 6번 포장:E -->
+                                    <!--============-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-6">
+                            <div class="card-body bg-palegray" style="height: 1300px;">
+
+                                <!--================================================================================================-->
+                                <!-- 구글지도(향후 지도api와 관련 이슈가 있을 수 있음 현재 높이값이 고정값으로 박혀있음 확인 필요:S -->
+                                <!--================================================================================================-->
+                                <div class="input-group pt-1 mt-4 position-absolute">
+                                    <button class="btn btn-dark map_button fs-12 fw-400" type="button">차량위치</button>
+                                    <button class="btn bg-white map_button border-dark fs-12 fw-400" type="button">거점위치</button>
+                                </div><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=%EB%85%BC%ED%98%84%EC%A0%95%EC%8B%A0%EA%B3%BC%EC%9D%98%EC%9B%90&t=&z=17&ie=UTF8&iwloc=&output=embed">
+                                </iframe>
+                                <div class="bg-white p-4">
+                                    <h5 class="mb-2">대여존</h5>
+                                    <div class="fc-858585">- 00단지 지하 3층 기둥</div>
+                                    <div class="d-flex">
+                                        <div class="me-auto fc-858585">- 00단지 지하 3층 기둥</div>
+                                        <div class="fc-858585">*지도에서 거점 선택 시 해당 거점 예약 현황 확인이 가능합니다.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!--================================================================================================-->
+                            <!-- 구글지도(향후 지도api와 관련 이슈가 있을 수 있음 현재 높이값이 고정값으로 박혀있음 확인 필요:S -->
+                            <!--================================================================================================-->
+                        </div>
+                    </div>
+                </div>
+                <!--=====================-->
+                <!-- DataTales Example:E -->
+                <!--=====================-->
+
+                <!--=====================================================-->
+                <!-- 프로그레스 바 영역 (기존 erp에서 기능 확인해볼것):S -->
+                <!--=====================================================-->
+                <div class="container-fluid mt-4">
+                    <div class="row">
+                        <div class="col-xxl-12">
+                            <div class="card-body bg-palegray">
+                                <div class="mb-1">
+                                    <h5 class="font-weight-bold text-primary text-dark">
+                                        예약 현황 | 서울서초3
+                                    </h5>
+                                </div>
+                                <div class="container-fluid px-0">
+                                    <div class="row mb-2 d-flex flex-row-reverse">
+                                        <div class="col-xxl-auto col-md-12 col-12 pt-1">
+                                            <div class="row">
+                                                <div class="col-xxl-12 col-12 my-1">
+                                                    <div class="d-grid gap-1 d-md-flex justify-content-end fs-12">
+                                                        <span class="fs-13"> <i class="bi bi-square-fill align-top lh-sm text-cyan"></i>
+                                                            예약</span>
+                                                        <span class="fs-13"> <i class="bi bi-square-fill align-top lh-sm fc-green text-warning"></i>
+                                                            이용대기</span>
+                                                        <span class="fs-13"> <i class="bi bi-square-fill align-top lh-sm fc-green"></i>
+                                                            이용중</span>
+                                                        <div class="d-grid gap-1 d-md-flex justify-content-end fs-12">
+                                                            <span class="fs-132"> <i class="bi bi-square-fill align-top lh-sm text-orange"></i>
+                                                                반납대기</span>
+                                                            <span class="fs-13"> <i class="bi bi-square-fill align-top lh-sm text-primary"></i>
+                                                                반납완료</span>
+                                                            <span class="fs-13"> <i class="bi bi-square-fill align-top lh-sm text-danger"></i>
+                                                                반납지연</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-xxl-auto col-md-12 col-12">
+                                            <div class="d-grid gap-1 d-md-flex justify-content-end fs-12">
+                                                <ul class="pagination my-0">
+                                                    <li class="page-item ms-3 bg-white">
+                                                        <a class="page-link" href="#" aria-label="Previous">
+                                                            <span aria-hidden="true">&laquo;
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <input type="date" class="form-control" placeholder="yyyy-mm-dd" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                                                    </li>
+                                                    <li class="page-item ms-1 bg-white">
+                                                        <a class="page-link me-0" href="#" aria-label="Next">
+                                                            <span aria-hidden="true">&raquo;
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!--=====================================================-->
+                                <!-- 프로그레스 바 코어 (기존 erp에서 기능 확인해볼것):E -->
+                                <!--=====================================================--
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-progress w-40">
+                                    </div>
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated w-25">
+                                        12시간
+                                    </div>
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success w-35">
+                                    </div>
+                                </div>
+                                <div class="progress mt-2">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated w-50">
+                                        12시간
+                                    </div>
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-progress w-50">
+                                    </div>
+                                </div>
+                                <!--=====================================================-->
+                                <!-- 프로그레스 바 코어 (기존 erp에서 기능 확인해볼것):E -->
+                                <!--=====================================================-->
+
+                                <!--==========================-->
+                                <!-- 24시간 예약 관련테이블:S -->
+                                <!--==========================-->
+                                <div class="overflow-auto bg-white p-4">
+                                    <table class="table_static" width="100%" border="0" cellpadding="0" cellspacing="0">
+                                        <thead>
+
+                                            <tr class="fc-858585" height="27" align="center">
+                                                <td>대여존</td>
+                                                <td>차량번호</td>
+                                                <td>이용번호</td>
+                                                <td>예약자</td>
+                                                <td>아이디(휴대폰)</td>
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">00</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">01</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">02</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">03</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">04</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">05</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">06</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">07</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">08</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">09</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">10</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">11</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+
+                                                <td align="center" style="color:red;" colspan="2">12</td>
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">13</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">14</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">15</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">16</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">17</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">18</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">19</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">20</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">21</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">22</td>
+
+
+
+
+                                                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                                                <td align="center" style="" colspan="2">23</td>
+
+                                                <td align="center" style="" colspan="1">대차</td>
+                                                <td align="center" style="" colspan="1">취소</td>
+
+
+                                            </tr>
+                                            <tr>
+                                                <td height="1" bgcolor="bfc4ce" colspan="101"></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+                                            <!-- :: List Start :: -->
+                                            <tr align="center" height="25">
+                                                <td class="table_zone">호정 행복아파트 4단지</td>
+                                                <td class="table_car_number">101하 1371</td>
+                                                <!-- 차량상태가 정상이고 통신장애가 발생한 차량 붉은색으로 표시 -->
+
+
+
+                                                <td class="table_use_number">20201217000019</td>
+
+
+                                                <td class="table_user_name">홍길동</td>
+                                                <td class="table_phone_number">010-1234-1234</td>
+
+
+                                                <!-- 시간별 예약상태를 보여주는 부분-->
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-success"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-success"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-success"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress">
+                                                    <a href="javascript:showLog('');">
+                                                        <!--클래스명 progress-bar로 on/off가능 bg-명령어를 통해 색상변경 가능 bs5 문서참조-->
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <!--클래스명 progress-bar로 on/off가능 bg-명령어를 통해 색상변경 가능 bs5 문서참조-->
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-success"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-success"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-success"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-success"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-success"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-success"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-success"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-success"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-success"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-success"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-success"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-success"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-success"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-success"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-outline-secondary my-1 rounded-0 fs-13 fc-black lh-1 btn_34 px-3 mx-1" type="button">대차
+                                                    </button>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-outline-secondary my-1 rounded-0 fs-13 fc-black lh-1 btn_34 px-3 mx-1" type="button">취소
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="1" bgcolor="bfc4ce" colspan="101"></td>
+                                            </tr>
+
+                                            <!-- :: List Start :: -->
+                                            <tr align="center" height="25">
+                                                <td class="table_zone">호정 행복아파트 4단지</td>
+                                                <td class="table_car_number">101하 1371</td>
+                                                <!-- 차량상태가 정상이고 통신장애가 발생한 차량 붉은색으로 표시 -->
+
+
+
+                                                <td class="table_use_number">20201217000019</td>
+
+
+                                                <td class="table_user_name">홍길동</td>
+                                                <td class="table_phone_number">010-1234-1234</td>
+
+
+                                                <!-- 시간별 예약상태를 보여주는 부분-->
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-info"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-info"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-info"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-info"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-info"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-info"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-info"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-info"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-info"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-info"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-outline-secondary my-1 rounded-0 fs-13 fc-black lh-1 btn_34 px-3 mx-1" type="button">대차
+                                                    </button>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-outline-secondary my-1 rounded-0 fs-13 fc-black lh-1 btn_34 px-3 mx-1" type="button">대차
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="1" bgcolor="bfc4ce" colspan="101"></td>
+                                            </tr>
+
+                                            <!-- :: List Start :: -->
+                                            <tr align="center" height="25">
+                                                <td class="table_zone">호정 행복아파트 4단지</td>
+                                                <td class="table_car_number">101하 1371</td>
+                                                <!-- 차량상태가 정상이고 통신장애가 발생한 차량 붉은색으로 표시 -->
+
+
+
+                                                <td class="table_use_number">20201217000019</td>
+
+
+                                                <td class="table_user_name">홍길동</td>
+                                                <td class="table_phone_number">010-1234-1234</td>
+
+
+                                                <!-- 시간별 예약상태를 보여주는 부분-->
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-primary"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-primary"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-primary"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-primary"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-primary"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-primary"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-primary"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-primary"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-primary"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-primary"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class="d-list-item progress-bar-animated progress-bar-striped progress-bar bg-primary"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td class="table_progress ">
+                                                    <a href="javascript:showLog('');">
+                                                        <div class=""></div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-outline-secondary my-1 rounded-0 fs-13 fc-black lh-1 btn_34 px-3 mx-1" type="button">대차
+                                                    </button>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-outline-secondary my-1 rounded-0 fs-13 fc-black lh-1 btn_34 px-3 mx-1" type="button">대차
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="1" bgcolor="bfc4ce" colspan="101"></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--==========================-->
+                                <!-- 24시간 예약 관련테이블:E -->
+                                <!--==========================-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--=====================================================-->
+                <!-- 프로그레스 바 영역 (기존 erp에서 기능 확인해볼것):S -->
+                <!--=====================================================-->
+
+                <div class="container-fluid px-2">
+                    <div class="d-flex mt-3">
+                        <div class="me-auto"></div>
+                        <div class="btn btn-dark btn-lg rounded-1 px-4 fs-14">반납완료</div>
+                    </div>
+                </div>
+                <!--==================-->
+                <!-- 메인영역표부분:E -->
+                <!--==================-->
+            </div>
+            <!--============-->
+            <!-- 메인영역:E -->
+            <!--============-->
+
+        </div>
+    </div>
+
+    <div class="tab-pane fade bg-white" id="pills-home2" role="tabpanel" aria-labelledby="pills-home2-tab">...
+    </div>
+
+    <div class="tab-pane fade show active bg-white" id="pills-home3" role="tabpanel" aria-labelledby="pills-home3-tab">
+        ...
+    </div>
+
+    <div class="tab-pane fade bg-white" id="pills-home4" role="tabpanel" aria-labelledby="pills-home4-tab">...
+    </div>
+
+
+
+</body>
+
+<!--=============================-->
+<!-- bootstrap_vanila_javascript -->
+<!--=============================-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="bs5/js/bootstrap.min.js"></script>
+
+</html>

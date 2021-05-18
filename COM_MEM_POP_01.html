@@ -1,0 +1,1229 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <!--===========-->
+  <!-- meta tags -->
+  <!--===========-->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!--=======-->
+  <!-- CSS:S -->
+  <!--=======-->
+  <link rel="stylesheet" href="bs5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bs5/css/framework.css">
+  <link rel="stylesheet" href="bs5/css/docs.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <!--=======-->
+  <!-- CSS:E -->
+  <!--=======-->
+  <style>
+    .bd-links .btn::before {
+      width: 1.25em;
+      line-height: 0;
+      content: none !important;
+      transition: transform 0.35s ease;
+      transform-origin: .5em 50%;
+      filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(25deg) brightness(0%) contrast(100%);
+    }
+
+    .bd-links .btn::after {
+      width: 1.25em;
+      line-height: 0;
+      content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+      transition: transform 0.35s ease;
+      transform-origin: .5em 50%;
+      filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(25deg) brightness(0%) contrast(100%);
+    }
+  </style>
+
+  <title>HAPPYCAR_TEST</title>
+</head>
+
+<body>
+  <!--=============-->
+  <!-- 상단 헤더:S -->
+  <!--=============-->
+  <header>
+    <!--============-->
+    <!-- 모달버튼:S -->
+    <!--============-->
+    <div class="conitaner-fluid">
+      <div class="row">
+        <div class="capsule">
+          <center>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              데모용 모달버튼
+            </button>
+          </center>
+        </div>
+      </div>
+    </div>
+    <!--============-->
+    <!-- 모달버튼:E -->
+    <!--============-->
+  </header>
+  <!--=============-->
+  <!-- 상단 헤더:E -->
+  <!--=============-->
+
+  <!--=========================================-->
+  <!-- 모달영역:S(헤더,바디,푸터 인라인스타일) -->
+  <!--=========================================-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+      <div class="modal-content">
+        <!--========-->
+        <!-- 헤더:S -->
+        <!--========-->
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            <span class="fs-5">회원상세</span>
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          </button>
+        </div>
+        <!--========-->
+        <!-- 헤더:E -->
+        <!--========-->
+        <div class="modal-body bg-labgray p-0">
+          <div class="yongtest">
+            <!--=====================================-->
+            <!-- 일단 안쪽에 준비되어있는 긁어온것:S -->
+            <!--=====================================-->
+
+            <body>
+              <!--========================-->
+              <!-- 중앙 네비게이션 내용:S -->
+              <!--========================-->
+              <div class="collapse navbar-collapse">
+                <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                  <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="/">|
+                    </a>
+                  </li>
+                  <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="/">
+                      <div class="wow1">차량제어
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/">
+                      <div class="wow2">관제보기
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="/docs/5.0/examples/">
+                      <div class="wow3">현황
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="https://icons.getbootstrap.com/" target="_blank" rel="noopener">
+                      <div class="wow4">요금계산
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="#" target="_blank" rel="noopener">
+                      <div class="wow5">예약하기
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="#" target="_blank" rel="noopener">
+                      <div class="wow5">예약하기
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="#" target="_blank" rel="noopener">
+                      <div class="wow5">예약하기
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="#" target="_blank" rel="noopener">
+                      <div class="wow5">예약하기
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+                <!--========================-->
+                <!-- 우측 네비게이션 메뉴:S -->
+                <!--========================-->
+                <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+                  <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="https://github.com/twbs" target="_blank" rel="noopener">
+                      <div class="wow_r1">
+                      </div>
+                      <small class="d-md-none ms-2">GitHub
+                      </small>
+                    </a>
+                  </li>
+                  <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="https://twitter.com/getbootstrap" target="_blank" rel="noopener">
+                      <div class="wow_r2">
+                      </div>
+                      <small class="d-md-none ms-2">Twitter
+                      </small>
+                    </a>
+                  </li>
+                  <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="https://bootstrap-slack.herokuapp.com/" target="_blank" rel="noopener">
+                      <div class="wow_r3">
+                      </div>
+                      <small class="d-md-none ms-2">Slack
+                      </small>
+                    </a>
+                  </li>
+                  <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="https://bootstrap-slack.herokuapp.com/" target="_blank" rel="noopener">
+                      <div class="wow_r3">
+                      </div>
+                      <small class="d-md-none ms-2">Slack
+                      </small>
+                    </a>
+                  </li>
+                </ul>
+                <!--========================-->
+                <!-- 우측 네비게이션 메뉴:E -->
+                <!--========================-->
+              </div>
+              <!--========================-->
+              <!-- 중앙 네비게이션 내용:E -->
+              <!--========================-->
+
+              <!--==========================-->
+              <!-- 메인네비 하단 세컨네비:S -->
+              <!--==========================-->
+              <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
+                <div class="container-fluid d-flex align-items-md-center">
+                  <form class="bd-search position-relative me-auto">
+                    <input type="search" class="form-control" id="search-input" placeholder="검색어 입력..." aria-label="Search docs for..." autocomplete="off" data-bd-docs-version="5.0">
+                  </form>
+                  <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ms-2 order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" viewbox="0 0 16 16">
+                      <title>Expand
+                      </title>
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z">
+                      </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-collapse" viewbox="0 0 16 16">
+                      <title>Collapse
+                      </title>
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707l-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </nav>
+              <!--==========================-->
+              <!-- 메인네비 하단 세컨네비:E -->
+              <!--==========================-->
+
+              <!--========================-->
+              <!-- 메인메뉴 및 좌측메뉴:S -->
+              <!--========================-->
+              <div class="container-fluid md-4 bd-layout mt-1 bg-battleshipgray">
+                <!--============-->
+                <!-- 좌측메뉴:S -->
+                <!--============-->
+                <aside class="bd-sidebar bg-battleshipgray px-2">
+                </aside>
+                <!--============-->
+                <!-- 좌측메뉴:E -->
+                <!--============-->
+
+                <!--=================-->
+                <!-- 우측 메인메뉴:S -->
+                <!--=================-->
+                <main class=" px-3 bg-white mt-2 pt-1">
+                  <!--============-->
+                  <!-- 알림수신:S -->
+                  <!--============-->
+                  <div class="d-flex justify-content-end fs-12 mt-3">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input fs-14" type="checkbox" id="flexSwitchCheckDefault">
+                      <label class="form-check-label fs-13 fc-black" for="flexSwitchCheckDefault">모든알림 수신여부 일시정지</label>
+                    </div>
+                  </div>
+                  <!--============-->
+                  <!-- 알림수신:E -->
+                  <!--============-->
+                  <!--=========================-->
+                  <!-- 우측메인 1번 컨테이너:S -->
+                  <!--=========================-->
+                  <div class="container-fluid yong_sample border border-1 mt-2">
+                    <div class="none my-2">
+                      <div class="fs-5">회원관련 정보
+                      </div>
+                    </div>
+                    <div class="row">
+                      <!--============-->
+                      <!-- 1번 포장:S -->
+                      <!--============-->
+                      <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+                        <!--================-->
+                        <!-- 1번 아코디언:S -->
+                        <!--================-->
+                        <div class="accordion" id="accordionExampleOne">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                회원정보 1번
+                              </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExampleOne">
+                              <div class="accordion-body">
+                                <!--============-->
+                                <!-- 1번 칼럼:S -->
+                                <!--============-->
+                                <div class="none">
+                                  <form class="mb-2">
+                                    <label for="text" class="form-label fc-gray-1 fw-light">회원구분
+                                    </label>
+                                    <div class="fs-14">
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <label class="form-check-label  fc-black fw-normal" for="inlineRadio1">개인</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label class="form-check-label  fc-black fw-normal" for="inlineRadio2">가족</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                        <label class="form-check-label fc-black fw-normal" for="inlineRadio3">법인</label>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                  <form class="mb-2">
+                                    <label for="text" class="form-label fc-gray-1 fw-light">회원등급
+                                    </label>
+                                    <div class="fs-14">
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <label class="form-check-label  fc-black fw-normal" for="inlineRadio1">정회원</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label class="form-check-label  fc-black fw-normal" for="inlineRadio2">준회원</label>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">회원유형</label>
+                                      <div class="input-group mb-3">
+                                        <select class="form-select" id="">
+                                          <option selected>일반</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">PCS상담코드</label>
+                                      <div class="input-group mb-3">
+                                        <select class="form-select" id="">
+                                          <option selected>PCS상담코드</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">이름</label>
+                                      <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="" placeholder="황태용(만21세)">
+                                        <h6 class="mt-2 fs-13 fw-500">&nbsp;(만 21세)</h6>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">구 아이디</label>
+                                      <input type="texxt" class="form-control" id="" placeholder="klkl3056" disabled>
+                                    </div>
+                                  </form>
+
+                                  <div class="row">
+                                    <div class="col-12 my-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">생년월일
+                                      </label>
+                                      <input type="date" class="form-control mx-0 my-0" placeholder="yyyy-mm-dd" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                                    </div>
+                                  </div>
+
+                                  <form class="mb-2">
+                                    <label for="text" class="form-label fc-gray-1 fw-light">성별
+                                    </label>
+                                    <div class="fs-14">
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <label class="form-check-label  fc-black fw-normal" for="inlineRadio1">남</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label class="form-check-label  fc-black fw-normal" for="inlineRadio2">여</label>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">직업</label>
+                                      <div class="input-group mb-3">
+                                        <select class="form-select" id="">
+                                          <option selected>-</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">가입경로</label>
+                                      <div class="input-group mb-3">
+                                        <select class="form-select" id="">
+                                          <option selected>-</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">소속 법인</label>
+                                      <div class="input-group mb-3">
+                                        <select class="form-select" id="">
+                                          <option selected>-</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">소속 가족</label>
+                                      <div class="input-group mb-3">
+                                        <select class="form-select" id="">
+                                          <option selected>-</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">사원번호</label>
+                                      <div class="input-group mb-3">
+                                        <select class="form-select" id="">
+                                          <option selected>-</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </form>
+                                </div>
+                                <!--============-->
+                                <!-- 1번 칼럼:E -->
+                                <!--============-->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--================-->
+                        <!-- 1번 아코디언:E -->
+                        <!--================-->
+                      </div>
+                      <!--============-->
+                      <!-- 1번 포장:E -->
+                      <!--============-->
+
+                      <!--============-->
+                      <!-- 2번 포장:S -->
+                      <!--============-->
+                      <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+                        <!--================-->
+                        <!-- 2번 아코디언:S -->
+                        <!--================-->
+                        <div class="accordion" id="accordionExampleTwo">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                회원정보 2번
+                              </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExampleTwo">
+                              <div class="accordion-body">
+                                <!--============-->
+                                <!-- 2번 칼럼:S -->
+                                <!--============-->
+                                <div class="none">
+                                  <form>
+                                    <div class="row">
+                                      <div class="col-4">
+                                        <form>
+                                          <div class="mb-2">
+                                            <label for="text" class="form-label fc-gray-1 fw-light">이메일
+                                            </label>
+                                            <input type="text" class="form-control" id="" placeholder="abcd1234@">
+                                          </div>
+                                        </form>
+                                      </div>
+
+                                      <div class="col-4">
+                                        <form>
+                                          <div class="mb-2">
+                                            <label for="text" class="form-label fc-gray-1 fw-light">&nbsp;&nbsp;&nbsp;
+                                            </label>
+                                            <input type="text" class="form-control" id="" placeholder="naver.com">
+                                          </div>
+                                        </form>
+                                      </div>
+
+                                      <div class="col-4">
+                                        <form>
+                                          <div class="mb-2">
+                                            <label for="text" class="form-label fc-gray-1 fw-light">&nbsp;&nbsp;&nbsp;
+                                            </label>
+                                            <div class="input-group mb-3">
+                                              <select class="form-select" id="">
+                                                <option selected>naver.com</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">전화번호</label>
+                                      <input type="text" class="form-control" id="textinput" placeholder="-" disabled>
+                                    </div>
+                                  </form>
+
+                                  <div class="row">
+                                    <div>
+                                      <label for="text" class="form-label fc-gray-1 fw-light">아이디(휴대전화)
+                                      </label>
+                                      <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="123" aria-label="Recipient's username" aria-describedby="button-addon2" disabled>
+                                        <input type="text" class="form-control" placeholder="123" aria-label="Recipient's username" aria-describedby="button-addon2" disabled>
+                                        <input type="text" class="form-control" placeholder="123" aria-label="Recipient's username" aria-describedby="button-addon2" disabled>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">추천인ID</label>
+                                      <input type="text" class="form-control" id="textinput" placeholder="-">
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">주소</label>
+                                      <div class="input-group mb-1">
+                                        <input type="text" class="form-control" placeholder="40000000866" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <button class="btn btn-dark px-3" type="button" id="button-addon2">우편번호 검색</button>
+                                      </div>
+                                      <input type="text" class="form-control mb-1" id="textinput" placeholder="경기도 성남시 수정구 고등로57(고등동,고등마을 1단지)">
+                                      <input type="text" class="form-control" id="textinput" placeholder="101동 106호">
+                                    </div>
+                                  </form>
+
+                                  <div class="row">
+                                    <div>
+                                      <label for="text" class="form-label fc-gray-1 fw-light">추가 연락처
+                                      </label>
+                                      <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="010" aria-label="Recipient's username" aria-describedby="button-addon2" disabled>
+                                        <input type="text" class="form-control" placeholder="123" aria-label="Recipient's username" aria-describedby="button-addon2" disabled>
+                                        <input type="text" class="form-control" placeholder="1234" aria-label="Recipient's username" aria-describedby="button-addon2" disabled>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div>
+                                      <label for="text" class="form-label fc-gray-1 fw-light">T-Money 카드번호
+                                      </label>
+                                      <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="9999" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <input type="text" class="form-control" placeholder="9999" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <input type="text" class="form-control" placeholder="9999" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <input type="text" class="form-control" placeholder="9999" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <button class="btn btn-dark px-2" type="button" id="button-addon2">수정</button>
+
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">회원 가입일 (정회원 인증일)</label>
+                                      <input type="text" class="form-control" id="textinput" placeholder="2020.10.22(2021.02.19)" disabled>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">본인인증여부</label>
+                                      <input type="text" class="form-control" id="textinput" placeholder="미인증" disabled>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">본인인증일</label>
+                                      <input type="text" class="form-control" id="textinput" placeholder="-" disabled>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                              <!--============-->
+                              <!-- 2번 칼럼:E -->
+                              <!--============-->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--============-->
+                      <!-- 2번 포장:E -->
+                      <!--============-->
+
+                      <!--============-->
+                      <!-- 3번 포장:S -->
+                      <!--============-->
+                      <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+                        <!--================-->
+                        <!-- 3번 아코디언:S -->
+                        <!--================-->
+                        <div class="accordion" id="accordionExampleThree">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                회원정보 3번
+                              </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExampleThree">
+                              <div class="accordion-body">
+                                <!--============-->
+                                <!-- 3번 칼럼:S -->
+                                <!--============-->
+                                <div class="none">
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">비밀번호 변경일 (비밀번호 연장일)</label>
+                                      <input type="text" class="form-control" id="textinput" placeholder="2020.10.22(2021.02.19)" disabled>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">최근 로그인 일시</label>
+                                      <input type="text" class="form-control" id="textinput" placeholder="-" disabled>
+                                    </div>
+                                  </form>
+
+                                  <form class="mb-2">
+                                    <label for="text" class="form-label fc-gray-1 fw-light">SMS 수신동의 여부
+                                    </label>
+                                    <div class="fs-14">
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <label class="form-check-label  fc-black fw-normal" for="inlineRadio1">수신</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label class="form-check-label  fc-black fw-normal" for="inlineRadio2">수신 안함</label>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                  <form class="mb-2">
+                                    <label for="text" class="form-label fc-gray-1 fw-light">E-mail 수신여부
+                                    </label>
+                                    <div class="fs-14">
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <label class="form-check-label  fc-black fw-normal" for="inlineRadio1">수신</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label class="form-check-label  fc-black fw-normal" for="inlineRadio2">수신 안함</label>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                  <form class="mb-2">
+                                    <label for="text" class="form-label fc-gray-1 fw-light">SMS 발송여부
+                                    </label>
+                                    <div class="fs-14">
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <label class="form-check-label  fc-black fw-normal" for="inlineRadio1">수신</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label class="form-check-label  fc-black fw-normal" for="inlineRadio2">수신 안함</label>
+                                      </div>
+                                    </div>
+                                  </form>
+
+
+
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">대표BM
+                                      </label>
+                                      <div class="input-group mb-3">
+                                        <select class="form-select" id="">
+                                          <option selected>행복카</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                        <button class="btn btn-dark px-3" type="button" id="button-addon2">BM 관리</button>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">멤버십 등급</label>
+                                      <div class="input-group mb-3">
+                                        <select class="form-select" id="">
+                                          <option selected>ECO</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">나의 대여존</label>
+                                      <div class="input-group mb-1">
+                                        <select class="form-select" id="">
+                                          <option selected>성남고등 (행복주택)</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                      </div>
+                                      <div class="input-group mb-1">
+                                        <select class="form-select" id="">
+                                          <option selected>대여존2</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                      </div>
+                                      <div class="input-group mb-2">
+                                        <select class="form-select" id="">
+                                          <option selected>대여존3</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                </div>
+                                <!--============-->
+                                <!-- 3번 칼럼:E -->
+                                <!--============-->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--================-->
+                        <!-- 3번 아코디언:E -->
+                        <!--================-->
+                      </div>
+                      <!--============-->
+                      <!-- 3번 포장:E -->
+                      <!--============-->
+
+                      <!--============-->
+                      <!-- 4번 포장:S -->
+                      <!--============-->
+                      <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+                        <!--================-->
+                        <!-- 4번 아코디언:S -->
+                        <!--================-->
+                        <div class="accordion" id="accordionExampleFour">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                회원정보 4번
+                              </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#accordionExampleFour">
+                              <div class="accordion-body">
+                                <!--============-->
+                                <!-- 4번 칼럼:S -->
+                                <!--============-->
+                                <div class="none">
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">싸인 이미지</label>
+                                      <div class="input-group">
+                                        <input type="file" class="form-control" id="">
+                                        <button class="btn py-0 border-secondary rounded-end fs-13" type="button">X</button>
+                                        <img class="col-12" src="">
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">회원비고</label>
+                                      <div class="input-group mb-1">
+                                        <select class="form-select" id="">
+                                          <option selected>-</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                      </div>
+                                      <textarea class="form-control" id="" rows="3" placeholder="-"></textarea>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">회원DID</label>
+                                      <input type="text" class="form-control" id="textinput" placeholder="-">
+                                    </div>
+                                  </form>
+                                  <!--03-29업데이트-->
+                                  <form class="mb-2">
+                                    <label for="text" class="form-label fc-gray-1 fw-light">간편 로그인 연동
+                                    </label>
+                                    <div class="fs-14 fw-normal">
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1 ">카카오</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">네이버</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">Apple</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">Google</label>
+                                      </div>
+                                    </div>
+                                  </form>
+                                  <!--03-29업데이트-->
+
+                                </div>
+                                <!--============-->
+                                <!-- 4번 칼럼:E -->
+                                <!--============-->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--================-->
+                        <!-- 4번 아코디언:E -->
+                        <!--================-->
+                      </div>
+                      <!--============-->
+                      <!-- 4번 포장:E -->
+                      <!--============-->
+                    </div>
+                  </div>
+                  <!--=========================-->
+                  <!-- 우측메인 1번 컨테이너:E -->
+                  <!--=========================-->
+
+                  <!--=========================-->
+                  <!-- 우측메인 2번 컨테이너:S -->
+                  <!--=========================-->
+                  <div class="container-fluid yong_sample border border-1 mt-3">
+                    <div class="none my-3">
+                      <div class="fs-5">운전면허 정보</div>
+                    </div>
+                    <div class="row">
+                      <!--============-->
+                      <!-- 5번 포장:S -->
+                      <!--============-->
+                      <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+                        <!--================-->
+                        <!-- 5번 아코디언:S -->
+                        <!--================-->
+                        <div class="accordion" id="accordionExampleFive">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                면허정보 1번
+                              </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse show" aria-labelledby="headingFive" data-bs-parent="#accordionExampleFive">
+                              <div class="accordion-body">
+                                <!--============-->
+                                <!-- 5번 칼럼:S -->
+                                <!--============-->
+                                <div class="none">
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">면허종류</label>
+                                      <div class="input-group mb-3">
+                                        <select class="form-select" id="">
+                                          <option selected>2종 보통</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">면허증 승인</label>
+                                      <div class="input-group mb-3">
+                                        <div class="fs-13 mt-2 fw-500">면허증이 정상적으로 승인되었습니다.</div>
+                                        <button class="ms-auto btn btn-dark px-2" type="button" id="button-addon2">취소</button>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">면허증 진위여부 확인</label>
+                                      <div>
+                                        <button type="button" class="btn btn-link p-0">링크 이동</button>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                </div>
+                                <!--============-->
+                                <!-- 5번 칼럼:E -->
+                                <!--============-->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--================-->
+                        <!-- 5번 아코디언:E -->
+                        <!--================-->
+                      </div>
+                      <!--============-->
+                      <!-- 5번 포장:E -->
+                      <!--============-->
+
+                      <!--============-->
+                      <!-- 6번 포장:S -->
+                      <!--============-->
+                      <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+                        <!--================-->
+                        <!-- 6번 아코디언:S -->
+                        <!--================-->
+                        <div class="accordion" id="accordionExampleSix">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                면허정보 2번
+                              </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse show" aria-labelledby="headingSix" data-bs-parent="#accordionExampleSix">
+                              <div class="accordion-body">
+                                <!--============-->
+                                <!-- 6번 칼럼:S -->
+                                <!--============-->
+                                <div class="none">
+                                  <form>
+                                    <div class="mb-2">
+                                      <label for="text" class="form-label fc-gray-1 fw-light">면허증 번호</label>
+                                      <div class="input-group mb-3">
+                                        <select class="form-select" id="">
+                                          <option selected>14</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                        <input type="text" class="form-control" placeholder="19-602244-19" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <button class="btn btn-dark px-3" type="button" id="button-addon2">수정</button>
+                                      </div>
+                                    </div>
+                                  </form>
+
+                                </div>
+                                <!--============-->
+                                <!-- 6번 칼럼:E -->
+                                <!--============-->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--================-->
+                        <!-- 6번 아코디언:E -->
+                        <!--================-->
+                      </div>
+                      <!--============-->
+                      <!-- 6번 포장:E -->
+                      <!--============-->
+
+                      <!--============-->
+                      <!-- 7번 포장:S -->
+                      <!--============-->
+                      <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+                        <!--================-->
+                        <!-- 7번 아코디언:S -->
+                        <!--================-->
+                        <div class="accordion" id="accordionExampleSeven">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSeven">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                면허정보 3번
+                              </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse show" aria-labelledby="headingSeven" data-bs-parent="#accordionExampleSeven">
+                              <div class="accordion-body">
+                                <!--============-->
+                                <!-- 7번 칼럼:S -->
+                                <!--============-->
+                                <div class="none">
+                                  <div class="mb-2">
+                                    <label for="text" class="form-label fc-gray-1 fw-light">면허 발급일자
+                                    </label>
+                                    <input type="date" class="form-control mx-0 my-0" placeholder="최초 등록일을 선택해주세요" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                                  </div>
+
+
+
+                                </div>
+                                <!--============-->
+                                <!-- 7번 칼럼:E -->
+                                <!--============-->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--================-->
+                        <!-- 7번 아코디언:E -->
+                        <!--================-->
+                      </div>
+                      <!--============-->
+                      <!-- 7번 포장:E -->
+                      <!--============-->
+
+                      <!--============-->
+                      <!-- 8번 포장:S -->
+                      <!--============-->
+                      <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+                        <!--================-->
+                        <!-- 8번 아코디언:S -->
+                        <!--================-->
+                        <div class="accordion" id="accordionExampleEight">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingEight">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                                면허정보 4번
+                              </button>
+                            </h2>
+                            <div id="collapseEight" class="accordion-collapse collapse show" aria-labelledby="headingEight" data-bs-parent="#accordionExampleEight">
+                              <div class="accordion-body">
+                                <!--============-->
+                                <!-- 8번 칼럼:S -->
+                                <!--============-->
+                                <div class="none">
+                                  <div class="mb-2">
+                                    <label for="text" class="form-label fc-gray-1 fw-light">적성기간 만료일
+                                    </label>
+                                    <input type="date" class="form-control mx-0 my-0" placeholder="최초 등록일을 선택해주세요" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                                  </div>
+                                </div>
+                                <!--============-->
+                                <!-- 8번 칼럼:E -->
+                                <!--============-->
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--================-->
+                        <!-- 8번 아코디언:E -->
+                        <!--================-->
+
+                      </div>
+                      <!--============-->
+                      <!-- 8번 포장:E -->
+                      <!--============-->
+
+                    </div>
+                  </div>
+                  <!--=========================-->
+                  <!-- 우측메인 2번 컨테이너:S -->
+                  <!--=========================-->
+
+                  <!--=========================-->
+                  <!-- 우측메인 3번 컨테이너:S -->
+                  <!--=========================-->
+                  <div class="container-fluid backdrop border border-1 mt-3">
+                    <div class="none my-3">
+                      <div class="fs-5">결제관련 정보
+                      </div>
+                    </div>
+                    <div class="row">
+                      <!--============-->
+                      <!-- 9번 포장:S -->
+                      <!--============-->
+                      <div class="col-xxl-12 col-md-6 col-xs-12 my-2">
+                        <!--================-->
+                        <!-- 9번 아코디언:S -->
+                        <!--================-->
+                        <div class="accordion" id="accordionExampleNine">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingNine">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                                결제정보 1번
+                              </button>
+                            </h2>
+                            <div id="collapseNine" class="accordion-collapse collapse show" aria-labelledby="headingNine" data-bs-parent="#accordionExampleNine">
+                              <div class="accordion-body">
+                                <!--============-->
+                                <!-- 9번 칼럼:S -->
+                                <!--============-->
+                                <div class="row">
+                                  <div class="d-grid gap-2 d-md-block">
+                                    <div class="btn btn-light border rounded-pill mx-1 fs-13">
+                                      <b>대표카드</b> : [개인카드] BC-2021.04.05
+                                    </div>
+                                    <div class="btn btn-light border rounded-pill mx-1 fs-13">
+                                      [개인카드] BC-2021.03.10
+                                    </div>
+                                    <div class="btn btn-light border rounded-pill mx-1 fs-13">
+                                      [개인카드] BC-2021.03.10
+                                    </div>
+                                    <div class="btn btn-light border rounded-pill mx-1 fs-13">
+                                      [개인카드] BC-2021.03.10
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!--============-->
+                              <!-- 9번 칼럼:E -->
+                              <!--============-->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--================-->
+                      <!-- 9번 아코디언:E -->
+                      <!--================-->
+                    </div>
+                    <!--============-->
+                    <!-- 9번 포장:E -->
+                    <!--============-->
+                  </div>
+              </div>
+              <!--=========================-->
+              <!-- 우측메인 3번 컨테이너:S -->
+              <!--=========================-->
+              <div class=" d-flex flex-row-reverse my-3">
+                <!--03-29업데이트-->
+                <button type="button" class="btn btn-dark btn-lg fs-14 px-4 py-2 ms-3">저장
+                </button>
+                <button type="button" class="btn btn-secondary btn-lg fs-14 px-4 py-2 ms-3">취소
+                </button>
+                <button type="button" class="btn btn-secondary btn-lg fs-14 px-4 py-2 ms-3">준회원 강등
+                </button>
+                <button type="button" class="btn btn-secondary btn-lg fs-14 px-4 py-2">강제탈퇴
+                </button>
+              </div>
+              <!--03-29업데이트-->
+
+              </main>
+              <!--=================-->
+              <!-- 우측 메인메뉴:E -->
+              <!--=================-->
+
+          </div>
+          <!--========================-->
+          <!-- 메인메뉴 및 좌측메뉴:E -->
+          <!--========================-->
+
+</body>
+<!--=====================================-->
+<!-- 일단 안쪽에 준비되어있는 긁어온것:E -->
+<!--=====================================-->
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+<!--=========================================-->
+<!-- 모달영역:E(헤더,바디,푸터 인라인스타일) -->
+<!--=========================================-->
+</body>
+
+<!--=============================-->
+<!-- bootstrap_vanila_javascript -->
+<!--=============================-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="bs5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!--==========================-->
+<!-- 레이아웃 공통영역 호출:S -->
+<!--==========================-->
+<script>
+  $(".bd-sidebar").load("framework/COM_MEM_POP_sidebar.html");
+</script>
+<!--==========================-->
+<!-- 레이아웃 공통영역 호출:E -->
+<!--==========================-->
+
+</html>

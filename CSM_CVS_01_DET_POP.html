@@ -1,0 +1,253 @@
+<!doctype html>
+
+<!--================================================================-->
+<!-- (xxl=1400px이상에서 작동, pc), (md=768px이상에서 작동, 패드):S -->
+<!--================================================================-->
+
+<html lang="ko">
+
+<head>
+    <!--===========-->
+    <!-- meta tags -->
+    <!--===========-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--===============-->
+    <!-- Bootstrap CSS -->
+    <!--===============-->
+    <link rel="stylesheet" href="bs5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bs5/css/framework.css">
+    <link rel="stylesheet" href="bs5/css/docs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <title>HAPPYCAR_TEST</title>
+</head>
+
+<body>
+    <!--=============-->
+    <!-- 상단 헤더:S -->
+    <!--=============-->
+    <header>
+        <div class="px-3 py-3" style="background-color:aliceblue; text-align: center;">헤더영역 없음</div>
+    </header>
+    <!--=============-->
+    <!-- 상단 헤더:E -->
+    <!--=============-->
+
+    <!--============-->
+    <!-- 모달버튼:S -->
+    <!--============-->
+    <div class="conitaner-fluid">
+        <div class="row">
+            <div class="capsule">
+                <center>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        예약정보
+                    </button>
+                </center>
+            </div>
+        </div>
+    </div>
+    <!--============-->
+    <!-- 모달버튼:E -->
+    <!--============-->
+
+    <!--=========================================-->
+    <!-- 모달영역:S(헤더,바디,푸터 인라인스타일) -->
+    <!--=========================================-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="exampleModalLabel">1:1 문의상세(수정)
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body" style="background-color:#; padding: 0px;">
+
+                    <div class="yongtest">
+                        <!--==================-->
+                        <!-- 모달 본문 내용:S -->
+                        <!--==================-->
+
+                        <body>
+                            <!--===================================-->
+                            <!-- 테이블표 위쪽 드롭다운 메뉴세트2:S -->
+                            <!--===================================-->
+                            <div class="backdrop">
+                                <div class="card-body bg-palegray mb-4 mt-3 pb-0">
+
+                                    <div class="container-fluid ">
+                                        <h5 class="modal-title fw-500 mb-3">문의내용</h5>
+                                        <!--==========================-->
+                                        <!-- 상담정보 상담유형 헤더:S -->
+                                        <!--==========================-->
+                                        <div class="row mt-4">
+                                            <div class="col-6">
+                                                <form>
+                                                    <div class="mb-2">
+                                                        <label for="text" class="form-label fc-gray-1 fw-light">문의유형</label>
+                                                        <div class="input-group mb-3">
+                                                            <input type="text" class="form-control" id="" placeholder="회원가입문의" disabled>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-6">
+                                                <form>
+                                                    <div class="mb-2">
+                                                        <label for="text" class="form-label fc-gray-1 fw-light">등록일</label>
+                                                        <div class="input-group mb-3">
+                                                            <input type="text" class="form-control" id="" placeholder="2020-12-12 11:11:11" disabled>
+                                                        </div>
+                                                    </div>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                        <!--==========================-->
+                                        <!-- 상담정보 상담유형 헤더:E -->
+                                        <!--==========================-->
+                                        <!--==========================-->
+                                        <!-- 상담정보 상담유형 헤더:S -->
+                                        <!--==========================-->
+                                        <div class="row mt-4">
+                                            <div class="col-6">
+                                                <form>
+                                                    <div class="mb-2">
+                                                        <label for="text" class="form-label fc-gray-1 fw-light">고객이름</label>
+                                                        <div class="input-group mb-3">
+                                                            <input type="text" class="form-control" id="" placeholder="홍길동" disabled>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-6">
+                                                <form>
+                                                    <div class="mb-2">
+                                                        <label for="text" class="form-label fc-gray-1 fw-light">아이디</label>
+                                                        <div class="input-group mb-3">
+                                                            <input type="text" class="form-control" id="" placeholder="010-1234-1234" disabled>
+                                                        </div>
+                                                    </div>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                        <!--==========================-->
+                                        <!-- 상담정보 상담유형 헤더:E -->
+                                        <!--==========================-->
+                                        <div class="row">
+                                            <div class="py-2">
+                                                <label for="text" class="form-label fc-gray-1 fw-light">등록내용</label>
+                                                <textarea class="form-control" id="" rows="5" placeholder="회원가입을 위해 운전면허 등록, 카드 등록 후 가입 버튼을 눌렀는데 운전면허가 등록이 되어 있다고 나옵니다.
+저 가입 한 적 없어요. 이상합니다. 바로 확인해주세요
+
+" disabled></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="py-2">
+                                                <label for="text" class="form-label fc-gray-1 fw-light">첨부파일</label>
+                                                <div> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--===================================-->
+                                    <!-- 테이블표 위쪽 드롭다운 메뉴세트2:E -->
+                                    <!--===================================-->
+
+                                    <!--================================================================-->
+                                    <!-- (xxl=1400px이상에서 작동, pc), (md=768px이상에서 작동, 패드):S -->
+                                    <!--================================================================-->
+                                    <!--=================================-->
+                                    <!-- 컨트롤러 영역 하단 테이블세트:S -->
+                                    <!--=================================-->
+
+                                </div>
+
+                                <div class="card-body bg-palegray">
+                                    <div class="container-fluid ">
+                                        <div class="row">
+                                            <h5 class="modal-title fw-500 mb-4">답변내용</h5>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <form>
+                                                    <div class="mb-2">
+                                                        <label for="text" class="form-label fc-gray-1 fw-light">답변자
+                                                        </label>
+                                                        <div class="input-group mb-3">
+                                                            <select class="form-select" id="">
+                                                                <option selected>이창희</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </form>
+
+                                            </div>
+                                            <div class="col-6">
+                                                <form>
+                                                    <div class="mb-2">
+                                                        <label for="text" class="form-label fc-gray-1 fw-light">답변일자</label>
+                                                        <div class="input-group mb-3">
+                                                            <input type="text" class="form-control" id="" placeholder="2020-11-11 11:11:11" disabled>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                        <div class="py-2">
+                                            <label for="text" class="form-label fc-gray-1 fw-light">답변내용<span class="fc-danger">*</span></label>
+                                            <textarea class="form-control" id="" rows="5" placeholder="회원가입을 위해 운전면허 등록, 카드 등록 후 가입 버튼을 눌렀는데 운전면허가 등록이 되어 있다고 나옵니다.
+저 가입 한 적 없어요. 이상합니다. 바로 확인해주세요
+
+"></textarea>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="py-2">
+                                                <label for="text" class="form-label fc-gray-1 fw-light">첨부파일</label>
+                                            </div>
+
+                                        </div>
+                                        <button type="button" class="btn btn-dark rounded-0 fs-13 px-4">파일선택</button>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" d-flex flex-row-reverse my-3 me-4">
+                                <button type="button" class="btn btn-dark btn-lg fs-14 px-4 py-2 ms-3">저장
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-lg fs-14 px-4 py-2 ms-3">취소
+                                </button>
+                            </div>
+                        </body>
+                        <!--==================-->
+                        <!-- 모달 본문 내용:E -->
+                        <!--==================-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--=========================================-->
+    <!-- 모달영역:E(헤더,바디,푸터 인라인스타일) -->
+    <!--=========================================-->
+
+</body>
+
+<!--=============================-->
+<!-- bootstrap_vanila_javascript -->
+<!--=============================-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="bs5/js/bootstrap.min.js"></script>
+
+</html>

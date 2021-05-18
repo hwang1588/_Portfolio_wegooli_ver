@@ -1,0 +1,373 @@
+<!doctype html>
+
+<!--================================================================-->
+<!-- (xxl=1400px이상에서 작동, pc), (md=768px이상에서 작동, 패드):S -->
+<!--================================================================-->
+<html lang="ko">
+
+<head>
+    <!--===========-->
+    <!-- meta tags -->
+    <!--===========-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--===============-->
+    <!-- Bootstrap CSS -->
+    <!--===============-->
+    <link rel="stylesheet" href="bs5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bs5/css/framework.css">
+    <link rel="stylesheet" href="bs5/css/docs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <title>HAPPYCAR_TEST</title>
+</head>
+
+<body>
+    <!--=============-->
+    <!-- 상단 헤더:S -->
+    <!--=============-->
+    <header>
+        <div class="px-3 py-3" style="background-color:aliceblue; text-align: center;">헤더영역 없음</div>
+    </header>
+    <!--=============-->
+    <!-- 상단 헤더:E -->
+    <!--=============-->
+
+    <!--============-->
+    <!-- 모달버튼:S -->
+    <!--============-->
+    <div class="conitaner-fluid">
+        <div class="row">
+            <div class="capsule">
+                <center>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        팝업 오픈버튼
+                    </button>
+                </center>
+            </div>
+        </div>
+    </div>
+    <!--============-->
+    <!-- 모달버튼:E -->
+    <!--============-->
+
+    <!--=========================================-->
+    <!-- 모달영역:S(헤더,바디,푸터 인라인스타일) -->
+    <!--=========================================-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">예약상세 및 운행기록
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="yongtest">
+                        <!--==================-->
+                        <!-- 모달 본문 내용:S -->
+                        <!--==================-->
+
+                        <body>
+                            <!--=====================-->
+                            <!-- DataTales Example:S -->
+                            <!--=====================-->
+                            <div class="container-fluid mt-3">
+                                <div class="row">
+                                    <div class="col-xxl-8">
+                                        <!--===================================-->
+                                        <!-- 테이블표 위쪽 드롭다운 메뉴세트2:S -->
+                                        <!--===================================-->
+                                        <div class="card-body bg-palegray mt-2">
+                                            <div class="container-fluid">
+                                                <div>
+                                                    <div class="fw-bold mb-3">예약이력</div>
+                                                    <div class="col-xxl-12 col-md-12 col-12">
+                                                        <div class="overflow-auto">
+                                                            <table class="table newtable-2 fs-13 fw-normal border text-start" style="min-width: 500px;">
+                                                                <thead>
+                                                                    <tr class="table-light border">
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary border-bottom-0 text-start">이용번호</th>
+                                                                        <td class="border border-secondary core text-start">윤성환</td>
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">이름(아이디)</th>
+                                                                        <td class="border border-secondary core text-start">홍길동(abcd1234)</td>
+                                                                    </tr>
+                                                                </thead>
+                                                                <thead>
+                                                                    <tr class="table-light border">
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">전화번호</th>
+                                                                        <td class="border border-secondary core text-start">010-1234-1234</td>
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">결제카드종류</th>
+                                                                        <td class="border border-secondary core text-start">개인카드(법인명:-)</td>
+                                                                    </tr>
+                                                                </thead>
+                                                                <thead>
+                                                                    <tr class="table-light border">
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start align-middle">예약시간</th>
+                                                                        <td class="border border-secondary core text-start">
+                                                                            <p>시작 : 2020.11.11 22:22:22</p>
+                                                                            <p>종료 : 2020.11.11 22:22:22</p>
+                                                                            <p class="m-0">(170분)</p>
+                                                                        </td>
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start align-middle">사용시간</th>
+                                                                        <td class="border border-secondary core text-start">
+                                                                            <p>시작 : 2020.11.11 22:22:22</p>
+                                                                            <p>종료 : 2020.11.11 22:22:22</p>
+                                                                            <p class="m-0">(170분)</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </thead>
+                                                                <thead>
+                                                                    <tr class="table-light border">
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">대여지역</th>
+                                                                        <td class="border border-secondary core text-start">고려대 하나스퀘어</td>
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">반납지역</th>
+                                                                        <td class="border border-secondary core text-start">고려대 하니스퀘어</td>
+                                                                    </tr>
+                                                                </thead>
+                                                                <thead>
+                                                                    <tr class="table-light border">
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">차종</th>
+                                                                        <td class="border border-secondary core text-start">올뉴모닝</td>
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">차량번호</th>
+                                                                        <td class="border border-secondary core text-start">101하1090</td>
+                                                                    </tr>
+                                                                </thead>
+                                                                <thead>
+                                                                    <tr class="table-light border">
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">주행거리</th>
+                                                                        <td class="border border-secondary core text-start">10KM</td>
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">요금제</th>
+                                                                        <td class="border border-secondary core text-start">시간요금</td>
+                                                                    </tr>
+                                                                </thead>
+                                                                <thead>
+                                                                    <tr class="table-light border">
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">예약요금</th>
+                                                                        <td class="border border-secondary core text-start">12,120</td>
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">반납지연요금</th>
+                                                                        <td class="border border-secondary core text-start">0</td>
+                                                                    </tr>
+                                                                </thead>
+                                                                <thead>
+                                                                    <tr class="table-light border">
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">연장요금</th>
+                                                                        <td class="border border-secondary core text-start">2,700</td>
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">거리요금</th>
+                                                                        <td class="border border-secondary core text-start">1,400</td>
+                                                                    </tr>
+                                                                </thead>
+                                                                <thead>
+                                                                    <tr class="table-light border">
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">총요금</th>
+                                                                        <td class="border border-secondary core text-start">16,220</td>
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">프로모션 종류</th>
+                                                                        <td class="border border-secondary core text-start">행복존 할인</td>
+                                                                    </tr>
+                                                                </thead>
+                                                                <thead>
+                                                                    <tr class="table-light border">
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">쿠폰</th>
+                                                                        <td class="border border-secondary core text-start">0</td>
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">결제일시</th>
+                                                                        <td class="border border-secondary core text-start">-</td>
+                                                                    </tr>
+                                                                </thead>
+                                                                <thead>
+                                                                    <tr class="table-light border">
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">결제요금</th>
+                                                                        <td class="border border-secondary core text-start">0</td>
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">등록일</th>
+                                                                        <td class="border border-secondary core text-start">2020.11.06 11:33:31</td>
+                                                                    </tr>
+                                                                </thead>
+                                                                <thead>
+                                                                    <tr class="table-light border">
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">취소일</th>
+                                                                        <td class="border border-secondary core text-start">-</td>
+                                                                        <th scope="col" class="fw-normal border border-secondary text-secondary text-start">취소패널티</th>
+                                                                        <td class="border border-secondary core text-start">0</td>
+                                                                    </tr>
+                                                                </thead>
+                                                            </table>
+                                                        </div>
+                                                        <!--================-->
+                                                        <!-- 표 하단 목차:S -->
+                                                        <!--================-->
+                                                        <div class="container-flluid mt-1">
+                                                            <div class="row">
+                                                                <div class="container-fluid">
+                                                                    <div class="row">
+                                                                        <div class="col-xxl-12 col-md-12 col-12">
+                                                                            <div class="overflow-auto">
+                                                                                <table class="table newtable-2 fs-13 fw-normal border" style="min-width: 500px;">
+                                                                                    <thead>
+                                                                                        <tr class="table-light border">
+                                                                                            <th scope="col" class="fw-normal border border-secondary"></th>
+                                                                                            <th scope="col" class="fw-normal border border-secondary">예약일시</th>
+                                                                                            <th scope="col" class="fw-normal border border-secondary">반납일시</th>
+                                                                                            <th scope="col" class="fw-normal border border-secondary">예약요금</th>
+                                                                                            <th scope="col" class="fw-normal border border-secondary">반납지연요금</th>
+                                                                                            <th scope="col" class="fw-normal border border-secondary">연장요금</th>
+                                                                                            <th scope="col" class="fw-normal border border-secondary">거리요금</th>
+                                                                                            <th scope="col" class="fw-normal border border-secondary">취소 패널티</th>
+                                                                                            <th scope="col" class="fw-normal border border-secondary">등록일</th>
+                                                                                            <th scope="col" class="fw-normal border border-secondary">상태</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                        <tr class="table-pointer" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">
+                                                                                            <th scope="row" class="table-light fw-normal border border-secondary">1</th>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">150,000</td>
+                                                                                            <td class="border core">0</td>
+                                                                                            <td class="border core">17,430</td>
+                                                                                            <td class="border core">17,040</td>
+                                                                                            <td class="border core">0</td>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">이용요금결제
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="table-pointer" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">
+                                                                                            <th scope="row" class="table-light fw-normal border border-secondary">1</th>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">150,000</td>
+                                                                                            <td class="border core">0</td>
+                                                                                            <td class="border core">17,430</td>
+                                                                                            <td class="border core">17,040</td>
+                                                                                            <td class="border core">0</td>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">이용요금결제
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="table-pointer" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">
+                                                                                            <th scope="row" class="table-light fw-normal border border-secondary">1</th>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">150,000</td>
+                                                                                            <td class="border core">0</td>
+                                                                                            <td class="border core">17,430</td>
+                                                                                            <td class="border core">17,040</td>
+                                                                                            <td class="border core">0</td>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">이용요금결제
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="table-pointer" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">
+                                                                                            <th scope="row" class="table-light fw-normal border border-secondary">1</th>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">150,000</td>
+                                                                                            <td class="border core">0</td>
+                                                                                            <td class="border core">17,430</td>
+                                                                                            <td class="border core">17,040</td>
+                                                                                            <td class="border core">0</td>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">이용요금결제
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="table-pointer" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">
+                                                                                            <th scope="row" class="table-light fw-normal border border-secondary">1</th>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">150,000</td>
+                                                                                            <td class="border core">0</td>
+                                                                                            <td class="border core">17,430</td>
+                                                                                            <td class="border core">17,040</td>
+                                                                                            <td class="border core">0</td>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">이용요금결제
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="table-pointer" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">
+                                                                                            <th scope="row" class="table-light fw-normal border border-secondary">1</th>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">150,000</td>
+                                                                                            <td class="border core">0</td>
+                                                                                            <td class="border core">17,430</td>
+                                                                                            <td class="border core">17,040</td>
+                                                                                            <td class="border core">0</td>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">이용요금결제
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="table-pointer" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">
+                                                                                            <th scope="row" class="table-light fw-normal border border-secondary">1</th>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">150,000</td>
+                                                                                            <td class="border core">0</td>
+                                                                                            <td class="border core">17,430</td>
+                                                                                            <td class="border core">17,040</td>
+                                                                                            <td class="border core">0</td>
+                                                                                            <td class="border core">2020.11.11.11 11:04:22</td>
+                                                                                            <td class="border core">이용요금결제
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--================-->
+                                                        <!-- 표 하단 목차:E -->
+                                                        <!--================-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--===================================-->
+                                        <!-- 테이블표 위쪽 드롭다운 메뉴세트2:E -->
+                                        <!--===================================-->
+                                    </div>
+                                    <div class="col-xxl-4">
+                                        <div class="card-body bg-palegray">
+                                            <!--================================================================================================-->
+                                            <!-- 구글지도(향후 지도api와 관련 이슈가 있을 수 있음 현재 높이값이 고정값으로 박혀있음 확인 필요:S -->
+                                            <!--================================================================================================-->
+                                            <div class="ratio ratio-1x1" style="height: 1300px;">
+                                                <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=%EB%85%BC%ED%98%84%EC%A0%95%EC%8B%A0%EA%B3%BC%EC%9D%98%EC%9B%90&t=&z=17&ie=UTF8&iwloc=&output=embed">
+                                                </iframe>
+                                            </div>
+                                            <!--================================================================================================-->
+                                            <!-- 구글지도(향후 지도api와 관련 이슈가 있을 수 있음 현재 높이값이 고정값으로 박혀있음 확인 필요:S -->
+                                            <!--================================================================================================-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--=====================-->
+                            <!-- DataTales Example:E -->
+                            <!--=====================-->
+                        </body>
+                        <!--==================-->
+                        <!-- 모달 본문 내용:E -->
+                        <!--==================-->
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--=========================================-->
+    <!-- 모달영역:E(헤더,바디,푸터 인라인스타일) -->
+    <!--=========================================-->
+
+</body>
+
+<!--=============================-->
+<!-- bootstrap_vanila_javascript -->
+<!--=============================-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="bs5/js/bootstrap.min.js"></script>
+
+</html>

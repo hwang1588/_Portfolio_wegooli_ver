@@ -1,0 +1,5769 @@
+
+<style>
+/* 총건 오른쪽 예약상태에 따른 컬러 사이즈 지정해주는 부분 */
+.revColorDivOutSize{
+	width:130px;
+	height:44px;
+	display:table;
+	float:left;
+}
+.revColorDivInSize{
+	width:100%;
+	height:auto;
+	display:table-cell;
+	vertical-align:middle;
+}
+.revColorSize{
+	width:52px;
+	height:18px;
+	display:inline-block;
+	border:1px solid black;
+	border-radius:2px;
+}
+.revTextSize{
+	width:60px;
+	height:25px;
+	display:inline-block;
+	padding-top:7px;
+}
+/* 테이블에 보여지는 예약상태 부분 (예약상태에 해당하는 컬러 지정해주는 부분) */
+/* 여기서 색칠되는 부분의 크기를 조절할 수 있다. revTdLine는 색을 감싸는 크기, td안의 색칠되는 부분의 크기 */
+.revTdLine{
+	width:20px;
+	height:30px;
+	border-right:1px dotted #bfc4ce;
+}
+.RESERV{
+	height:18px;
+	background-color:#1266FF;
+}
+.USING{
+	height:18px;
+	background-color:#6CC0FF;
+}
+.END{
+	height:18px;
+	background-color:#B4FFFF;
+}
+.WAIT{
+	height:18px;
+	background-color:#FFDC46;
+}
+.DELAY{
+	height:18px;
+	background-color:#FF5050;
+}
+</style>
+
+
+
+                    <table id="staticTable" width="100%" border="0" cellpadding="0" cellspacing="0">
+			        	<thead>
+			        	<tr>
+							<td height="1" bgcolor="bfc4ce" colspan="101"></td>
+						</tr>
+			            <tr height="27" align="center" bgcolor="eeeff3">
+			            	<td style="width:5%"><strong>소유회사</strong></td>
+			            	<td style="width:5%"><strong>대여존</strong></td>
+			            	<td style="width:3%"><strong>차량번호</strong></td>
+			            	<td style="width:2%"><strong>차종</strong></td>
+			            	<td style="width:5%"><strong>상태</strong></td>
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>00</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>01</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>02</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>03</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>04</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>05</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>06</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>07</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>08</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>09</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>10</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>11</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+
+				            			<td align="left" style="color:red;"colspan="2"><strong>12</strong></td>
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>13</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>14</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>15</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>16</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>17</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>18</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>19</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>20</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>21</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>22</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>23</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>00</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>01</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>02</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>03</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>04</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>05</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>06</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>07</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>08</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>09</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>10</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>11</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>12</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>13</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>14</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>15</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>16</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>17</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>18</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>19</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>20</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>21</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>22</strong></td>
+
+
+
+
+			            		<!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+				            			<td align="left" style=""colspan="2"><strong>23</strong></td>
+
+
+
+
+						</tr>
+						<tr>
+							<td height="1" bgcolor="bfc4ce" colspan="101"></td>
+						</tr>
+						</thead>
+						<tbody>
+
+						<!-- :: List Start :: -->
+						<tr align="center" height="25">
+							<td style="width:46px;">㈜래디우스랩</td>
+							<td style="width:38px;">※운영서버로 이전</td>
+							<!-- 차량상태가 정상이고 통신장애가 발생한 차량 붉은색으로 표시 -->
+
+
+				            		<td style="width:20px;color:red;">01하3567</td>
+
+
+
+							<td style="width:30px;">모닝</td>
+							<td style="width:34px;">01.정상</td>
+
+
+
+							<!-- 시간별 예약상태를 보여주는 부분-->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<!-- ///////////////////////////////////////////////////// -->
+							<!-- ***************************************************** -->
+							<!-- ///////////////////////////////////////////////////// -->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td height="1" bgcolor="bfc4ce" colspan="101"></td>
+						</tr>
+
+						<!-- :: List Start :: -->
+						<tr align="center" height="25">
+							<td style="width:46px;">㈜래디우스랩</td>
+							<td style="width:38px;">☆고려대 중앙광장</td>
+							<!-- 차량상태가 정상이고 통신장애가 발생한 차량 붉은색으로 표시 -->
+
+
+				            		<td style="width:20px;color:red;">36하1434</td>
+
+
+
+							<td style="width:30px;">레이</td>
+							<td style="width:34px;">01.정상</td>
+
+
+
+							<!-- 시간별 예약상태를 보여주는 부분-->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<!-- ///////////////////////////////////////////////////// -->
+							<!-- ***************************************************** -->
+							<!-- ///////////////////////////////////////////////////// -->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td height="1" bgcolor="bfc4ce" colspan="101"></td>
+						</tr>
+
+						<!-- :: List Start :: -->
+						<tr align="center" height="25">
+							<td style="width:46px;">㈜래디우스랩</td>
+							<td style="width:38px;">☆고려대 하나스퀘어</td>
+							<!-- 차량상태가 정상이고 통신장애가 발생한 차량 붉은색으로 표시 -->
+
+
+				            		<td style="width:20px;color:red;">10호7756</td>
+
+
+
+							<td style="width:30px;">K3</td>
+							<td style="width:34px;">01.정상</td>
+
+
+
+							<!-- 시간별 예약상태를 보여주는 부분-->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<!-- ///////////////////////////////////////////////////// -->
+							<!-- ***************************************************** -->
+							<!-- ///////////////////////////////////////////////////// -->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td height="1" bgcolor="bfc4ce" colspan="101"></td>
+						</tr>
+
+						<!-- :: List Start :: -->
+						<tr align="center" height="25">
+							<td style="width:46px;">㈜래디우스랩</td>
+							<td style="width:38px;">☆고려대 하나스퀘어</td>
+							<!-- 차량상태가 정상이고 통신장애가 발생한 차량 붉은색으로 표시 -->
+
+
+				            		<td style="width:20px;color:red;">101하1037</td>
+
+
+
+							<td style="width:30px;">더뉴레이</td>
+							<td style="width:34px;">01.정상</td>
+
+
+
+							<!-- 시간별 예약상태를 보여주는 부분-->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<!-- ///////////////////////////////////////////////////// -->
+							<!-- ***************************************************** -->
+							<!-- ///////////////////////////////////////////////////// -->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td height="1" bgcolor="bfc4ce" colspan="101"></td>
+						</tr>
+
+						<!-- :: List Start :: -->
+						<tr align="center" height="25">
+							<td style="width:46px;">㈜래디우스랩</td>
+							<td style="width:38px;">☆고려대 하나스퀘어</td>
+							<!-- 차량상태가 정상이고 통신장애가 발생한 차량 붉은색으로 표시 -->
+
+
+				            		<td style="width:20px;color:red;">36호8024</td>
+
+
+
+							<td style="width:30px;">레이</td>
+							<td style="width:34px;">01.정상</td>
+
+
+
+							<!-- 시간별 예약상태를 보여주는 부분-->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<!-- ///////////////////////////////////////////////////// -->
+							<!-- ***************************************************** -->
+							<!-- ///////////////////////////////////////////////////// -->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td height="1" bgcolor="bfc4ce" colspan="101"></td>
+						</tr>
+
+						<!-- :: List Start :: -->
+						<tr align="center" height="25">
+							<td style="width:46px;">㈜래디우스랩</td>
+							<td style="width:38px;">☆고려대 하나스퀘어</td>
+							<!-- 차량상태가 정상이고 통신장애가 발생한 차량 붉은색으로 표시 -->
+
+
+				            		<td style="width:20px;color:red;">10호7869</td>
+
+
+
+							<td style="width:30px;">모닝</td>
+							<td style="width:34px;">01.정상</td>
+
+
+
+							<!-- 시간별 예약상태를 보여주는 부분-->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<!-- ///////////////////////////////////////////////////// -->
+							<!-- ***************************************************** -->
+							<!-- ///////////////////////////////////////////////////// -->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td height="1" bgcolor="bfc4ce" colspan="101"></td>
+						</tr>
+
+						<!-- :: List Start :: -->
+						<tr align="center" height="25">
+							<td style="width:46px;">㈜래디우스랩</td>
+							<td style="width:38px;">☆고려대 하나스퀘어</td>
+							<!-- 차량상태가 정상이고 통신장애가 발생한 차량 붉은색으로 표시 -->
+
+
+				            		<td style="width:20px;color:red;">10호7879</td>
+
+
+
+							<td style="width:30px;">모닝</td>
+							<td style="width:34px;">01.정상</td>
+
+
+
+							<!-- 시간별 예약상태를 보여주는 부분-->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<!-- ///////////////////////////////////////////////////// -->
+							<!-- ***************************************************** -->
+							<!-- ///////////////////////////////////////////////////// -->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td height="1" bgcolor="bfc4ce" colspan="101"></td>
+						</tr>
+
+						<!-- :: List Start :: -->
+						<tr align="center" height="25">
+							<td style="width:46px;">㈜래디우스랩</td>
+							<td style="width:38px;">☆고려대 하나스퀘어</td>
+							<!-- 차량상태가 정상이고 통신장애가 발생한 차량 붉은색으로 표시 -->
+
+
+				            		<td style="width:20px;color:red;">41호2072</td>
+
+
+
+							<td style="width:30px;">모닝</td>
+							<td style="width:34px;">01.정상</td>
+
+
+
+							<!-- 시간별 예약상태를 보여주는 부분-->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<!-- ///////////////////////////////////////////////////// -->
+							<!-- ***************************************************** -->
+							<!-- ///////////////////////////////////////////////////// -->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td height="1" bgcolor="bfc4ce" colspan="101"></td>
+						</tr>
+
+						<!-- :: List Start :: -->
+						<tr align="center" height="25">
+							<td style="width:46px;">㈜래디우스랩</td>
+							<td style="width:38px;">☆고려대 하나스퀘어</td>
+							<!-- 차량상태가 정상이고 통신장애가 발생한 차량 붉은색으로 표시 -->
+
+
+
+				            		<td style="width:20px;">91하9111</td>
+
+
+							<td style="width:30px;">올뉴모닝</td>
+							<td style="width:34px;">09.준비중</td>
+
+
+
+							<!-- 시간별 예약상태를 보여주는 부분-->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<!-- ///////////////////////////////////////////////////// -->
+							<!-- ***************************************************** -->
+							<!-- ///////////////////////////////////////////////////// -->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td height="1" bgcolor="bfc4ce" colspan="101"></td>
+						</tr>
+
+						<!-- :: List Start :: -->
+						<tr align="center" height="25">
+							<td style="width:46px;">㈜래디우스랩</td>
+							<td style="width:38px;">♡幸福 래디우스랩</td>
+							<!-- 차량상태가 정상이고 통신장애가 발생한 차량 붉은색으로 표시 -->
+
+
+				            		<td style="width:20px;color:red;">10호7538</td>
+
+
+
+							<td style="width:30px;">K3</td>
+							<td style="width:34px;">01.정상</td>
+
+
+
+							<!-- 시간별 예약상태를 보여주는 부분-->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<!-- ///////////////////////////////////////////////////// -->
+							<!-- ***************************************************** -->
+							<!-- ///////////////////////////////////////////////////// -->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td height="1" bgcolor="bfc4ce" colspan="101"></td>
+						</tr>
+
+						<!-- :: List Start :: -->
+						<tr align="center" height="25">
+							<td style="width:46px;">㈜래디우스랩</td>
+							<td style="width:38px;">♡幸福 래디우스랩</td>
+							<!-- 차량상태가 정상이고 통신장애가 발생한 차량 붉은색으로 표시 -->
+
+
+				            		<td style="width:20px;color:red;">10호7622</td>
+
+
+
+							<td style="width:30px;">K3</td>
+							<td style="width:34px;">01.정상</td>
+
+
+
+							<!-- 시간별 예약상태를 보여주는 부분-->
+							<td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('2017101200004');">
+									<div class="END"></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('2017101200008');">
+									<div class="END"></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>
+							<td class="revTdLine">
+								<a href="javascript:showLog('');">
+									<div class=""></div>
+								</a>
+							</td>

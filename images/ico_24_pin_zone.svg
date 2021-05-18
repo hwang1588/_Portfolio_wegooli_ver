@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="35" viewBox="0 0 24 35">
+    <defs>
+        <filter id="g06cwh5ksa" width="22" height="22" x="1.001" y="3" filterUnits="userSpaceOnUse">
+            <feOffset dy="2"/>
+            <feGaussianBlur result="blur" stdDeviation="2"/>
+            <feFlood flood-color="#552a00" flood-opacity=".149"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <ellipse cx="7" cy="3" opacity="0.203" rx="7" ry="3" transform="translate(5 29)"/>
+    <path fill="#fd9214" d="M165.936 261.922a12 12 0 1 0-19.873 0l.012.017c.116.178 4.167 6.41 9.193 12.891a.9.9 0 0 0 1.464 0c5.027-6.481 9.078-12.713 9.194-12.891l.012-.017z" transform="translate(-144 -243.207)"/>
+    <g filter="url(#g06cwh5ksa)">
+        <circle cx="5" cy="5" r="5" fill="#fff" transform="translate(7 7)"/>
+    </g>
+</svg>

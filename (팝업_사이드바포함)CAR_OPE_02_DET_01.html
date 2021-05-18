@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <!--===========-->
+    <!-- meta tags -->
+    <!--===========-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--=======-->
+    <!-- CSS:S -->
+    <!--=======-->
+    <link rel="stylesheet" href="bs5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bs5/css/framework.css">
+    <link rel="stylesheet" href="bs5/css/docs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!--=======-->
+    <!-- CSS:E -->
+    <!--=======-->
+    <title>HAPPYCAR_TEST</title>
+</head>
+
+<!--==================-->
+<!--모달 트리거 버튼:S-->
+<!--==================-->
+<div class="conitaner-fluid">
+    <div class="row">
+        <div class="capsule">
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                데모용 모달버튼
+            </button>
+
+        </div>
+    </div>
+</div>
+<!--==================-->
+<!--모달 트리거 버튼:E-->
+<!--==================-->
+
+<!--==========================-->
+<!--모달전체(헤더,바디,푸터):S-->
+<!--==========================-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <!--===========-->
+            <!--모달 헤더:S-->
+            <!--===========-->
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    <span class="fs-5">단말기 상세(수정)
+                    </span>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <!--===========-->
+            <!--모달 헤더:E-->
+            <!--===========-->
+
+            <!--===========-->
+            <!--모달 바디:S-->
+            <!--===========-->
+            <div class="modal-body bg-labgray p-0">
+                <!--===============================-->
+                <!-- 좌측 사이드바&우측 메인메뉴:S -->
+                <!--===============================-->
+                <div class="container-fluid md-4 bd-layout mt-1 bg-battleshipgray">
+
+                    <!--================-->
+                    <!-- 좌측 사이드바:S-->
+                    <!--================-->
+                    <aside class="bd-sidebar bg-battleshipgray px-2">
+                        <nav class="bd-links collapse show" id="bd-docs-nav" aria-label="Docs navigation">
+                            <ul class="list-unstyled mb-0 pt-3">
+                                <!--===================-->
+                                <!-- 좌측상단 이미지:S -->
+                                <!--===================-->
+                                <div class="container-fluid px-1">
+                                    <div class="row">
+                                        <img src="images/moon.jpg" />
+                                    </div>
+                                </div>
+                                <!--===================-->
+                                <!-- 좌측상단 이미지:E -->
+                                <!--===================-->
+
+                                <!--============-->
+                                <!-- 회원정보:S -->
+                                <!--============-->
+                                <li class="mt-2 ms-2">
+                                    <div class="container-fluid px-1">
+                                        <div class="row">
+                                            <div class="ml-1 detail">
+                                            </div>
+
+                                            <div class="ml-1 detail_2">
+                                            </div>
+
+                                            <div class="ml-1 detail_3 col-xxl-4 col-4">이용번호
+                                            </div>
+
+                                            <div class="ml-1 detail_3 col-xxl-8 col-8">0000000000000
+                                            </div>
+
+                                            <div class="ml-1 detail_3 col-xxl-4 col-4">예약자명
+                                            </div>
+
+                                            <div class="ml-1 detail_3 col-xxl-8 col-8">홍길동
+                                            </div>
+
+                                            <div class="ml-1 detail_3 col-xxl-4 col-4">예약시간
+                                            </div>
+                                            <div class="ml-1 detail_3 col-xxl-8 col-8">2020.10.30 13:31:31~
+                                                <br>
+                                                2020.10.30 13:31:31
+                                            </div>
+
+                                            <div class="ml-1 detail_3 col-xxl-4 col-4">대여존
+                                            </div>
+                                            <div class="ml-1 detail_3 col-xxl-8 col-8">부천옥길센트럴힐
+                                            </div>
+
+                                            <div class="ml-1 detail_3 col-xxl-4 col-4">차량번호
+                                            </div>
+                                            <div class="ml-1 detail_3 col-xxl-8 col-8">00호 0000
+                                            </div>
+
+                                            <div class="ml-1 detail_3 col-xxl-4 col-4">차종
+                                            </div>
+                                            <div class="ml-1 detail_3 col-xxl-8 col-8">올뉴레이
+                                            </div>
+
+                                            <div class="ml-1 detail_3 col-xxl-4 col-4">소유회사
+                                            </div>
+                                            <div class="ml-1 detail_3 col-xxl-8 col-8">래디우스랩
+                                            </div>
+
+                                            <div class="ml-1 detail_3 col-xxl-4 col-4">접수자
+                                            </div>
+                                            <div class="ml-1 detail_3 col-xxl-8 col-8">ABCD1234(김개똥)
+                                            </div>
+
+                                            <div class="ml-1 detail_3 col-xxl-4 col-4">최종처리자
+                                            </div>
+                                            <div class="ml-1 detail_3 col-xxl-8 col-8">ABCD1234(김개똥)
+                                            </div>
+
+                                        </div>
+                                        <div class="container px-0 pe-3 mt-3">
+                                            <div class="btn-dark py-2 center cursor-pointer fw-normal fs-12">단말기 테스트(차량제어)</div>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                                <li class="my-3 me-3 border-top border-secondary border-1"> </li>
+                                <!--============-->
+                                <!-- 회원정보:E -->
+                                <!--============-->
+                            </ul>
+                        </nav>
+
+                    </aside>
+                    <!--================-->
+                    <!-- 좌측 사이드바:E-->
+                    <!--================-->
+
+                    <!--========-->
+                    <!-- 메인:S -->
+                    <!--========-->
+                    <main class=" px-3 bg-white mt-3">
+                        <!--=====================-->
+                        <!-- 메인 1번 컨테이너:S -->
+                        <!--=====================-->
+                        <div class="container-fluid backdrop mb-2">
+                            <div class="none py-0">
+                                <div class="row">
+                                    <!--============-->
+                                    <!-- 1번 포장:S -->
+                                    <!--============-->
+                                    <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+                                        <!--================-->
+                                        <!-- 1번 아코디언:S -->
+                                        <!--================-->
+                                        <div class="accordion" id="accordionExampleOne">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        사고상세 1번
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExampleOne">
+                                                    <div class="accordion-body">
+                                                        <!--============-->
+                                                        <!-- 1번 칼럼:S -->
+                                                        <!--============-->
+                                                        <div class="none py-0">
+                                                            <form>
+                                                                <div class="">
+                                                                    <label for="text" class="form-label fc-gray-1 fw-light">등록자</label>
+                                                                    <input type="text" class="form-control" id="textinput" placeholder="홍길동(ABCD1234)" disabled>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <!--============-->
+                                                        <!-- 1번 칼럼:E -->
+                                                        <!--============-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================-->
+                                        <!-- 1번 아코디언:E -->
+                                        <!--================-->
+                                    </div>
+                                    <!--============-->
+                                    <!-- 1번 포장:E -->
+                                    <!--============-->
+
+                                    <!--============-->
+                                    <!-- 2번 포장:S -->
+                                    <!--============-->
+                                    <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+                                        <!--================-->
+                                        <!-- 2번 아코디언:S -->
+                                        <!--================-->
+                                        <div class="accordion" id="accordionExampleTwo">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingTwo">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                        사고상세 2번
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExampleTwo">
+                                                    <div class="accordion-body">
+                                                        <!--============-->
+                                                        <!-- 2번 칼럼:S -->
+                                                        <!--============-->
+                                                        <div class="none py-0">
+                                                            <form>
+                                                                <div class="">
+                                                                    <label for="text" class="form-label fc-gray-1 fw-light">등록일(시스템)</label>
+                                                                    <input type="text" class="form-control" id="textinput_2" placeholder="2020.10.15" disabled>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                    <!--============-->
+                                                    <!-- 2번 칼럼:E -->
+                                                    <!--============-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--============-->
+                                    <!-- 2번 포장:E -->
+                                    <!--============-->
+
+                                    <!--============-->
+                                    <!-- 3번 포장:S -->
+                                    <!--============-->
+                                    <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+                                        <!--================-->
+                                        <!-- 3번 아코디언:S -->
+                                        <!--================-->
+                                        <div class="accordion" id="accordionExampleThree">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingThree">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                                        사고상세 3번
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExampleThree">
+                                                    <div class="accordion-body">
+                                                        <!--============-->
+                                                        <!-- 3번 칼럼:S -->
+                                                        <!--============-->
+
+                                                        <!--============-->
+                                                        <!-- 3번 칼럼:E -->
+                                                        <!--============-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================-->
+                                        <!-- 3번 아코디언:E -->
+                                        <!--================-->
+                                    </div>
+                                    <!--============-->
+                                    <!-- 3번 포장:E -->
+                                    <!--============-->
+
+                                    <!--============-->
+                                    <!-- 4번 포장:S -->
+                                    <!--============-->
+                                    <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+                                        <!--================-->
+                                        <!-- 4번 아코디언:S -->
+                                        <!--================-->
+                                        <div class="accordion" id="accordionExampleFour">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingFour">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                                        사고상세 4번
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#accordionExampleFour">
+                                                    <div class="accordion-body">
+                                                        <!--============-->
+                                                        <!-- 4번 칼럼:S -->
+                                                        <!--============-->
+
+                                                        <!--============-->
+                                                        <!-- 4번 칼럼:E -->
+                                                        <!--============-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================-->
+                                        <!-- 4번 아코디언:E -->
+                                        <!--================-->
+                                    </div>
+                                    <!--============-->
+                                    <!-- 4번 포장:E -->
+                                    <!--============-->
+                                </div>
+                            </div>
+                        </div>
+                        <!--=====================-->
+                        <!-- 메인 1번 컨테이너:E -->
+                        <!--=====================-->
+
+                        <!--=====================-->
+                        <!-- 메인 2번 컨테이너:S -->
+                        <!--=====================-->
+                        <div class="container-fluid backdrop">
+                            <div class="none">
+                                <div class="fs-5 container-fluid px-3 mt-2">단말기 정보 상세
+                                </div>
+                                <div class="row">
+                                    <!--==============-->
+                                    <!-- 2-1번 포장:S -->
+                                    <!--==============-->
+                                    <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+                                        <!--==================-->
+                                        <!-- 2-1번 아코디언:S -->
+                                        <!--==================-->
+                                        <div class="accordion" id="accordionExampleFive">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingFive">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                                        단말기 정보상세 1번
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseFive" class="accordion-collapse collapse show" aria-labelledby="headingFive" data-bs-parent="#accordionExampleFive">
+                                                    <div class="accordion-body">
+                                                        <!--==============-->
+                                                        <!-- 2-1번 칼럼:S -->
+                                                        <!--==============-->
+                                                        <div class="none">
+                                                            <form>
+                                                                <div class="mb-2">
+                                                                    <label for="text" class="form-label fc-gray-1 fw-light">(차량)소유회사 <b class="fc-danger fs-6">*</b></label>
+                                                                    <select class="form-select" id="">
+                                                                        <option selected>(주)래디우스랩</option>
+                                                                        <option value="1">One</option>
+                                                                        <option value="2">Two</option>
+                                                                        <option value="3">Three</option>
+                                                                    </select>
+                                                                </div>
+                                                            </form>
+
+                                                            <form>
+                                                                <div class="mb-2">
+                                                                    <label for="text" class="form-label fc-gray-1 fw-light">단말기 타입 <b class="fc-danger fs-6">*</b></label>
+                                                                    <select class="form-select" id="">
+                                                                        <option selected>DCS-U310</option>
+                                                                        <option value="1">One</option>
+                                                                        <option value="2">Two</option>
+                                                                        <option value="3">Three</option>
+                                                                    </select>
+                                                                </div>
+                                                            </form>
+
+                                                            <form>
+                                                                <div class="mb-2">
+                                                                    <label for="text" class="form-label fc-gray-1 fw-light">서버접속PORT</label>
+                                                                    <input type="text" class="form-control" id="" placeholder="33102">
+
+                                                                </div>
+                                                            </form>
+
+                                                        </div>
+                                                        <!--==============-->
+                                                        <!-- 2-1번 칼럼:E -->
+                                                        <!--==============-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--==================-->
+                                        <!-- 2-1번 아코디언:E -->
+                                        <!--==================-->
+                                    </div>
+                                    <!--==============-->
+                                    <!-- 2-1번 포장:E -->
+                                    <!--==============-->
+
+                                    <!--==============-->
+                                    <!-- 2-2번 포장:S -->
+                                    <!--==============-->
+                                    <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+                                        <!--==================-->
+                                        <!-- 2-2번 아코디언:S -->
+                                        <!--==================-->
+                                        <div class="accordion" id="accordionExampleSix">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingSix">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                                        단말기 정보상세 2번
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseSix" class="accordion-collapse collapse show" aria-labelledby="headingSix" data-bs-parent="#accordionExampleSix">
+                                                    <div class="accordion-body">
+                                                        <!--==============-->
+                                                        <!-- 2-2번 칼럼:S -->
+                                                        <!--==============-->
+                                                        <div class="none">
+                                                            <form>
+                                                                <div class="mb-2">
+                                                                    <label for="text" class="form-label fc-gray-1 fw-light">시리얼 번호 <b class="fc-danger fs-6">*</b></label>
+                                                                    <input type="text" class="form-control" id="textinput" placeholder="1000000578">
+                                                                </div>
+                                                            </form>
+
+                                                            <form>
+                                                                <div class="mb-2">
+                                                                    <label for="text" class="form-label fc-gray-1 fw-light">수신허용번호</label>
+                                                                    <input type="text" class="form-control" id="" placeholder=" - 제외하고 입력해주세요 ">
+                                                                </div>
+                                                            </form>
+
+                                                            <form>
+                                                                <div class="mb-2">
+                                                                    <label for="text" class="form-label fc-gray-1 fw-light">주차중전송주기(분)</label>
+                                                                    <input type="texxt" class="form-control" id="" placeholder="60">
+                                                                </div>
+                                                            </form>
+
+
+                                                        </div>
+
+                                                    </div>
+                                                    <!--==============-->
+                                                    <!-- 2-2번 칼럼:E -->
+                                                    <!--==============-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--==============-->
+                                    <!-- 2-2번 포장:E -->
+                                    <!--==============-->
+
+                                    <!--==============-->
+                                    <!-- 2-3번 포장:S -->
+                                    <!--==============-->
+                                    <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+                                        <!--==================-->
+                                        <!-- 2-3번 아코디언:S -->
+                                        <!--==================-->
+                                        <div class="accordion" id="accordionExampleSeven">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingSeven">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                                        단말기 정봉상세 3번
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseSeven" class="accordion-collapse collapse show" aria-labelledby="headingSeven" data-bs-parent="#accordionExampleSeven">
+                                                    <div class="accordion-body">
+                                                        <!--==============-->
+                                                        <!-- 2-3번 칼럼:S -->
+                                                        <!--==============-->
+                                                        <div class="none">
+                                                            <form>
+                                                                <div>
+                                                                    <label for="text" class="form-label fc-gray-1 fw-light">단말기 번호 <b class="fc-danger fs-6">*</b>
+                                                                    </label>
+                                                                    <div class="input-group mb-2">
+                                                                        <input type="text" class="form-control center" placeholder="012" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                                                        <input type="text" class="form-control center" placeholder="1234" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                                                        <input type="text" class="form-control center" placeholder="1234" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+
+                                                            <form>
+                                                                <div class="mb-2">
+                                                                    <label for="text" class="form-label fc-gray-1 fw-light">단말 상태</label>
+                                                                    <select class="form-select" id="">
+                                                                        <option selected>정상</option>
+                                                                        <option value="1">One</option>
+                                                                        <option value="2">Two</option>
+                                                                        <option value="3">Three</option>
+                                                                    </select>
+                                                                </div>
+                                                            </form>
+
+                                                            <form>
+                                                                <div class="mb-2">
+                                                                    <label for="text" class="form-label fc-gray-1 fw-light">주행중전송주기(분)</label>
+                                                                    <input type="texxt" class="form-control" id="" placeholder="1">
+                                                                </div>
+                                                            </form>
+
+
+                                                        </div>
+                                                        <!--==============-->
+                                                        <!-- 2-3번 칼럼:E -->
+                                                        <!--==============-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--==================-->
+                                        <!-- 2-3번 아코디언:E -->
+                                        <!--==================-->
+                                    </div>
+                                    <!--==============-->
+                                    <!-- 2-3번 포장:E -->
+                                    <!--==============-->
+
+                                    <!--==============-->
+                                    <!-- 2-4번 포장:S -->
+                                    <!--==============-->
+                                    <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+                                        <!--==================-->
+                                        <!-- 2-4번 아코디언:S -->
+                                        <!--==================-->
+                                        <div class="accordion" id="accordionExampleEight">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingEight">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                                                        차량 정보 등록 4번
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseEight" class="accordion-collapse collapse show" aria-labelledby="headingEight" data-bs-parent="#accordionExampleEight">
+                                                    <div class="accordion-body">
+                                                        <!--==============-->
+                                                        <!-- 2-4번 칼럼:S -->
+                                                        <!--==============-->
+                                                        <div class="none">
+                                                            <div class="row">
+                                                                <div class="col-12 mb-2">
+                                                                    <label for="text" class="form-label fc-gray-1 fw-light">단말기 종류 <b class="fc-danger fs-6">*</b></label>
+                                                                    <select class="form-select" id="">
+                                                                        <option selected>정상</option>
+                                                                        <option value="1">One</option>
+                                                                        <option value="2">Two</option>
+                                                                        <option value="3">Three</option>
+                                                                    </select>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <form>
+                                                                <div class="mb-2">
+                                                                    <label for="inputState" class="form-label fw-light">서버접속IP
+                                                                    </label>
+                                                                    <input type="texxt" class="form-control" id="" placeholder="">
+                                                                </div>
+                                                            </form>
+
+                                                            <form>
+                                                                <div class="mb-2">
+                                                                    <label for="text" class="form-label fc-gray-1 fw-light">단말환경설정 수신일</label>
+                                                                    <input type="text" class="form-control" id="textinput" placeholder="2020.10.11 01:23" disabled>
+                                                                </div>
+                                                            </form>
+
+
+                                                        </div>
+                                                        <!--==============-->
+                                                        <!-- 2-4번 칼럼:E -->
+                                                        <!--==============-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--==================-->
+                                        <!-- 2-4번 아코디언:E -->
+                                        <!--==================-->
+                                    </div>
+                                    <!--==============-->
+                                    <!-- 2-4번 포장:E -->
+                                    <!--==============-->
+                                </div>
+
+                                <!--============-->
+                                <!-- 받는회원:S -->
+                                <!--============-->
+                                <div class="row px-3">
+                                    <div class="col-12 mb-3">
+                                        <!--================-->
+                                        <!-- 버튼그룹 1-1:S -->
+                                        <!--================-->
+                                        <label for="inputState" class="form-label fw-normal">받는 회원
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="form-control py-2">
+                                                <span class="border-1 border py-1 ps-2 pe-1 me-1 rounded-pill cursor-pointer">홍길동(1010010167980473)
+                                                    <button type="button" class="btn-close pe-0 bs-50 h-60em">
+                                                    </button>
+                                                </span>
+                                                <span class="border-1 border py-1 ps-2 pe-1 mx-1 rounded-pill cursor-pointer">박서준(1019150152093530)
+                                                    <button type="button" class="btn-close pe-0 bs-50 h-60em">
+                                                    </button>
+                                                </span>
+                                                <span class="border-1 border py-1 ps-2 pe-1 mx-1 rounded-pill cursor-pointer">김수현(1010001232933281)
+                                                    <button type="button" class="btn-close pe-0 bs-50 h-60em">
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <div class="btn btn-dark">관리자 추가</div>
+                                        </div>
+                                        <!--================-->
+                                        <!-- 버튼그룹 1-1:E -->
+                                        <!--================-->
+                                    </div>
+                                </div>
+                                <!--============-->
+                                <!-- 받는회원:E -->
+                                <!--============-->
+
+                                <!--============-->
+                                <!-- 내용메모:S -->
+                                <!--============-->
+                                <div class="row px-3 mt-3">
+                                    <div class="col-12 mb-3">
+                                        <!--================-->
+                                        <!-- 버튼그룹 1-1:S -->
+                                        <!--================-->
+                                        <label for="inputState" class="form-label fw-normal">단말설정
+                                        </label>
+                                        <textarea class="form-control" id="" rows="6" placeholder="내용을 입력해주세요."></textarea>
+                                        <!--================-->
+                                        <!-- 버튼그룹 1-1:E -->
+                                        <!--================-->
+                                    </div>
+                                </div>
+                                <!--============-->
+                                <!-- 내용메모:E -->
+                                <!--============-->
+                            </div>
+                        </div>
+                        <!--=====================-->
+                        <!-- 메인 1번 컨테이너:E -->
+                        <!--=====================-->
+                    </main>
+                    <!--========-->
+                    <!-- 메인:E -->
+                    <!--========-->
+
+                </div>
+                <!--===============================-->
+                <!-- 좌측 사이드바&우측 메인메뉴:E -->
+                <!--===============================-->
+            </div>
+            <!--===========-->
+            <!--모달 바디:E-->
+            <!--===========-->
+
+            <!--===========-->
+            <!--모달 푸터:S-->
+            <!--===========-->
+            <div class="container-fluid">
+                <footer>
+                    <div class="container-fluid px-0 fixed-bottom mt-5">
+                        <div class=" d-flex flex-row-reverse">
+                            <button type="button" class="btn btn-dark btn-lg fs-14 px-4 py-2 ms-3">저장
+                            </button>
+
+                            <button type="button" class="btn btn-secondary btn-lg fs-14 px-4 py-2 ms-3">취소
+                            </button>
+
+                            <button type="button" class="btn btn-secondary btn-lg fs-14 px-4 py-2 ms-3">정보삭제
+                            </button>
+
+                            <button type="button" class="btn btn-secondary btn-lg fs-14 px-4 py-2">인쇄
+                            </button>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!--===========-->
+            <!--모달 푸터:E-->
+            <!--===========-->
+        </div>
+    </div>
+</div>
+<!--==========================-->
+<!--모달전체(헤더,바디,푸터):E-->
+<!--==========================-->
+
+<!--===============-->
+<!--스크립트 영역:S-->
+<!--===============-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="bs5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!--===============-->
+<!--스크립트 영역:E-->
+<!--===============-->
+
+<!--==========================-->
+<!-- 레이아웃 공통영역 호출:S -->
+<!--==========================-->
+
+<!--==========================-->
+<!-- 레이아웃 공통영역 호출:E -->
+<!--==========================-->
+
+</html>

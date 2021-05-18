@@ -1,0 +1,150 @@
+<!doctype html>
+
+<!--================================================================-->
+<!-- (xxl=1400px이상에서 작동, pc), (md=768px이상에서 작동, 패드):S -->
+<!--================================================================-->
+
+<html lang="ko">
+
+<head>
+    <!--===========-->
+    <!-- meta tags -->
+    <!--===========-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--===============-->
+    <!-- Bootstrap CSS -->
+    <!--===============-->
+    <link rel="stylesheet" href="bs5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bs5/css/framework.css">
+    <link rel="stylesheet" href="bs5/css/docs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <title>HAPPYCAR_TEST</title>
+</head>
+
+
+
+<!--=====================-->
+<!-- 상담이력:S -->
+<!--=====================-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xxl-8 col-md-12 col-12">
+            <table class="table newtable-2 fs-13 fw-normal borde">
+                <thead>
+                    <tr class="table-light border">
+                        <th scope="col" class="fw-normal border border-secondary">번호</th>
+                        <th scope="col" class="fw-normal border border-secondary">
+                            <div class="row">
+                                <div class="col-12">
+                                    IN/OUT
+                                    <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1" />
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col" class="fw-normal border border-secondary">
+                            <div class="row">
+                                <div class="col-12">
+                                    접수일시
+                                    <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1" />
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col" class="fw-normal border border-secondary">
+                            <div class="row">
+                                <div class="col-12">
+                                    상담유형
+                                    <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1" />
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col" class="fw-normal border border-secondary">
+                            <div class="row">
+                                <div class="col-12">
+                                    유형세부1
+                                    <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1" />
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col" class="fw-normal border border-secondary">
+                            <div class="row">
+                                <div class="col-12">
+                                    처리상태
+                                    <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1" />
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col" class="fw-normal border border-secondary">
+                            <div class="row">
+                                <div class="col-12">
+                                    담당자
+                                    <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1" />
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr :class="{ table_active: i === index , ' bg-failure':counsel.calCod === 'CSLB0000'}" class="table-pointer" data-bs-toggle="collapse" :data-bs-target="`#multiCollapseExample${i}`" aria-expanded="false" :aria-controls="`#multiCollapseExample${i}`" v-for="(counsel, i) in counselList" @click="selectDetail(counsel, i)">
+                        <th scope="row" class="table-light fw-normal border border-secondary">{{counsel.rowNum}}</th>
+                        <td class="border">{{counsel.inoutCod === 'ADVG01' ? 'IN': 'OUT'}}</td>
+                        <td class="border">{{counsel.calDate | dateFormat}}</td>
+                        <td class="border">{{getCodeName(counsel.calCod, counsel.calCon1)}}</td>
+                        <td class="border">{{getCodeName(counsel.calCon1, counsel.calCon2)}}</td>
+                        <td class="border">
+                            <!-- {{getCodeName(COUNSEL_PROC_COD,counsel.procCod )}} -->
+                            {{counsel.procCod === 'COMPLETED' ? '처리 완료' : counsel.procCod === 'PROCESSING' ? '처리중' : '임시저장' }}
+                        </td>
+                        <td class="border">{{counsel.name ?? '-'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--================-->
+            <!-- 표 하단 목차:S -->
+            <!--================-->
+            <pagination :page-size="pagination.pageSize" :page="1" :page-list-count="pagination.pageListCount" :total="pagination.total" @goto-page="paginationClicked">
+            </pagination>
+            <!--================-->
+            <!-- 표 하단 목차:E -->
+            <!--================-->
+        </div>
+        <div class="col-xxl-4 col-md-12 col-12">
+            <div v-if="counselDetail" class="collapse multi-collapse bg-white" :class="{ show : showDetail }" :id="`multiCollapseExample${detailIndex}`" aria-labelledby="multiCollapseExample">
+                <table class="table newtable-2 fs-13 fw-normal borde">
+                    <thead>
+                        <tr class="table-light border">
+                            <th scope="col" class="fw-normal border border-secondary width-20">상담유형</th>
+                            <th scope="col" class="fw-normal border border-secondary">
+                                {{getCodeName(counselDetail.calCod, counselDetail.calCon1)}}
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="table-light fw-normal border border-secondary">질문</th>
+                            <td class="border">{{counselDetail.calReq}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="table-light fw-normal border border-secondary">답변</th>
+                            <td class="border">{{counselDetail.calAns}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--=====================-->
+<!-- 상담이력:E -->
+<!--=====================-->
+
+
+<!--=============================-->
+<!-- bootstrap_vanila_javascript -->
+<!--=============================-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="bs5/js/bootstrap.min.js"></script>
+
+</html>

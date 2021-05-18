@@ -1,0 +1,1252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+    <style>
+        * {
+            font-size: 13px;
+        }
+
+        /* 총건 오른쪽 예약상태에 따른 컬러 사이즈 지정해주는 부분 */
+        .revColorDivOutSize {
+            width: 130px;
+            height: 44px;
+            display: table;
+            float: left;
+        }
+
+        .revColorDivInSize {
+            width: 100%;
+            height: auto;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .revColorSize {
+            width: 52px;
+            height: 18px;
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 2px;
+        }
+
+        .revTextSize {
+            width: 60px;
+            height: 25px;
+            display: inline-block;
+            padding-top: 7px;
+        }
+
+        /* 테이블에 보여지는 예약상태 부분 (예약상태에 해당하는 컬러 지정해주는 부분) */
+        /* 여기서 색칠되는 부분의 크기를 조절할 수 있다. revTdLine는 색을 감싸는 크기, td안의 색칠되는 부분의 크기 */
+        .revTdLine {
+            width: 20px;
+            height: 30px;
+            border-right: 1px dotted #bfc4ce;
+        }
+
+        .RESERV {
+            height: 18px;
+            background-color: #1266FF;
+        }
+
+        .USING {
+            height: 18px;
+            background-color: #6CC0FF;
+        }
+
+        .END {
+            height: 18px;
+            background-color: #B4FFFF;
+        }
+
+        .WAIT {
+            height: 18px;
+            background-color: #FFDC46;
+        }
+
+        .DELAY {
+            height: 18px;
+            background-color: #FF5050;
+        }
+    </style>
+
+
+
+    <link rel="stylesheet" type="text/css" href="/resources/css/carmin/style.css" />
+    <link rel="stylesheet" type="text/css" href="/resources/css/carmin/admin_hj.css" />
+    <link rel="stylesheet" type="text/css" href='/resources/css/jquery-ui.css'>
+    <link rel="stylesheet" type="text/css" href="/resources/css/carmin/jquery.treeview.css" />
+
+    <script type="text/javascript" src="/resources/js/jquery.js"></script>
+    <script type="text/javascript" src='/resources/js/jquery-ui.js'></script>
+    <script type="text/javascript" src="/resources/js/jquery.treeview.js"></script>
+    <script type="text/javascript" src="/resources/js/jquery.datePicker.js"></script>
+    <script type="text/javascript" src="/resources/js/jquery.form.js"></script>
+
+    <script type="text/javascript" src="/resources/js/common.js"></script>
+    <script type="text/javascript" src="/resources/js/carmin/common_hj.js?version=1.0"></script>
+    <script type="text/javascript" src="/resources/js/carmin/common_code.js?version=1.3"></script>
+    <script type="text/javascript" src="/resources/js/carmin/common_popup.js?version=1.0"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //소유회사
+            getCarUseComList("busiRegNum", "소유회사", "resBusiRegNum");
+            //대여존 리스트
+            getCarSpotList("spoId", "대여존", "resSpoId");
+            //차종 리스트
+            getModCodList("modSeq", "차종", "resModCod");
+            //차량상태 리스트
+            getCodList("carStaCod", "CARB00", "차량상태", "resCarStaCod");
+            //날짜세팅
+            fn_setDatePicker();
+
+            //시간 셀렉트 박스 값 새로고침시에도 유지되도록 수정
+            $('#srchHour').val('12');
+
+            //검색 클릭
+            $("#btnSearch").click(function() {
+                $("#currentPage").val("1");
+                $("#recordCountPerPage").children().eq(0).attr({
+                    selected: true
+                });
+                goPage();
+                return false;
+            });
+
+            //페이지수 변경
+            $("#recordCountPerPage").change(function() {
+                $("#currentPage").val("1");
+                goPage();
+            });
+
+            //처리중 Dialog 처리
+            //화면로딩에 시간이 오래 걸려서 추가	2020-03-13
+            $('#_waitDialog').dialog({
+                autoOpen: false,
+                width: 280,
+                height: 90,
+                position: [500, 300],
+                dialogClass: "alert",
+                resizable: false,
+                modal: true,
+                open: function() {
+                    $(this).parents(".ui-dialog:first").find(".ui-dialog-titlebar-close").hide(); //.remove();
+                    $(this).parents(".ui-dialog:first").find(".ui-dialog-titlebar").remove();
+                }
+            });
+        });
+
+        //금일 날짜로 세팅하는 부분
+        function fn_setDatePicker() {
+            $('#srchYmd').datepicker({
+                showAnim: "fadeIn",
+                dateFormat: "yy-mm-dd",
+                buttonImageOnly: true,
+                onClose: function(sDate) {},
+                onSelect: function(sDate) {},
+                buttonImage: "/resources/images/calendar/calendar.gif"
+            });
+        }
+
+        //소유회사에 해당하는 대여존 리스트 가져오기
+        function fn_getComSpotList(obj) {
+            var busiRegNum = obj.value;
+            var bmId = '';
+
+            getComCarSpotList("spoId", busiRegNum, bmId, "대여존", "resSpoId")
+        }
+
+        /* 이전 시간 */
+        function fn_prevTime() {
+            var currIndex = $("#srchHour option").index($("#srchHour option:selected")); // 현재 선택한 인덱스
+            if (currIndex >= 1) {
+                var prevIndex = currIndex - 1;
+                var prevTime = $("#srchHour option:eq(" + prevIndex + ")").val(); // 이전 대여존의 spoid
+
+                $("#srchHour").val(prevTime); // 이전 시간을 셀렉트 옵션을 설정
+                fn_getStatistics();
+
+            } else {
+                alert("이전 시간이 없습니다.");
+            }
+        }
+
+        /* 다음 시간 */
+        function fn_nextTime() {
+            var currIndex = $("#srchHour option").index($("#srchHour option:selected")); // 현재 선택한 인덱스
+            var lastIndex = $("#srchHour option").size() - 1; // 마지막 인덱스
+
+            if (currIndex != lastIndex) {
+                var nextIndex = currIndex + 1;
+
+                var nextTime = $("#srchHour option:eq(" + nextIndex + ")").val(); // 이전 대여존의 spoid
+                $("#srchHour").val(nextTime); // 이전 시간을 셀렉트 옵션을 설정
+                fn_getStatistics();
+
+            } else {
+                alert("다음 시간이 없습니다.");
+            }
+        }
+
+        function fn_getStatistics() {
+            $('#_waitDialog').dialog("open");
+
+            $('#frm').serialize();
+            $('#frm').submit();
+        }
+    </script>
+
+    <!--==========================-->
+    <!-- 24시간 예약 관련테이블:S -->
+    <!--==========================-->
+    <table id="staticTable" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                <td height="1" bgcolor="bfc4ce" colspan="101"></td>
+            </tr>
+            <tr height="27" align="center" bgcolor="eeeff3">
+                <td style="width:5%">대여존</td>
+                <td style="width:5%">차량번호</td>
+                <td style="width:3%">이용번호</td>
+                <td style="width:2%">예약자</td>
+                <td style="width:5%">아이디(휴대폰)</td>
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">00</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">01</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">02</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">03</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">04</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">05</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">06</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">07</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">08</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">09</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">10</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">11</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+
+                <td align="center" style="color:red;" colspan="2">12</td>
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">13</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">14</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">15</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">16</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">17</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">18</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">19</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">20</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">21</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">22</td>
+
+
+
+
+                <!-- 조회기준시간 13번째 시간을 붉은색으로 표시 -->
+
+
+                <td align="center" style="" colspan="2">23</td>
+
+                <td align="center" style="" colspan="1">대차</td>
+                <td align="center" style="" colspan="1">취소</td>
+
+
+            </tr>
+            <tr>
+                <td height="1" bgcolor="bfc4ce" colspan="101"></td>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            <!-- :: List Start :: -->
+            <tr align="center" height="25">
+                <td style="min-width:200px;">호정 행복아파트 4단지</td>
+                <td style="min-width: 100px;">101하 1371</td>
+                <!-- 차량상태가 정상이고 통신장애가 발생한 차량 붉은색으로 표시 -->
+
+
+
+                <td style="min-width: 100px;">20201217000019</td>
+
+
+                <td style="min-width: 70px;">홍길동</td>
+                <td style="min-width: 100px;">010-1234-1234</td>
+
+
+                <!-- 시간별 예약상태를 보여주는 부분-->
+                <td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td>
+                    대차버튼
+                </td>
+                <td>
+                    취소버튼
+                </td>
+            </tr>
+            <tr>
+                <td height="1" bgcolor="bfc4ce" colspan="101"></td>
+            </tr>
+
+            <!-- :: List Start :: -->
+            <tr align="center" height="25">
+                <td style="min-width:200px;">호정 행복아파트 4단지</td>
+                <td style="min-width: 100px;">101하 1371</td>
+                <!-- 차량상태가 정상이고 통신장애가 발생한 차량 붉은색으로 표시 -->
+
+
+
+                <td style="min-width: 100px;">20201217000019</td>
+
+
+                <td style="min-width: 70px;">홍길동</td>
+                <td style="min-width: 100px;">010-1234-1234</td>
+
+
+                <!-- 시간별 예약상태를 보여주는 부분-->
+                <td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td>
+                    대차버튼
+                </td>
+                <td>
+                    취소버튼
+                </td>
+            </tr>
+            <tr>
+                <td height="1" bgcolor="bfc4ce" colspan="101"></td>
+            </tr>
+
+            <!-- :: List Start :: -->
+            <tr align="center" height="25">
+                <td style="min-width:200px;">호정 행복아파트 4단지</td>
+                <td style="min-width: 100px;">101하 1371</td>
+                <!-- 차량상태가 정상이고 통신장애가 발생한 차량 붉은색으로 표시 -->
+
+
+
+                <td style="min-width: 100px;">20201217000019</td>
+
+
+                <td style="min-width: 70px;">홍길동</td>
+                <td style="min-width: 100px;">010-1234-1234</td>
+
+
+                <!-- 시간별 예약상태를 보여주는 부분-->
+                <td class="revTdLine" style="border-left:1px dotted #bfc4ce;">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td class="revTdLine">
+                    <a href="javascript:showLog('');">
+                        <div class=""></div>
+                    </a>
+                </td>
+                <td>
+                    대차버튼
+                </td>
+                <td>
+                    취소버튼
+                </td>
+            </tr>
+            <tr>
+                <td height="1" bgcolor="bfc4ce" colspan="101"></td>
+            </tr>
+
+
+
+
+            <!-- 페이징 처리 -->
+            <tr style="height:10px;">
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="center" colspan="101">
+                    <a href="1" class=" goPage"><img src="/resources/images/carmin/arr_p1.gif" /></a>
+                    <span class=" Page"><b> 1 </b><a href="2" class=" goPage"> 2 </a><a href="3" class=" goPage"> 3 </a><a href="4" class=" goPage"> 4 </a></span>
+                    <a href="4" class=" goPage"><img src="/resources/images/carmin/arr_p2.gif" /><input type="hidden" name="currentPage" id="currentPage" value="1" />
+                        <script type="text/javascript">
+                            function goPage() {
+                                $('form').attr({
+                                    action: location.pathname,
+                                    method: 'post'
+                                }).submit();
+                            }
+                            $(".goPage").click(function() {
+                                $("#currentPage").val($(this).attr("href"));
+                                goPage();
+                                return false;
+                            });
+                        </script>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!--==========================-->
+    <!-- 24시간 예약 관련테이블:E -->
+    <!--==========================-->

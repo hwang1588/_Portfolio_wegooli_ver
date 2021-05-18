@@ -1,0 +1,129 @@
+<!doctype html>
+
+<!--================================================================-->
+<!-- (xxl=1400px이상에서 작동, pc), (md=768px이상에서 작동, 패드):S -->
+<!--================================================================-->
+
+<html lang="ko">
+
+<head>
+    <!--===========-->
+    <!-- meta tags -->
+    <!--===========-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--===============-->
+    <!-- Bootstrap CSS -->
+    <!--===============-->
+    <link rel="stylesheet" href="bs5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bs5/css/framework.css">
+    <link rel="stylesheet" href="bs5/css/docs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <title>HAPPYCAR_TEST</title>
+</head>
+
+<body>
+    <!--=============-->
+    <!-- 상단 헤더:S -->
+    <!--=============-->
+    <header>
+        <div class="px-3 py-3" style="background-color:aliceblue; text-align: center;">헤더영역 없음</div>
+    </header>
+    <!--=============-->
+    <!-- 상단 헤더:E -->
+    <!--=============-->
+
+    <!--============-->
+    <!-- 모달버튼:S -->
+    <!--============-->
+    <div class="conitaner-fluid">
+        <div class="row">
+            <div class="capsule">
+                <center>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        대여존 검색
+                    </button>
+                </center>
+            </div>
+        </div>
+    </div>
+    <!--============-->
+    <!-- 모달버튼:E -->
+    <!--============-->
+
+    <!--=========================================-->
+    <!-- 모달영역:S(헤더,바디,푸터 인라인스타일) -->
+    <!--=========================================-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="font-weight:bold;">행복카 상담서비스
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="yongtest">
+                        <!--==================-->
+                        <!-- 모달 본문 내용:S -->
+                        <!--==================-->
+
+                        <body>
+                            <div class="container-fluid">
+                                <h6 class="pt-2 pb-2">임시공휴일 (2020년 8월 17일) 주말/휴일 요금 적용 안내</h6>
+                                <div class="fs-14">2020.11.09 | 홍길동(ABC1234)</div>
+                                <div class="border-1 border-top mt-3"></div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="pt-3 pb-2 fc-858585 fs-14">첨부파일</div>
+                                <div class="fc-black fs-13 pb-2 mb-2">
+                                   <!--0407-->
+                                    <span class="border-1 border pb-1 px-2 rounded-pill cursor-pointer pt-1 pe-3">
+                                       <i class="bi bi-paperclip fs-4 me-1"></i>radiuslab.pdf
+                                    </span>
+                                    <!--0407-->
+                                </div>
+
+                                <textarea class="form-control mb-4 p-4 rounded-0" id="" rows="15" placeholder="안녕하십니까. 행복카입니다.
+
+2020년 8월 17일 (월) 임시공휴일 지정에 따른 주말/휴일 요금 적용에 대해 아래와 같이 안내해 드립니다.
+
+            —아   래——
+
+▶ 임시공휴일 주말/휴일 요금 적용
+
+  - 임시공휴일 휴일요금 일시: 2020년 8월 16일(일) 12시 ~ 8월 17일(월) 20시 까지
+  - 주말/휴일 요금 적용 기간: 8월 14일(금) 12시 ~ 8월 17일(월) 20시 까지
+
+앞으로도 많은 이용 부탁 드리며, 언제나 궁금한 사항은
+행복카 고객센터(1566-6560)으로 연락 주시기 바랍니다.
+
+감사합니다." disabled></textarea>
+
+                            </div>
+                        </body>
+                        <!--==================-->
+                        <!-- 모달 본문 내용:E -->
+                        <!--==================-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--=========================================-->
+    <!-- 모달영역:E(헤더,바디,푸터 인라인스타일) -->
+    <!--=========================================-->
+
+</body>
+
+<!--=============================-->
+<!-- bootstrap_vanila_javascript -->
+<!--=============================-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="bs5/js/bootstrap.min.js"></script>
+
+</html>

@@ -1,0 +1,558 @@
+<!doctype html>
+
+<!--================================================================-->
+<!-- (xxl=1400px이상에서 작동, pc), (md=768px이상에서 작동, 패드):S -->
+<!--================================================================-->
+
+<html lang="ko">
+
+<head>
+    <!--===========-->
+    <!-- meta tags -->
+    <!--===========-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--===============-->
+    <!-- Bootstrap CSS -->
+    <!--===============-->
+    <link rel="stylesheet" href="bs5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bs5/css/framework.css">
+    <link rel="stylesheet" href="bs5/css/docs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <title>HAPPYCAR_TEST</title>
+</head>
+
+<body>
+    <!--=============-->
+    <!-- 상단 헤더:S -->
+    <!--=============-->
+    <header>
+        <div class="px-3 py-3" style="background-color:aliceblue; text-align: center;">헤더영역 없음</div>
+    </header>
+    <!--=============-->
+    <!-- 상단 헤더:E -->
+    <!--=============-->
+
+    <!--============-->
+    <!-- 모달버튼:S -->
+    <!--============-->
+    <div class="conitaner-fluid">
+        <div class="row">
+            <div class="capsule">
+                <center>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        예약정보
+                    </button>
+                </center>
+            </div>
+        </div>
+    </div>
+    <!--============-->
+    <!-- 모달버튼:E -->
+    <!--============-->
+
+    <!--=========================================-->
+    <!-- 모달영역:S(헤더,바디,푸터 인라인스타일) -->
+    <!--=========================================-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="exampleModalLabel">예약정보
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body" style="background-color:#; padding: 0px;">
+
+                    <div class="yongtest">
+                        <!--==================-->
+                        <!-- 모달 본문 내용:S -->
+                        <!--==================-->
+
+                        <body>
+                            <!--===================================-->
+                            <!-- 테이블표 위쪽 드롭다운 메뉴세트2:S -->
+                            <!--===================================-->
+                            <div class="backdrop">
+                                <div class="card-body bg-palegray mb-4 pb-0">
+
+                                    <div class="container-fluid ">
+                                        <h5 class="modal-title fw-500 mb-3">예약정보1</h5>
+                                        <!--==========================-->
+                                        <!-- 상담정보 상담유형 헤더:S -->
+                                        <!--==========================-->
+                                        <div class="row">
+                                            <div class="col-xxl-4">
+                                                <div>
+                                                    <label for="inputState" class="form-label">예약구분
+                                                        <span class="fc-danger">*</span>
+                                                    </label>
+                                                </div>
+                                                <span class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                    <label class="form-check-label fc-black" for="inlineRadio1">일반회원예약</label>
+                                                </span>
+                                                <span class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                    <label class="form-check-label fc-black" for="inlineRadio2">Block예약(관리자 업무 예약)</label>
+                                                </span>
+
+                                            </div>
+                                            <div class="col-xxl-2">
+                                                <label for="text" class="form-label fc-gray-1 fw-light">&nbsp;</label>
+                                                <select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon" disabled>
+                                                    <option selected>선택</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xxl-3">
+                                                <div class="mb-2">
+                                                    <label for="text" class="form-label fc-gray-1 fw-light">아이디
+                                                    </label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" id="disabledTextInput" class="form-control" placeholder="2020.12.24 12:23:23">
+                                                        <button class="btn btn-dark px-3" type="button" id="button-addon2">검색</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xxl-3">
+                                                <div class="mt-2 fs-14">
+                                                    <label for="text" class="form-label fc-gray-1 fw-light">&nbsp;
+                                                    </label>
+                                                    <div>멤버십 등급: VIP</div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="row border-bottom mt-2">
+                                        </div>
+                                        <!--==========================-->
+                                        <!-- 상담정보 상담유형 헤더:E -->
+                                        <!--==========================-->
+                                    </div>
+                                    <!--===================================-->
+                                    <!-- 테이블표 위쪽 드롭다운 메뉴세트2:E -->
+                                    <!--===================================-->
+
+                                    <!--================================================================-->
+                                    <!-- (xxl=1400px이상에서 작동, pc), (md=768px이상에서 작동, 패드):S -->
+                                    <!--================================================================-->
+                                    <!--=================================-->
+                                    <!-- 컨트롤러 영역 하단 테이블세트:S -->
+                                    <!--=================================-->
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active bg-white" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                            <!--=====================-->
+                                            <!-- DataTales Example:S -->
+                                            <!--=====================-->
+                                            <div class="card-body bg-palegray mb-4">
+                                                <div class="row">
+                                                    <!--==============-->
+                                                    <!-- 버튼그룹 2:S -->
+                                                    <!--==============-->
+                                                    <div class="col-xxl-12 col-md-12 col-12">
+                                                        <div class="row mb-1">
+                                                            <div class="col-xxl-4 col-md-8 col-8">
+                                                                <!--================-->
+                                                                <!-- 버튼그룹 2-1:S -->
+                                                                <!--================-->
+                                                                <label for="inputState" class="form-label">거점 및 차량번호 <span class="fc-danger">*</span>
+                                                                </label>
+                                                                <input type="text" id="disabledTextInput" class="form-control" placeholder="홍길동(ABC1234)">
+                                                                <!--================-->
+                                                                <!-- 버튼그룹 2-1:E -->
+                                                                <!--================-->
+                                                            </div>
+                                                            <div class="col-xxl-2 col-md-4 col-4">
+                                                                <form>
+                                                                    <div class="mt-1">
+                                                                        <label for="text" class="form-label fc-gray-1 fw-light">&nbsp;</label>
+                                                                        <div class="form-check ">
+                                                                            <input class="form-check-input mt-1" type="checkbox" value="" id="flexCheckDefault">
+                                                                            <label class="form-check-label fs-6 fc-black" for="flexCheckDefault">
+                                                                                편도예약
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+
+                                                            </div>
+                                                            <div class="col-xxl-6 col-md-12 col-12">
+                                                                <!--================-->
+                                                                <!-- 버튼그룹 2-2:S -->
+                                                                <!--================-->
+                                                                <label for="inputState" class="form-label">&nbsp;
+                                                                </label>
+                                                                <select id="inputState" class="form-select">
+                                                                    <option selected>20호8551 [01.정상] (26세) 모닝</option>
+                                                                    <option>샘플2</option>
+                                                                </select>
+                                                                <!--================-->
+                                                                <!-- 버튼그룹 2-2:E -->
+                                                                <!--================-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--==============-->
+                                                    <!-- 버튼그룹 2:E -->
+                                                    <!--==============-->
+                                                    <div class="col-xxl-5 col-md-12 col-12">
+                                                        <div class="row gx-1">
+                                                            <div class="col-xxl-6 col-md-6 col-12 my-2">
+                                                                <label for="inputState" class="form-label">대여시간(시작) <span class="fc-danger">*</span>
+                                                                </label>
+                                                                <input type="date" class="form-control mx-0 my-0" placeholder="yyyy-mm-dd" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                                                            </div>
+                                                            <div class="col-xxl-3 col-md-3 col-6 my-2">
+                                                                <label for="inputState" class="form-label">&nbsp;
+                                                                </label>
+                                                                <select id="inputState" class="form-select">
+                                                                    <option selected>18 시</option>
+                                                                    <option>샘플2</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-xxl-3 col-md-3 col-6 my-2">
+                                                                <label for="inputState" class="form-label">&nbsp;
+                                                                </label>
+                                                                <select id="inputState" class="form-select">
+                                                                    <option selected>30 분</option>
+                                                                    <option>샘플2</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xxl-5 col-md-12 col-12">
+                                                        <div class="row gx-1">
+                                                            <div class="col-xxl-6 col-md-6 col-12 my-2">
+                                                                <label for="inputState" class="form-label">대여시간(종료) <span class="fc-danger">*</span>
+                                                                </label>
+                                                                <input type="date" class="form-control mx-0 my-0" placeholder="yyyy-mm-dd" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                                                            </div>
+                                                            <div class="col-xxl-3 col-md-3 col-6 my-2">
+                                                                <label for="inputState" class="form-label">&nbsp;
+                                                                </label>
+                                                                <select id="inputState" class="form-select">
+                                                                    <option selected>18 시</option>
+                                                                    <option>샘플2</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-xxl-3 col-md-3 col-6 my-2">
+                                                                <label for="inputState" class="form-label">&nbsp;
+                                                                </label>
+                                                                <select id="inputState" class="form-select">
+                                                                    <option selected>30 분</option>
+                                                                    <option>샘플2</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-2">
+                                                        <label for="inputState" class="form-label">&nbsp;
+                                                        </label>
+                                                        <div class=" d-flex flex-row-reverse mt-1">
+                                                            <button type="button" class="btn border-1 rounded-0 mx-1 border-secondary fs-13 mt-1">예약조회
+                                                            </button>
+                                                            <button type="button" class="btn border-1 rounded-0 border-secondary fs-13 mt-1">금액계산
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xxl-12 col-md-12 col-12">
+                                                        <div class="row mt-2">
+                                                            <div class="col-xxl-6 col-md-8 col-8">
+                                                                <!--================-->
+                                                                <!-- 버튼그룹 2-1:S -->
+                                                                <!--================-->
+                                                                <label for="inputState" class="form-label">보험 선택 <span class="fc-danger">*</span>
+                                                                </label>
+                                                                <select id="inputState" class="form-select">
+                                                                    <option selected>일반</option>
+                                                                    <option>샘플2</option>
+                                                                </select>
+                                                                <!--================-->
+                                                                <!-- 버튼그룹 2-1:E -->
+                                                                <!--================-->
+                                                            </div>
+
+                                                            <div class="col-xxl-6 col-md-12 col-12">
+                                                                <!--================-->
+                                                                <!-- 버튼그룹 2-2:S -->
+                                                                <!--================-->
+                                                                <label for="inputState" class="form-label">상품 선택 <span class="fc-danger">*</span>
+                                                                </label>
+                                                                <select id="inputState" class="form-select">
+                                                                    <option selected>일반</option>
+                                                                    <option>샘플2</option>
+                                                                </select>
+                                                                <!--================-->
+                                                                <!-- 버튼그룹 2-2:E -->
+                                                                <!--================-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xxl-12 col-md-12 col-12">
+                                                        <div class="row mt-2">
+                                                            <div class="col-xxl-4 col-md-8 col-8">
+                                                                <!--================-->
+                                                                <!-- 버튼그룹 2-1:S -->
+                                                                <!--================-->
+                                                                <label for="inputState" class="form-label">결제 금액 <span class="fc-danger">*</span>
+                                                                </label>
+                                                                <input type="text" id="disabledTextInput" class="form-control" placeholder="금액을 입력하세요">
+                                                                <!--================-->
+                                                                <!-- 버튼그룹 2-1:E -->
+                                                                <!--================-->
+                                                            </div>
+                                                            <div class="col-xxl-2 col-md-4 col-4">
+                                                                <form>
+                                                                    <div class="mt-1">
+                                                                        <label for="text" class="form-label fc-gray-1 fw-light">&nbsp;</label>
+                                                                        <div class="form-check ps-0">
+                                                                            <label class="form-check-label fs-12 fc-black" for="flexCheckDefault">
+                                                                                할인적용 전: 150,000원
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            <div class="col-xxl-6 col-4">
+                                                                <label for="inputState" class="form-label">결제카드 선택 <span class="fc-danger">*</span> <span class="ms-4">(※고객 입금용 통장번호 0081181818-04-12345678 (주)래디우스랩)</span>
+                                                                </label>
+                                                                <select id="inputState" class="form-select">
+                                                                    <option selected>하나카드 0000 **** **** 0000</option>
+                                                                    <option>샘플2</option>
+                                                                </select>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xxl-12 col-md-12 col-12">
+                                                        <div class="row mt-2">
+                                                            <div class="col-xxl-6 col-md-12 col-12">
+                                                                <!--================-->
+                                                                <!-- 버튼그룹 2-1:S -->
+                                                                <!--================-->
+                                                                <label for="inputState" class="form-label">쿠폰선택
+                                                                </label>
+                                                                <select id="inputState" class="form-select">
+                                                                    <option selected>일반</option>
+                                                                    <option>샘플2</option>
+                                                                </select>
+
+                                                                <!--================-->
+                                                                <!-- 버튼그룹 2-1:E -->
+                                                                <!--================-->
+                                                            </div>
+
+                                                            <div class="col-xxl-5 col-md-8 col-8">
+                                                                <!--================-->
+                                                                <!-- 버튼그룹 2-2:S -->
+                                                                <!--================-->
+                                                                <label for="inputState" class="form-label">포인트 사용
+                                                                </label>
+                                                                <input type="text" id="disabledTextInput" class="form-control" placeholder="포인트를 입력하세요">
+                                                                <!--================-->
+                                                                <!-- 버튼그룹 2-2:E -->
+                                                                <!--================-->
+                                                            </div>
+                                                            <div class="col-xxl-1 col-md-4 col-4">
+                                                                <form>
+                                                                    <div class="mt-1">
+                                                                        <label for="text" class="form-label fc-gray-1 fw-light">&nbsp;</label>
+                                                                        <div class="form-check ps-0">
+                                                                            <label class="form-check-label fs-12 fc-black" for="flexCheckDefault">
+                                                                                / 5000P
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row border-bottom my-3">
+
+                                                </div>
+                                                <form>
+                                                    <div class="mb-2">
+                                                        <label for="text" class="form-label fc-gray-1 fw-light">Block예약 상세 <span class="fc-danger">*</span></label>
+                                                        <textarea class="form-control" id="" rows="1" placeholder="내용을 입력해주세요." disabled></textarea>
+                                                    </div>
+
+                                                </form>
+                                                <div class="row border-bottom mt-4">
+
+                                                </div>
+                                                <!--=====================-->
+                                                <!-- DataTales Example:E -->
+                                                <!--=====================-->
+                                                <div class="tab-pane fade bg-white" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...
+
+                                                </div>
+                                                <div class=" d-flex flex-row-reverse">
+                                                    <button type="button" class="btn btn-dark btn-lg fs-14 px-4 py-2">예약
+                                                    </button>
+
+                                                </div>
+                                            </div>
+                                            <!--=================================-->
+                                            <!-- 컨트롤러 영역 하단 테이블세트:E -->
+                                            <!--=================================-->
+
+                                            <!--==================-->
+                                            <!-- 메인영역표부분:E -->
+                                            <!--==================-->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-body bg-palegray">
+                                    <div class="container-fluid ">
+                                        <div class="row">
+                                            <h5 class="modal-title fw-500 mb-4">예약정보2</h5>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xxl-12 col-md-12 col-12">
+                                                <div class="overflow-auto pt-1">
+                                                    <table class="table newtable-2 fs-13 fw-normal border">
+                                                        <thead>
+                                                            <tr class="table-light border">
+                                                                <th scope="col" class="fw-normal border border-secondary">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            이용번호
+                                                                            <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1">
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="fw-normal border border-secondary">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            차량번호
+                                                                            <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1">
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="fw-normal border border-secondary">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            주회원명(구아이디)
+                                                                            <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1">
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="fw-normal border border-secondary">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            아이디(휴대폰)
+                                                                            <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1">
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="fw-normal border border-secondary">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            예약일시
+                                                                            <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1">
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="fw-normal border border-secondary">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            예약시작
+                                                                            <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1">
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="fw-normal border border-secondary">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            예약종료
+                                                                            <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1">
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="fw-normal border border-secondary">
+                                                                   <div class="container px-1">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            예약상태
+                                                                            <img src="images/ico_16_tableheader_sort_n.svg" class="pb-1">
+                                                                        </div>
+                                                                    </div>
+                                                                    </div>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="border bg-white text-decoration-underline cursor-pointer">20201217000019</th>
+                                                                <td class="border bg-white text-decoration-underline cursor-pointer">01하1234</td>
+                                                                <td class="border bg-white ">홍길동(ABC123)</td>
+                                                                <td class="border bg-white text-decoration-underline cursor-pointer">010-1234-1234</td>
+                                                                <td class="border bg-white">2020.12.25 13:00</td>
+                                                                <td class="border bg-white">2020.12.25 13:00</td>
+                                                                <td class="border bg-white">2020.12.25 13:00</td>
+                                                                <td class="border bg-white">이용중</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="border bg-white text-decoration-underline cursor-pointer">20201217000019</th>
+                                                                <td class="border bg-white text-decoration-underline cursor-pointer">01하1234</td>
+                                                                <td class="border bg-white ">홍길동(ABC123)</td>
+                                                                <td class="border bg-white text-decoration-underline cursor-pointer">010-1234-1234</td>
+                                                                <td class="border bg-white">2020.12.25 13:00</td>
+                                                                <td class="border bg-white">2020.12.25 13:00</td>
+                                                                <td class="border bg-white">2020.12.25 13:00</td>
+                                                                <td class="border bg-white">이용중</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" d-flex flex-row-reverse my-3 me-4">
+                                <button type="button" class="btn btn-dark btn-lg fs-14 px-4 py-2 ms-3">저장
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-lg fs-14 px-4 py-2 ms-3">취소
+                                </button>
+                            </div>
+                        </body>
+                        <!--==================-->
+                        <!-- 모달 본문 내용:E -->
+                        <!--==================-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--=========================================-->
+    <!-- 모달영역:E(헤더,바디,푸터 인라인스타일) -->
+    <!--=========================================-->
+
+</body>
+
+<!--=============================-->
+<!-- bootstrap_vanila_javascript -->
+<!--=============================-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="bs5/js/bootstrap.min.js"></script>
+
+</html>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="51.965" viewBox="0 0 42 51.965">
+    <defs>
+        <filter id="타원_1185" width="42" height="42" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="2"/>
+            <feGaussianBlur result="blur" stdDeviation="2"/>
+            <feFlood flood-opacity=".149"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <style>
+            .cls-2,.cls-4{fill:#00c3ff}.cls-3{fill:#fff}.cls-4{stroke:#fff;stroke-width:.75px;stroke-miterlimit:10}.cls-7{fill:none}.cls-6{stroke:none}
+        </style>
+    </defs>
+    <g id="ico_36_poi_waiting" transform="translate(3 .965)">
+        <ellipse id="타원_1147" cx="7" cy="3" opacity="0.203" rx="7" ry="3" transform="translate(11 45)"/>
+        <path id="패스_33914" d="M128.9 184.407a18 18 0 1 0-29.81 0l.018.025c.174.267 6.251 9.615 13.791 19.337a1.352 1.352 0 0 0 2.2 0c7.54-9.722 13.616-19.07 13.79-19.337l.018-.025z" class="cls-2" transform="translate(-96 -156.333)"/>
+        <g filter="url(#타원_1185)" transform="translate(-3 -.96)">
+            <circle id="타원_1185-2" cx="15" cy="15" r="15" class="cls-3" transform="translate(6 4)"/>
+        </g>
+        <g id="그룹_42101" transform="translate(-96 -156.333)">
+            <path id="패스_33829" d="M102.248 171.982a1.884 1.884 0 0 0-.248.939v3.479a1.639 1.639 0 0 0 1.633 1.642h19.859a2.513 2.513 0 0 0 2.508-2.518 2.469 2.469 0 0 0-.028-.374l-.286-1.931a1.763 1.763 0 0 0-1.277-1.442l-4.188-1.413a1.56 1.56 0 0 1-.727-.517l-2.532-3.275a1.811 1.811 0 0 0-1.282-.532h-8.265a2.6 2.6 0 0 0-2.139 1.124z" class="cls-2"/>
+            <g id="타원_1151">
+                <g id="타원_1148" class="cls-4" transform="translate(118.937 176.252)">
+                    <circle cx="1.875" cy="1.875" r="1.875" class="cls-6"/>
+                    <circle cx="1.875" cy="1.875" r="2.25" class="cls-7"/>
+                </g>
+            </g>
+            <g id="타원_1151-2">
+                <g id="타원_1149" class="cls-4" transform="translate(104.625 176.252)">
+                    <circle cx="1.875" cy="1.875" r="1.875" class="cls-6"/>
+                    <circle cx="1.875" cy="1.875" r="2.25" class="cls-7"/>
+                </g>
+            </g>
+            <path id="패스_33830" d="M110.806 168.041a.465.465 0 0 0-.464-.466h-2.927a1.046 1.046 0 0 0-.835.4l-1.323 2.106a.351.351 0 0 0 .014.493.345.345 0 0 0 .242.1h4.829a.462.462 0 0 0 .464-.461v-2.17z" class="cls-3"/>
+            <path id="패스_33831" d="M117.8 170.167l-1.549-2a1.541 1.541 0 0 0-1.215-.6H112.8a.463.463 0 0 0-.462.464v2.169a.462.462 0 0 0 .462.463h4.753a.307.307 0 0 0 .244-.5z" class="cls-3"/>
+        </g>
+    </g>
+</svg>

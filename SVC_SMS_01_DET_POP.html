@@ -1,0 +1,175 @@
+<!doctype html>
+
+<!--================================================================-->
+<!-- (xxl=1400px이상에서 작동, pc), (md=768px이상에서 작동, 패드):S -->
+<!--================================================================-->
+
+<html lang="ko">
+
+<head>
+    <!--===========-->
+    <!-- meta tags -->
+    <!--===========-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--===============-->
+    <!-- Bootstrap CSS -->
+    <!--===============-->
+    <link rel="stylesheet" href="bs5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bs5/css/framework.css">
+    <link rel="stylesheet" href="bs5/css/docs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <title>HAPPYCAR_TEST</title>
+</head>
+
+<body>
+    <!--=============-->
+    <!-- 상단 헤더:S -->
+    <!--=============-->
+    <header>
+        <div class="px-3 py-3" style="background-color:aliceblue; text-align: center;">헤더영역 없음</div>
+    </header>
+    <!--=============-->
+    <!-- 상단 헤더:E -->
+    <!--=============-->
+
+    <!--============-->
+    <!-- 모달버튼:S -->
+    <!--============-->
+    <div class="conitaner-fluid">
+        <div class="row">
+            <div class="capsule">
+                <center>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        비고등록(수정)
+                    </button>
+                </center>
+            </div>
+        </div>
+    </div>
+    <!--============-->
+    <!-- 모달버튼:E -->
+    <!--============-->
+
+    <!--=========================================-->
+    <!-- 모달영역:S(헤더,바디,푸터 인라인스타일) -->
+    <!--=========================================-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="font-weight:bold;">SMS Form 상세(수정)
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body" style="background-color:#; padding: 0px;">
+                    <!--==================-->
+                    <!-- 모달 본문 내용:S -->
+                    <!--==================-->
+
+                    <body>
+                        <div class="container px-3">
+                            <div class="row mt-4">
+                                <div class="col-6">
+                                    <form>
+                                        <div class="mb-2">
+                                            <label for="text" class="form-label fc-gray-1 fw-light">제목</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" id="" placeholder="미납요금안내">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-6">
+                                    <form>
+                                        <div class="mb-2">
+                                            <label for="text" class="form-label fc-gray-1 fw-light">카드사명</label>
+                                            <div class="input-group mb-3">
+                                                <select class="form-select" id="">
+                                                    <option selected>회원</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <form>
+                                        <div class="mb-2">
+                                            <label for="text" class="form-label fc-gray-1 fw-light">등록자</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" id="" placeholder="홍길동(아이디)" disabled>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-6">
+                                    <form>
+                                        <div class="mb-2">
+                                            <label for="text" class="form-label fc-gray-1 fw-light">등록일</label>
+                                            <input type="text" class="form-control" id="" placeholder="0000.00.00" disabled>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="py-2">
+                                    <label for="text" class="form-label fc-gray-1 fw-light">내용</label>
+                                    <textarea class="form-control" id="" rows="15" placeholder="[카셰어링서비스] 미납요금 안내
+안녕하세요. 행복카 고객센터입니다.
+입주자님께서 2017년 월 일 예약하신 차량에 대한 미결제내역 안내입니다.
+
+▶거리요금: 원
+▶연장요금: 원
+▶합계요금: 원
+
+※ 결제카드 정보(유효기간, 카드번호, 잔고, 한도, 분실, 변경 등) 확인 부탁드리며, 요금 미납 시 차량 이용이 제한됩니다.
+※ 요금 납부 시 이용승인 처리는 업무시간 월~금 09:00~18:00에만 확인 후 승인 가능합니다.
+※ 입금을 원하시는 경우 아래의 계좌에 예약자 성함으로 입금 요청 드립니다.
+
+▶ 국민은행/003101-04-123084/(주)래디우스랩
+※ 카카오톡 문의(친구추가): http://goto.kakao.com/jguu4mzx
+"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container px-3">
+                            <div class="row">
+                                <div class="py-2">
+                                    <div class="d-flex">
+                                        <div class="me-auto"></div>
+                                        <div class="btn btn-secondary btn-lg px-4 py-2 me-2 fs-15 fw-bold fc-white">삭제</div>
+                                        <div class="btn btn-secondary btn-lg px-4 py-2 me-2 fs-15 fw-bold fc-white">취소</div>
+                                        <div class="btn btn-dark btn-lg px-4 py-2 fs-15 fw-bold fc-white">확인</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </body>
+                    <!--==================-->
+                    <!-- 모달 본문 내용:E -->
+                    <!--==================-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--=========================================-->
+    <!-- 모달영역:E(헤더,바디,푸터 인라인스타일) -->
+    <!--=========================================-->
+</body>
+
+<!--=============================-->
+<!-- bootstrap_vanila_javascript -->
+<!--=============================-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="bs5/js/bootstrap.min.js"></script>
+
+</html>

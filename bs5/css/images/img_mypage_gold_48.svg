@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <linearGradient id="1npgbvmdda" x1=".177" x2=".843" y1=".122" y2=".879" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#ffd41d"/>
+            <stop offset=".675" stop-color="#fdba4b"/>
+            <stop offset="1" stop-color="#fcae61"/>
+        </linearGradient>
+        <linearGradient id="4qb36bbh5b" x1=".933" x2=".067" y1=".75" y2=".25" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fdc65d"/>
+            <stop offset="1" stop-color="#fff1c3"/>
+        </linearGradient>
+    </defs>
+    <circle cx="24" cy="24" r="24" fill="url(#1npgbvmdda)"/>
+    <text fill="#863e09" font-family="NotoSansCJKkr-Bold, Noto Sans CJK KR" font-size="9px" font-weight="700" letter-spacing="-0.024em" transform="translate(24 34)">
+        <tspan x="-12.177" y="0">GOLD</tspan>
+    </text>
+    <path fill="url(#4qb36bbh5b)" d="M260.379-214.294a22.025 22.025 0 0 1-22-22 22.025 22.025 0 0 1 22-22 22.024 22.024 0 0 1 22 22 22.024 22.024 0 0 1-22 22zm0-43.2a21.224 21.224 0 0 0-21.2 21.2 21.223 21.223 0 0 0 21.2 21.2 21.224 21.224 0 0 0 21.2-21.2 21.225 21.225 0 0 0-21.2-21.201z" transform="translate(-236.379 260.295)"/>
+    <g>
+        <path fill="rgba(255,237,162,0.66)" d="M2682.847 8518.531l-3.311 2.987 6.331 6.77 6.905-7.057-3.788-2.7z" transform="translate(16 8) translate(-2677.845 -8514.844)"/>
+        <path fill="#863e09" d="M-305.347 297.071l-3.928-3.321a.535.535 0 0 0-.345-.125h-5.737a.535.535 0 0 0-.345.125l-3.928 3.321a.536.536 0 0 0-.187.373.53.53 0 0 0 .137.393l6.655 7.347c.008.009.019.012.028.02a.521.521 0 0 0 .114.083.571.571 0 0 0 .052.029.529.529 0 0 0 .195.043h.007a.515.515 0 0 0 .194-.041.511.511 0 0 0 .051-.027.522.522 0 0 0 .115-.081.279.279 0 0 0 .027-.019l6.939-7.347a.532.532 0 0 0 .145-.4.537.537 0 0 0-.189-.373zm-10.252-2.009l.451 1.819h-2.6zm1.55 1.819l-.543-2.189h4.193l-.6 2.189zm2.756 1.066l-1.31 4.769-1.182-4.769zm-3.591 0l1.227 4.951-4.483-4.951zm4.7 0h3.32l-4.682 4.958zm.293-1.066l.5-1.831 2.165 1.831z" transform="translate(16 8) translate(320.485 -290.825)"/>
+    </g>
+</svg>

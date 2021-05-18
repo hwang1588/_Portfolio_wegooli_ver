@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37.03" height="51.53" viewBox="0 0 37.03 51.53">
+    <defs>
+        <filter id="3jk2rp6z5a" width="36" height="36" x=".5" y="2.565" filterUnits="userSpaceOnUse">
+            <feOffset dy="2"/>
+            <feGaussianBlur result="blur" stdDeviation="2"/>
+            <feFlood flood-opacity=".102"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g transform="translate(.5 .53)">
+        <ellipse cx="7" cy="3" fill="#1a1a1a" opacity="0.203" rx="7" ry="3" transform="translate(11 45)"/>
+        <g transform="translate(-95.21 -252.525)">
+            <path fill="#ffd41d" stroke="#cc8d00" stroke-miterlimit="10" d="M128.113 280.6a18 18 0 1 0-29.809 0l.018.025c.174.267 6.25 9.614 13.79 19.337a1.352 1.352 0 0 0 2.2 0c7.54-9.723 13.616-19.07 13.79-19.337l.018-.025z"/>
+            <g filter="url(#3jk2rp6z5a)" transform="translate(94.71 252)">
+                <circle cx="12" cy="12" r="12" fill="#fff" transform="translate(6.5 6.57)"/>
+            </g>
+            <circle cx="3" cy="3" r="3" fill="#fe9215" transform="translate(110.209 267.56)"/>
+        </g>
+    </g>
+</svg>

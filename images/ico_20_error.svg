@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="ico_20_error" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-3{fill:#fff}
+        </style>
+    </defs>
+    <path id="area" fill="none" d="M0 0H20V20H0z"/>
+    <circle id="타원_1118" cx="8" cy="8" r="8" fill="#d91f3b" transform="translate(2 2)"/>
+    <path id="사각형_18652" d="M0 0H2V6H0z" class="cls-3" transform="translate(9 5)"/>
+    <circle id="타원_1119" cx="1" cy="1" r="1" class="cls-3" transform="translate(9 13)"/>
+</svg>

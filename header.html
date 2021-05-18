@@ -1,0 +1,190 @@
+<!--=============-->
+<!-- 상단 헤더:S -->
+<!--=============-->
+<nav class="container-fluid flex-wrap flex-md-nowrap ns_header_inner">
+    <a href="/" class="car_logo" src="images/happycar_logo.png" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="wow_togler">
+        </div>
+    </button>
+    <!--===================-->
+    <!-- 메인 네비게이션:S -->
+    <!--===================-->
+    <div class="collapse navbar-collapse" id="bdNavbar">
+        <!--==============================-->
+        <!-- 메인 네비게이션=>메뉴세트1:S -->
+        <!--==============================-->
+        <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+            <li class="nav-item col-xxl-auto col-md-4 col-4">
+                <a class="nav-link p-2" href="#">
+                    <div class="wow1">차량제어
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item col-xxl-auto col-md-4 col-4">
+                <a class="nav-link p-2 active" aria-current="true" href="#">
+                    <div class="wow2">관제보기
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item col-xxl-auto col-md-4 col-4">
+                <a class="nav-link p-2" href="/docs/5.0/examples/">
+                    <div class="wow3">운영현황
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item col-xxl-auto col-md-4 col-4">
+                <a class="nav-link p-2" href="https://icons.getbootstrap.com/" target="_blank" rel="noopener">
+                    <div class="wow4">요금계산
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item col-xxl-auto col-md-4 col-4" @click="openReservationPop">
+                <a class="nav-link p-2" href="#" target="_blank" rel="noopener">
+                    <div class="wow5">예약하기
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item col-xxl-auto col-md-4 col-4">
+                <a class="nav-link p-2" href="#" target="_blank" rel="noopener">
+                    <div class="wow5">예약하기
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <!--==============================-->
+        <!-- 메인 네비게이션=>메뉴세트1:E -->
+        <!--==============================-->
+        <hr class="d-md-none text-white-50">
+        <!--==============================-->
+        <!-- 메인 네비게이션=>메뉴세트2:S -->
+        <!--==============================-->
+        <ul class="navbar-nav flex-row flex-wrap ms-md-auto ">
+            <li class="nav-item col-xxl-auto col-md-4 col-4">
+                <a class="nav-link p-2" href="https://github.com/twbs" target="_blank" rel="noopener">
+                    <div class="wow_r1">
+                        <small class="d-md-none ms-2">GitHub
+                        </small>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item col-xxl-auto col-md-4 col-4">
+                <a class="nav-link p-2" href="https://twitter.com/getbootstrap" target="_blank" rel="noopener">
+                    <div class="wow_r2">
+                        <small class="d-md-none ms-2">Twitter
+                        </small>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item col-xxl-auto col-md-4 col-4">
+                <a class="nav-link p-2" target="_blank" rel="noopener" @click="logout()">
+                    <div class="wow_r3">
+                        <small class="d-md-none ms-2">logout
+                        </small>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav flex-row flex-wrap d-flex flex-row-reverse">
+            <li class="nav-item">
+                <div class="row">
+                    <div class="col-auto">
+                        <img src="images/moon.jpg" class="img-circle profile_img ">
+                    </div>
+                    <div class="col-auto">
+                        <div class="col-12 ml-2 fc-happycar fs-13 d-flex justify-content-end">2020년-11월-12일 10:24:31
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-auto cursor-pointer">
+                                    <div class="dropdown text-end btn-group dropstart">
+                                        <span href="#" class="d-block text-decoration-none dropdown-toggle fc-happycar fs-13 max-w-100 text-truncate" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            asdfasdfsadfsadf
+                                        </span>
+                                        <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="">
+                                            <li><a class="dropdown-item" href="asdf#">
+                                                    <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">새로운 프로젝트...</font>
+                                                    </font>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">설정</font>
+                                                    </font>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">프로필</font>
+                                                    </font>
+                                                </a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">로그 아웃</font>
+                                                    </font>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-auto cursor-pointer">
+                                    <div class="dropdown text-end btn-group dropstart fs-13">
+                                        <span href="#" class="d-block text-decoration-none dropdown-toggle fc-happycar max-w-100 text-truncate" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                                            asdfasdfasdfsadf
+                                        </span>
+                                        <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="">
+                                            <li><a class="dropdown-item" href="#">
+                                                    <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">새로운 프로젝트...</font>
+                                                    </font>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">설정</font>
+                                                    </font>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">프로필</font>
+                                                    </font>
+                                                </a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">로그 아웃</font>
+                                                    </font>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--==============================-->
+                <!-- 메인 네비게이션=>메뉴세트2:E -->
+                <!--==============================-->
+            </li>
+
+        </ul>
+        <!--==============================-->
+        <!-- 메인 네비게이션=>메뉴세트2:E -->
+        <!--==============================-->
+    </div>
+    <!--===================-->
+    <!-- 메인 네비게이션:E -->
+    <!--===================-->
+</nav>
+<!--=============-->
+<!-- 상단 헤더:E -->
+<!--=============-->
+
+<div class="ns_quick_reservation_container d-block"></div>
+<script>
+    $(".ns_quick_reservation_container").load("/reservation/quick_reservation.html");
+</script>
+<script type="module" src="header.js"></script>

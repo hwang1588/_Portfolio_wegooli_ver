@@ -1,0 +1,604 @@
+<!doctype html>
+
+<!--================================================================-->
+<!-- (xxl=1400px이상에서 작동, pc), (md=768px이상에서 작동, 패드):S -->
+<!--================================================================-->
+<html lang="ko">
+
+<head>
+    <!--===========-->
+    <!-- meta tags -->
+    <!--===========-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--=======-->
+    <!-- CSS:S -->
+    <!--=======-->
+    <link rel="stylesheet" href="bs5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bs5/css/framework.css">
+    <link rel="stylesheet" href="bs5/css/docs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!--=======-->
+    <!-- CSS:E -->
+    <!--=======-->
+
+    <title>HAPPYCAR_TEST</title>
+</head>
+
+<body>
+    <!--=============-->
+    <!-- 상단 헤더:S -->
+    <!--=============-->
+    <header>
+
+        <!--===================-->
+        <!-- 모달트리거 버튼:S -->
+        <!--===================-->
+        <div class="conitaner-fluid">
+            <div class="row">
+                <div class="capsule">
+                    <center>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            데모용 모달버튼
+                        </button>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <!--===================-->
+        <!-- 모달트리거 버튼:E -->
+        <!--===================-->
+
+    </header>
+    <!--=============-->
+    <!-- 상단 헤더:E -->
+    <!--=============-->
+
+    <!--==========================-->
+    <!--모달전체(헤더,바디,푸터):S-->
+    <!--==========================-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+            <div class="modal-content">
+
+                <!--===========-->
+                <!--모달 헤더:S-->
+                <!--===========-->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        공지사항 상세(수정)
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <!--===========-->
+                <!--모달 헤더:E-->
+                <!--===========-->
+
+                <!--===========-->
+                <!--모달 바디:S-->
+                <!--===========-->
+                <div class="modal-body p-0">
+
+                    <!--========================-->
+                    <!-- 메인메뉴 및 좌측메뉴:S -->
+                    <!--========================-->
+                    <div class="container-fluid mt-3 mb-3 bg-white">
+
+                        <!--=====================-->
+                        <!-- 메인 1번 컨테이너:S -->
+                        <!--=====================-->
+                        <div class="container-fluid bg-battleshipgray py-1 rounded-2">
+                            <div class="row gx-0">
+
+                                <!--============-->
+                                <!-- 1번 포장:S -->
+                                <!--============-->
+                                <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+
+                                    <!--================-->
+                                    <!-- 1번 아코디언:S -->
+                                    <!--================-->
+                                    <div class="accordion" id="accordionExampleOne">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    기본정보 1번
+                                                </button>
+                                            </h2>
+                                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExampleOne">
+                                                <div class="accordion-body">
+                                                    <!--============-->
+                                                    <!-- 1번 칼럼:S -->
+                                                    <!--============-->
+                                                    <form>
+                                                        <div class="mb-2">
+                                                            <label for="text" class="form-label fc-gray-1 fw-light">소유회사</label>
+                                                            <select class="form-select" id="">
+                                                                <option selected>(주)래디우스랩</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                    </form>
+                                                    <!--============-->
+                                                    <!-- 1번 칼럼:E -->
+                                                    <!--============-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--================-->
+                                    <!-- 1번 아코디언:E -->
+                                    <!--================-->
+
+                                </div>
+                                <!--============-->
+                                <!-- 1번 포장:E -->
+                                <!--============-->
+
+                                <!--============-->
+                                <!-- 2번 포장:S -->
+                                <!--============-->
+                                <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+
+                                    <!--================-->
+                                    <!-- 2번 아코디언:S -->
+                                    <!--================-->
+                                    <div class="accordion" id="accordionExampleTwo">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingTwo">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                    기본정보 2번
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExampleTwo">
+                                                <div class="accordion-body">
+                                                    <!--============-->
+                                                    <!-- 2번 칼럼:S -->
+                                                    <!--============-->
+                                                    <form>
+                                                        <div class="mb-2">
+                                                            <label for="text" class="form-label fc-gray-1 fw-light">BM</label>
+                                                            <select class="form-select" id="">
+                                                                <option selected>행복카</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                    </form>
+
+
+                                                </div>
+                                                <!--============-->
+                                                <!-- 2번 칼럼:E -->
+                                                <!--============-->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--============-->
+                                <!-- 2번 포장:E -->
+                                <!--============-->
+
+                                <!--============-->
+                                <!-- 3번 포장:S -->
+                                <!--============-->
+                                <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+
+                                    <!--================-->
+                                    <!-- 3번 아코디언:S -->
+                                    <!--================-->
+                                    <div class="accordion" id="accordionExampleThree">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingThree">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                                    기본정보 3번
+                                                </button>
+                                            </h2>
+                                            <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExampleThree">
+                                                <div class="accordion-body">
+                                                    <!--============-->
+                                                    <!-- 3번 칼럼:S -->
+                                                    <!--============-->
+
+                                                    <!--============-->
+                                                    <!-- 3번 칼럼:E -->
+                                                    <!--============-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--================-->
+                                    <!-- 3번 아코디언:E -->
+                                    <!--================-->
+
+                                </div>
+                                <!--============-->
+                                <!-- 3번 포장:E -->
+                                <!--============-->
+
+                                <!--============-->
+                                <!-- 4번 포장:S -->
+                                <!--============-->
+                                <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+
+                                    <!--================-->
+                                    <!-- 4번 아코디언:S -->
+                                    <!--================-->
+                                    <div class="accordion" id="accordionExampleFour">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingFour">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                                    기본정보 4번
+                                                </button>
+                                            </h2>
+                                            <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#accordionExampleFour">
+                                                <div class="accordion-body">
+                                                    <!--============-->
+                                                    <!-- 4번 칼럼:S -->
+                                                    <!--============-->
+
+                                                    <!--============-->
+                                                    <!-- 4번 칼럼:E -->
+                                                    <!--============-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--================-->
+                                    <!-- 4번 아코디언:E -->
+                                    <!--================-->
+
+                                </div>
+                                <!--============-->
+                                <!-- 4번 포장:E -->
+                                <!--============-->
+
+                            </div>
+                            <div class="border-bottom border-1 mx-3"></div>
+                        </div>
+                        <!--=====================-->
+                        <!-- 메인 1번 컨테이너:E -->
+                        <!--=====================-->
+                        <!--=====================-->
+                        <!-- 메인 2번 컨테이너:S -->
+                        <!--=====================-->
+                        <div class="container-fluid bg-battleshipgray py-1 rounded-2">
+                            <div class="row gx-0">
+
+                                <!--============-->
+                                <!-- 5번 포장:S -->
+                                <!--============-->
+                                <div class="col-xxl-12 col-md-6 col-xs-12">
+                                    <!--================-->
+                                    <!-- 5번 아코디언:S -->
+                                    <!--================-->
+                                    <div class="accordion" id="accordionExampleFive">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingFive">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                                    차량 정보 등록 1번
+                                                </button>
+                                            </h2>
+                                            <div id="collapseFive" class="accordion-collapse collapse show" aria-labelledby="headingFive" data-bs-parent="#accordionExampleFive">
+                                                <div class="accordion-body">
+                                                    <!--============-->
+                                                    <!-- 5번 칼럼:S -->
+                                                    <!--============-->
+                                                    <form>
+                                                        <div>
+                                                            <label for="text" class="form-label fc-gray-1 fw-light">제목 <b class="fc-danger fs-6">*</b></label>
+                                                            <input type="text" class="form-control" id="textinput" placeholder="제목을 입력해주세요">
+                                                        </div>
+                                                    </form>
+                                                    <!--============-->
+                                                    <!-- 5번 칼럼:E -->
+                                                    <!--============-->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--================-->
+                                    <!-- 5번 아코디언:E -->
+                                    <!--================-->
+                                </div>
+                                <!--============-->
+                                <!-- 5번 포장:E -->
+                                <!--============-->
+
+                                <!--============-->
+                                <!-- 6번 포장:S -->
+                                <!--============-->
+                                <div class="col-xxl-3 col-md-6 col-xs-12">
+                                    <!--================-->
+                                    <!-- 6번 아코디언:S -->
+                                    <!--================-->
+                                    <div class="accordion" id="accordionExampleSix">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingSix">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                                    차량 정보 등록 2번
+                                                </button>
+                                            </h2>
+                                            <div id="collapseSix" class="accordion-collapse collapse show" aria-labelledby="headingSix" data-bs-parent="#accordionExampleSix">
+                                                <div class="accordion-body">
+                                                    <!--============-->
+                                                    <!-- 6번 칼럼:S -->
+                                                    <!--============-->
+                                                    <form>
+                                                        <div class="">
+                                                            <label for="text" class="form-label fc-gray-1 fw-light">등록일</label>
+                                                            <div class="input-group mb-1">
+                                                                <input type="text" class="form-control" id="textinput" placeholder="(주)이렌트카">
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <!--============-->
+                                                <!-- 6번 칼럼:E -->
+                                                <!--============-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--============-->
+                                <!-- 6번 포장:E -->
+                                <!--============-->
+
+                                <!--============-->
+                                <!-- 7번 포장:S -->
+                                <!--============-->
+                                <div class="col-xxl-3 col-md-6 col-xs-12">
+                                    <!--================-->
+                                    <!-- 7번 아코디언:S -->
+                                    <!--================-->
+                                    <div class="accordion" id="accordionExampleSeven">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingSeven">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                                    차량 정보 등록 3번
+                                                </button>
+                                            </h2>
+                                            <div id="collapseSeven" class="accordion-collapse collapse show" aria-labelledby="headingSeven" data-bs-parent="#accordionExampleSeven">
+                                                <div class="accordion-body">
+                                                    <!--============-->
+                                                    <!-- 7번 칼럼:S -->
+                                                    <!--============-->
+                                                    <div class="row">
+                                                        <form>
+                                                            <div class="">
+                                                                <label for="text" class="form-label fc-gray-1 fw-light">작성자</label>
+                                                                <div class="input-group mb-1">
+                                                                    <input type="text" class="form-control" id="textinput" placeholder="(주)이렌트카">
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+
+                                                    <!--============-->
+                                                    <!-- 7번 칼럼:E -->
+                                                    <!--============-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--================-->
+                                    <!-- 7번 아코디언:E -->
+                                    <!--================-->
+                                </div>
+                                <!--============-->
+                                <!-- 7번 포장:E -->
+                                <!--============-->
+
+                                <!--============-->
+                                <!-- 8번 포장:S -->
+                                <!--============-->
+                                <div class="col-xxl-3 col-md-6 col-xs-12 my-2">
+
+                                </div>
+                                <!--============-->
+                                <!-- 8번 포장:E -->
+                                <!--============-->
+
+                                <!--============-->
+                                <!-- 9번 포장:S -->
+                                <!--============-->
+                                <div class="col-xxl-3 col-md-6 col-xs-12">
+
+                                </div>
+                                <!--============-->
+                                <!-- 9번 포장:E -->
+                                <!--============-->
+
+                                <!--============-->
+                                <!-- 10번 포장:S -->
+                                <!--============-->
+                                <div class="col-xxl-12 col-md-6 col-xs-12">
+                                    <!--================-->
+                                    <!-- 10번 아코디언:S -->
+                                    <!--================-->
+                                    <div class="accordion" id="accordionExampleTen">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingTen">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
+                                                    차량 이용 정보 2번
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTen" class="accordion-collapse collapse show" aria-labelledby="headingTen" data-bs-parent="#accordionExampleTen">
+                                                <div class="accordion-body">
+                                                    <!--============-->
+                                                    <!-- 10번 칼럼:S -->
+                                                    <!--============-->
+                                                    <form>
+                                                        <div class="">
+                                                            <label for="text" class="form-label fc-gray-1 fw-light">첨부파일</label>
+                                                            <!--▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
+                                                            <!--이미지세팅 영역:S-->
+                                                            <!--▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
+                                                            <div class="row">
+                                                                <div class="col-xxl-2">
+                                                                    <div class="btn btn-dark mb-3 px-4 rounded-0 fs-12">파일선택</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-control bg-transparent border-0 py-2 px-0 text-truncate">
+                                                                <span class="border-1 bg-white border py-1 ps-2 pe-1 me-1 rounded-pill cursor-pointer svc_file ">
+                                                                    <i class="bi bi-paperclip" style="vertical-align: 3px;"></i>
+                                                                    filename.pdf
+                                                                    <button type="button" class="btn-close  pe-0 bs-50 h-60em">
+                                                                    </button>
+                                                                </span>
+                                                                <span class="border-1 bg-white border py-1 ps-2 pe-1 me-1 rounded-pill cursor-pointer svc_file ">
+                                                                    <i class="bi bi-paperclip" style="vertical-align: 3px;"></i>
+                                                                    filename.pdf
+                                                                    <button type="button" class="btn-close  pe-0 bs-50 h-60em">
+                                                                    </button>
+                                                                </span>
+                                                            </div>
+                                                            <!--▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲-->
+                                                            <!--이미지세팅 영역:E-->
+                                                            <!--▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲-->
+                                                        </div>
+                                                    </form>
+                                                    <!--============-->
+                                                    <!-- 10번 칼럼:E -->
+                                                    <!--============-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--================-->
+                                    <!-- 10번 아코디언:E -->
+                                    <!--================-->
+                                </div>
+                                <!--============-->
+                                <!-- 10번 포장:E -->
+                                <!--============-->
+
+                                <!--============-->
+                                <!-- 11번 포장:S -->
+                                <!--============-->
+                                <div class="col-xxl-12 col-md-12 col-xs-12 mb-2">
+                                    <!--================-->
+                                    <!-- 11번 아코디언:S -->
+                                    <!--================-->
+                                    <div class="accordion" id="accordionExampleEleven">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingEleven">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
+                                                    차량 부가 정보 1번
+                                                </button>
+                                            </h2>
+                                            <div id="collapseEleven" class="accordion-collapse collapse show" aria-labelledby="headingEleven" data-bs-parent="#accordionExampleEleven">
+                                                <div class="accordion-body">
+                                                    <!--============-->
+                                                    <!-- 11번 칼럼:S -->
+                                                    <!--============-->
+                                                    <label for="text" class="form-label fc-gray-1 fw-light">내용</label>
+
+                                                    <div id="editor">샘플입니다 에디터는 개발자가 내부적으로 결정해서 사용하셔야 합니다.(샘플 사용 금지) 샘플 에디터는 본 문서 하단 스크립트 영역(ck editor)에 CDN형식으로 로드중입니다.
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                    </div>
+
+                                                    <!--============-->
+                                                    <!-- 11번 칼럼:E -->
+                                                    <!--============-->
+                                                    <div class="row">
+                                                        <form>
+                                                            <div class="my-2">
+                                                                <label for="text" class="form-label fc-gray-1 fw-light">게시여부</label>
+                                                                <div class="form-check ">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                                    <label class="form-check-label fw-normal fc-black" for="flexCheckDefault">
+                                                                        게시
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--================-->
+                                    <!-- 11번 아코디언:E -->
+                                    <!--================-->
+                                </div>
+                                <!--============-->
+                                <!-- 11번 포장:E -->
+                                <!--============-->
+                            </div>
+                        </div>
+                        <!--=====================-->
+                        <!-- 메인 2번 컨테이너:E -->
+                        <!--=====================-->
+
+                    </div>
+                    <!--========================-->
+                    <!-- 메인메뉴 및 좌측메뉴:E -->
+                    <!--========================-->
+
+                </div>
+                <!--===========-->
+                <!--모달 바디:E-->
+                <!--===========-->
+
+                <!--===========-->
+                <!--모달 푸터:S-->
+                <!--===========-->
+                <footer>
+                    <div class="container-fluid">
+                        <div class="d-flex py-3 accordion-body">
+                            <div class="me-auto"></div>
+                            <div class="btn btn-secondary me-2 px-4 fs-13">취소</div>
+                            <div class="btn btn-dark px-4 fs-13">등록</div>
+                        </div>
+                    </div>
+                </footer>
+                <!--===========-->
+                <!--모달 푸터:E-->
+                <!--===========-->
+
+            </div>
+        </div>
+    </div>
+    <!--==========================-->
+    <!--모달전체(헤더,바디,푸터):S-->
+    <!--==========================-->
+
+</body>
+
+<!--=============================-->
+<!-- bootstrap_vanila_javascript -->
+<!--=============================-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="bs5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!--=============-->
+<!-- ck editor:S -->
+<!--=============-->
+<script src="https://cdn.ckeditor.com/ckeditor5/27.0.0/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .catch(error => {
+            console.error(error);
+        });
+</script>
+<!--=============-->
+<!-- ck editor:E -->
+<!--=============-->
+
+</html>

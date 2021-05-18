@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <!--===========-->
+  <!-- meta tags -->
+  <!--===========-->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!--===============-->
+  <!-- Bootstrap CSS -->
+  <!--===============-->
+  <link rel="stylesheet" href="bs5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bs5/css/framework.css">
+  <link rel="stylesheet" href="bs5/css/docs.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+  <title>HAPPYCAR_TEST</title>
+
+  <style>
+    .navbar-nav .show {
+      position: absolute !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!--=============-->
+  <!-- 상단 헤더:S -->
+  <!--=============-->
+  <header class="navbar navbar-expand-md navbar-dark bd-navbar">
+
+  </header>
+  <!--=============-->
+  <!-- 상단 헤더:E -->
+  <!--=============-->
+
+  <!--========================-->
+  <!-- 서브 네비게이션 내용:S -->
+  <!--========================-->
+  <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
+
+  </nav>
+  <!--========================-->
+  <!-- 서브 네비게이션 내용:E -->
+  <!--========================-->
+
+  <!--==========================================-->
+  <!-- 메인영역 좌측 사이드바&우측 메인컨텐츠:S -->
+  <!--==========================================-->
+  <div class="container-fluid md-4 bd-layout">
+    <!--================-->
+    <!-- 좌측사이드바:S -->
+    <!--================-->
+    <aside class="bd-sidebar">
+
+    </aside>
+    <!--================-->
+    <!-- 좌측사이드바:E -->
+    <!--================-->
+
+    <!--===================-->
+    <!-- 우측 메인컨텐츠:S -->
+    <!--===================-->
+    <main>
+      <div class="container-fluid bg-labgray p-0">
+        <div class="row">
+          <div class="col-12 mt-5">
+            <!--=======================-->
+            <!-- 네비게이션탭 세가지:S -->
+            <!--=======================--
+                        <div class="container-fluid px-0">
+                            <nav>
+                                <div class="nav nav-tabs px-5" id="nav-tab" role="tablist">
+                                    <a class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">첫번째 탭
+                                    </a>
+                                    <a class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">두번째 탭
+                                    </a>
+                                </div>
+                            </nav>
+                        </div>
+                        <!--=======================-->
+            <!-- 네비게이션탭 세가지:E -->
+            <!--=======================-->
+
+            <!--==================-->
+            <!-- 본문탭들총관리:S -->
+            <!--==================-->
+            <div class="tab-content" id="nav-tabContent">
+              <!--===================-->
+              <!-- 메인탭첫번째 틀:S -->
+              <!--===================-->
+              <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+                <!--============-->
+                <!-- 본문영역:S -->
+                <!--============-->
+                <div class="backdrop px-0 m-0 bg-white">
+
+                  <!--==================-->
+                  <!-- 본문 제목 영역:S -->
+                  <!--==================-->
+                  <div class="container-fluid">
+                    <div class="container-fluid mb-3 mt-3">
+                      <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                        <ol class="breadcrumb fs-13 mb-1">
+                          <li class="breadcrumb-item active">HOME</li>
+                          <li class="breadcrumb-item active" aria-current="page">서비스 운영관리</li>
+                          <li class="breadcrumb-item fw-bold" aria-current="page">PUSH FORM</li>
+
+                        </ol>
+                      </nav>
+                      <div class="row mb-4">
+                        <div class="col-12">
+                          <div class="top">PUSH FORM
+                            <img src="images/ico_24_title_n.svg" class="mb-1" />
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <!--==================-->
+                  <!-- 본문 제목 영역:E -->
+                  <!--==================-->
+
+                  <!--==================-->
+                  <!-- 본문 내용 영역:S -->
+                  <!--==================-->
+                  <div class="container-fluid">
+                    <div class="tab-content" id="pills-tabContent">
+                      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                        <!--===============================-->
+                        <!-- 본문 내용 첫번째 컨트롤박스:S -->
+                        <!--===============================-->
+                        <div class="container-fluid">
+                          <div class="card-body bg-palegray mb-4">
+                            <div class="row">
+                              <div class="col-xxl-10">
+                                <div class="row">
+                                  <!--==============-->
+                                  <!-- 버튼그룹 1:S -->
+                                  <!--==============-->
+                                  <div class="col-xxl-4 col-md-6 col-12">
+                                    <div class="row">
+                                      <div class="col-4 my-2">
+                                        <!--================-->
+                                        <!-- 버튼그룹 1-1:S -->
+                                        <!--================-->
+                                        <label for="inputState" class="form-label">제목
+                                        </label>
+                                        <select id="inputState" class="form-select">
+                                          <option selected>전체</option>
+                                          <option>샘플2</option>
+                                        </select>
+                                        <!--================-->
+                                        <!-- 버튼그룹 1-1:E -->
+                                        <!--================-->
+                                      </div>
+                                      <div class="col-8 my-2">
+                                        <!--================-->
+                                        <!-- 버튼그룹 1-2:S -->
+                                        <!--================-->
+                                        <label for="inputState" class="form-label">내용
+                                        </label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="내용을 입력해주세요." />
+                                        <!--================-->
+                                        <!-- 버튼그룹 1-2:E -->
+                                        <!--================-->
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--==============-->
+                                  <!-- 버튼그룹 1:E -->
+                                  <!--==============-->
+
+                                  <!--==============-->
+                                  <!-- 버튼그룹 2:S -->
+                                  <!--==============-->
+                                  <div class="col-xxl-2 col-md-6 col-12">
+                                    <div class="row">
+
+                                    </div>
+                                  </div>
+                                  <!--==============-->
+                                  <!-- 버튼그룹 2:E -->
+                                  <!--==============-->
+
+                                  <!--==============-->
+                                  <!-- 버튼그룹 3:S -->
+                                  <!--==============-->
+                                  <div class="col-xxl-3 col-md-6 col-12">
+                                    <div class="row">
+
+                                    </div>
+                                  </div>
+                                  <!--==============-->
+                                  <!-- 버튼그룹 3:E -->
+                                  <!--==============-->
+
+                                  <!--==============-->
+                                  <!-- 버튼그룹 4:S -->
+                                  <!--==============-->
+                                  <div class="col-xxl-2 col-md-6 col-12">
+
+                                  </div>
+                                  <!--==============-->
+                                  <!-- 버튼그룹 4:E -->
+                                  <!--==============-->
+
+                                </div>
+                              </div>
+                              <div class="col-xxl-1">
+                                <div class="row">
+
+                                </div>
+                              </div>
+                              <div class="col-xxl-1 ">
+                                <div class="row">
+                                  <!--==============-->
+                                  <!-- 버튼그룹 5:S -->
+                                  <!--==============-->
+                                  <div class="col-xxl-12 mt-4">
+                                    <!--================-->
+                                    <!-- 버튼그룹 5-1:S -->
+                                    <!--================-->
+                                    <div class="btn-group mt-2">
+                                      <button class="btn btn-dark btn_34 px-4" type="button" id="button-addon2">Search
+                                      </button>
+                                    </div>
+                                    <!--================-->
+                                    <!-- 버튼그룹 5-1:E -->
+                                    <!--================-->
+                                  </div>
+                                  <!--==============-->
+                                  <!-- 버튼그룹 5:E -->
+                                  <!--==============-->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--===============================-->
+                        <!-- 본문 내용 첫번째 컨트롤박스:E -->
+                        <!--===============================-->
+
+                        <!--=======================-->
+                        <!-- 본문 내용 테이블 표:S -->
+                        <!--=======================-->
+                        <div class="container-fluid bg-white">
+                          <div class="card shadow mb-4">
+                            <div class="card-body bg-palegray">
+                              <div class="row">
+                                <div class="col-xxl-9 col-md-6 col-12 mb-3">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-funnel p-1 svg-filter" viewBox="0 0 16 16">
+                                    <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z" />
+                                  </svg>
+                                  <b>총 140건</b>
+                                </div>
+                                <div class="col-xxl-3 col-md-6 col-12 mb-3">
+                                  <div class="row">
+                                    <div class="col-12">
+                                      <div class="input-group">
+                                        <button class="btn-dark text-warning me-3 fs-13 px-3" type="button">등록</button>
+                                        <button class="btn border-dark fs-13 me-3" type="button">엑셀저장</button>
+                                        <select class="form-select" id="inputGroupSelect02" aria-label="Example select with button addon">
+                                          <option selected>50</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <div id="table-scroll" class="table-scroll">
+                                    <div class="table-wrap pt-1">
+                                      <table class="main-table" border="1" cellpadding="0" cellspacing="0">
+
+                                        <!--======================-->
+                                        <!-- 테이블 표 헤더부분:S -->
+                                        <!--======================-->
+                                        <thead>
+                                          <tr>
+                                            <th>
+                                              <center>번호</center>
+                                            </th>
+                                            <th class="min-w-500">
+                                              <div class="row">
+                                                <div class="col-12">
+                                                  제목
+                                                  <button class="fs-12 border-0 p-0 btn_sort">▼</button>
+                                                  <button class="fs-12 border-0 p-0 btn_sort">▲</button>
+                                                </div>
+                                              </div>
+                                            </th>
+                                            <th>
+                                              <div class="row">
+                                                <div class="col-12">
+                                                  분류
+                                                  <button class="fs-12 border-0 p-0 btn_sort">▼</button>
+                                                  <button class="fs-12 border-0 p-0 btn_sort">▲</button>
+                                                </div>
+                                              </div>
+                                            </th>
+                                            <th>
+                                              <div class="row">
+                                                <div class="col-12">
+                                                  PUSH ID
+                                                  <button class="fs-12 border-0 p-0 btn_sort">▼</button>
+                                                  <button class="fs-12 border-0 p-0 btn_sort">▲</button>
+                                                </div>
+                                              </div>
+                                            </th>
+                                            <th>
+                                              <div class="row">
+                                                <div class="col-12">
+                                                  작성자
+                                                  <button class="fs-12 border-0 p-0 btn_sort">▼</button>
+                                                  <button class="fs-12 border-0 p-0 btn_sort">▲</button>
+                                                </div>
+                                              </div>
+                                            </th>
+                                            <th>
+                                              <div class="row">
+                                                <div class="col-12">
+                                                  등록일
+                                                  <button class="fs-12 border-0 p-0 btn_sort">▼</button>
+                                                  <button class="fs-12 border-0 p-0 btn_sort">▲</button>
+                                                </div>
+                                              </div>
+                                            </th>
+
+                                          </tr>
+                                        </thead>
+                                        <!--======================-->
+                                        <!-- 테이블 표 헤더부분:E -->
+                                        <!--======================-->
+
+                                        <!--======================-->
+                                        <!-- 테이블 표 바디부분:S -->
+                                        <!--======================-->
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                              1</td>
+                                            <td class=" min-w-500 bg-white">미납통행료 안내</td>
+                                            <td>회원</td>
+                                            <td>자동차</td>
+                                            <td>이름(아이디)</td>
+                                            <td>0000.00.00</td>
+                                          </tr>
+                                          <tr>
+                                            <td>2</td>
+                                            <td class=" min-w-500 bg-white">미납통행료 안내</td>
+                                            <td>회원</td>
+                                            <td>자동차</td>
+                                            <td>이름(아이디)</td>
+                                            <td>0000.00.00</td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td class=" min-w-500 bg-white">미납통행료 안내</td>
+                                            <td>회원</td>
+                                            <td>자동차</td>
+                                            <td>이름(아이디)</td>
+                                            <td>0000.00.00</td>
+                                          </tr>
+                                          <tr>
+                                            <td>4</td>
+                                            <td class=" min-w-500 bg-white">미납통행료 안내</td>
+                                            <td>회원</td>
+                                            <td>자동차</td>
+                                            <td>이름(아이디)</td>
+                                            <td>0000.00.00</td>
+                                          </tr>
+                                          <tr>
+                                            <td>5</td>
+                                            <td class=" min-w-500 bg-white">미납통행료 안내</td>
+                                            <td>회원</td>
+                                            <td>자동차</td>
+                                            <td>이름(아이디)</td>
+                                            <td>0000.00.00</td>
+                                          </tr>
+                                          <tr>
+                                            <td>6</td>
+                                            <td class=" min-w-500 bg-white">미납통행료 안내</td>
+                                            <td>회원</td>
+                                            <td>자동차</td>
+                                            <td>이름(아이디)</td>
+                                            <td>0000.00.00</td>
+                                          </tr>
+                                          <tr>
+                                            <td>7</td>
+                                            <td class=" min-w-500 bg-white">미납통행료 안내</td>
+                                            <td>회원</td>
+                                            <td>자동차</td>
+                                            <td>이름(아이디)</td>
+                                            <td>0000.00.00</td>
+                                          </tr>
+                                          <tr>
+                                            <td>8</td>
+                                            <td class=" min-w-500 bg-white">미납통행료 안내</td>
+                                            <td>회원</td>
+                                            <td>자동차</td>
+                                            <td>이름(아이디)</td>
+                                            <td>0000.00.00</td>
+                                          </tr>
+                                          <tr>
+                                            <td>9</td>
+                                            <td class=" min-w-500 bg-white">미납통행료 안내</td>
+                                            <td>회원</td>
+                                            <td>자동차</td>
+                                            <td>이름(아이디)</td>
+                                            <td>0000.00.00</td>
+                                          </tr>
+                                          <tr>
+                                            <td>10</td>
+                                            <td class=" min-w-500 bg-white">미납통행료 안내</td>
+                                            <td>회원</td>
+                                            <td>자동차</td>
+                                            <td>이름(아이디)</td>
+                                            <td>0000.00.00</td>
+                                          </tr>
+
+                                        </tbody>
+                                        <!--======================-->
+                                        <!-- 테이블 표 바디부분:E -->
+                                        <!--======================-->
+
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!--================-->
+                              <!-- 페이지네이션:S -->
+                              <!--================-->
+                              <div class="container-flluid">
+                                <div class="row center">
+                                  <nav aria-label="Page navigation example">
+                                    <ul class="pagination mb-0 mt-4">
+                                      <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                          <span aria-hidden="true">&laquo;
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li class="page-item">
+                                        <a class="page-link" href="#">1
+                                        </a>
+                                      </li>
+                                      <li class="page-item">
+                                        <a class="page-link" href="#">2
+                                        </a>
+                                      </li>
+                                      <li class="page-item">
+                                        <a class="page-link" href="#">3
+                                        </a>
+                                      </li>
+                                      <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                          <span aria-hidden="true">&raquo;
+                                          </span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </nav>
+                                </div>
+                              </div>
+                              <!--================-->
+                              <!-- 페이지네이션:E -->
+                              <!--================-->
+
+                            </div>
+                          </div>
+                        </div>
+                        <!--=======================-->
+                        <!-- 본문 내용 테이블 표:E -->
+                        <!--=======================-->
+
+                      </div>
+
+                      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...
+                      </div>
+
+                    </div>
+                  </div>
+                  <!--==================-->
+                  <!-- 본문 내용 영역:E -->
+                  <!--==================-->
+
+                </div>
+                <!--============-->
+                <!-- 본문영역:E -->
+                <!--============-->
+
+              </div>
+              <!--===================-->
+              <!-- 메인탭첫번째 틀:E -->
+              <!--===================-->
+
+              <!--===================-->
+              <!-- 메인탭두번째 틀:S -->
+              <!--===================-->
+              <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...
+              </div>
+              <!--===================-->
+              <!-- 메인탭두번째 틀:E -->
+              <!--===================-->
+
+            </div>
+            <!--==================-->
+            <!-- 본문탭들총관리:E -->
+            <!--==================-->
+
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--===================-->
+    <!-- 우측 메인컨텐츠:E -->
+    <!--===================-->
+
+  </div>
+  <!--==========================================-->
+  <!-- 메인영역 좌측 사이드바&우측 메인컨텐츠:E -->
+  <!--==========================================-->
+
+</body>
+
+<!--===============================-->
+<!-- bootstrap_vanila_javascript:S -->
+<!--===============================-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="bs5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!--===============================-->
+<!-- bootstrap_vanila_javascript:E -->
+<!--===============================-->
+
+<!--==========================-->
+<!-- 레이아웃 공통영역 호출:S -->
+<!--==========================-->
+<script>
+  $("header.navbar").load("framework/header.html");
+  $(".bd-subnavbar ").load("framework/subnavigation.html");
+  $(".bd-sidebar ").load("framework/sidebar.html");
+</script>
+<!--==========================-->
+<!-- 레이아웃 공통영역 호출:E -->
+<!--==========================-->
+
+</html>

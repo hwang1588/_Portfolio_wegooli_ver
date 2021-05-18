@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+<!--========-->
+<!-- head:S -->
+<!--========-->
+
+<head>
+    <!--===========-->
+    <!-- meta tags -->
+    <!--===========-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--=======-->
+    <!-- CSS:S -->
+    <!--=======-->
+    <link rel="stylesheet" href="bs5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bs5/css/framework.css">
+    <link rel="stylesheet" href="bs5/css/docs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!--=======-->
+    <!-- CSS:E -->
+    <!--=======-->
+
+    <title>HAPPYCAR_TEST</title>
+</head>
+<!--========-->
+<!-- head:E -->
+<!--========-->
+
+<div class="input-group mt-2">
+
+    <button class="send btn-dark px-5 py-3 fs-16" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal4">조회
+    </button>
+    <!--================-->
+    <!-- 임시저장모달:S -->
+    <!--================-->
+    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-1">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">BM관리
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body pb-0">
+                    <!--============-->
+                    <!-- 모달내용:S -->
+                    <!--============-->
+                    <div class="container-fluid px-0">
+                        <div class="row">
+                            <!--==============-->
+                            <!-- 버튼그룹 3:S -->
+                            <!--==============-->
+                            <div class="col-xxl-12 col-md-6 col-12">
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <!--================-->
+                                        <!-- 버튼그룹 3-1:S -->
+                                        <!--================-->
+                                        <label for="inputState" class="form-label">BM목록
+                                        </label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>부천스마트시티</option>
+                                            <option>샘플2</option>
+                                        </select>
+                                        <!--================-->
+                                        <!-- 버튼그룹 3-1:E -->
+                                        <!--================-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--==============-->
+                            <!-- 버튼그룹 3:E -->
+                            <!--==============-->
+
+                            <div class="col-xxl-12 col-md-12 col-12 overflow-auto">
+                                <label for="inputState" class="form-label">등록된 BM
+                                </label>
+                                <table class="table newtable-2 fs-13 fw-normal borde">
+                                    <thead>
+                                        <tr class="table-light border">
+                                            <th scope="col" class="table-w-10 fw-normal border border-secondary">이름</th>
+                                            <th scope="col" class="table-w-10 fw-normal border border-secondary">
+                                                아이디(휴대폰)
+                                            </th>
+                                            <th scope="col" class="table-w-10 fw-normal border border-secondary ">
+                                                성별
+                                            </th>
+                                            <th scope="col" class="table-w-10 fw-normal border border-secondary">
+                                                생년월일
+                                            </th>
+                                            <th scope="col" class="table-w-10 fw-normal border border-secondary">
+                                                회원구분
+                                            </th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!--                                                                 <tr class="table-pointer" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">-->
+                                        <tr class="table-pointer">
+                                            <th class="border fw-normal table-w-10 border">홍길동</th>
+                                            <td class="border">0123-1234-1234</td>
+                                            <td class="table-w-10 border">남</td>
+                                            <td class="border">1983-01-01 (36세)</td>
+                                            <td class="table-w-10 border">정회원</td>
+                                        </tr>
+                                        <tr class="table-pointer">
+                                            <th class="border fw-normal table-w-10 border">홍길동</th>
+                                            <td class="border">0123-1234-1234</td>
+                                            <td class="table-w-10 border">남</td>
+                                            <td class="border">1983-01-01 (36세)</td>
+                                            <td class="table-w-10 border"><button class="btn border border-1 border-dark rounded-1 fs-13 py-1">삭제</button></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--============-->
+                    <!-- 모달내용:E -->
+                    <!--============-->
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-lg btn-secondary rounded-1 px-4 fs-13" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-lg btn-dark rounded-1 px-4 fs-13" data-bs-dismiss="modal">등록</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--================-->
+    <!-- 임시저장모달:E -->
+    <!--================-->
+
+</div>
+
+<!--=============================-->
+<!-- bootstrap_vanila_javascript -->
+<!--=============================-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="bs5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+</html>

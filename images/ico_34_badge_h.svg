@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="86" height="52" viewBox="0 0 86 52">
+    <defs>
+        <filter id="558m4ena7a" width="86" height="52" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="2"/>
+            <feGaussianBlur result="blur" stdDeviation="3"/>
+            <feFlood flood-opacity=".149"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g>
+        <g filter="url(#558m4ena7a)" transform="translate(9 7) translate(-9 -7)">
+            <rect width="68" height="34" fill="#d09e17" rx="17" transform="translate(9 7)"/>
+        </g>
+        <text fill="#1a1a1a" font-family="NotoSansCJKkr-Bold, Noto Sans CJK KR" font-size="13px" font-weight="700" letter-spacing="-0.015em" transform="translate(9 7) translate(34 22)">
+            <tspan x="-23.627" y="0">시승차량</tspan>
+        </text>
+    </g>
+</svg>
