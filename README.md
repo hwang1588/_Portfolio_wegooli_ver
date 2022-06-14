@@ -13,6 +13,8 @@
 
 ### - PC
 <img src="https://github.com/hwang1588/repo_img_src/blob/main/pc1.png">
+<img src="https://github.com/hwang1588/repo_img_src/blob/main/pc2.png">
+
 
 ### - MOBILE
 N/A
